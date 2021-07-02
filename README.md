@@ -36,6 +36,51 @@
 └── mysql                               #資料庫sql檔案彙整後放這裡
 
 ```
+# 更新版 20210702
+```
+.
+├── RESTful.txt
+├── backend
+│   └── images
+├── frontend
+│   ├── README.md
+│   ├── package.json
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── fonts
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   ├── src
+│   │   ├── App.js
+│   │   ├── components
+│   │   │   ├── Buttons.js
+│   │   │   ├── Footer.js
+│   │   │   └── Navbar.js
+│   │   ├── index.js
+│   │   ├── pages
+│   │   │   ├── About.js
+│   │   │   ├── cart
+│   │   │   │   └── CartIndex.js
+│   │   │   ├── game
+│   │   │   │   └── GameIndex.js
+│   │   │   ├── index.js
+│   │   │   ├── member
+│   │   │   │   └── MemberIndex.js
+│   │   │   ├── message
+│   │   │   │   └── MessageIndex.js
+│   │   │   ├── products
+│   │   │   │   └── ProductsIndex.js
+│   │   │   └── reservation
+│   │   │       └── ReservationIndex.js
+│   │   └── styles
+│   │       └── global.scss
+│   └── yarn.lock
+└── mysql
+
+```
 <br/>
 <br/>
 
