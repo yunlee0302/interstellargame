@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
+
+    <title>Register</title>
+
+    <style>
+        * {
+            font-size: .75rem;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: .5px;
+        }
+
+        body {
+            background-image: url('../image/bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 1000px;
+        }
+
+
+        .login .container {
+            min-height: 700px;
+            align-items: center;
+            background-image: url('../image/login/login-frame.png');
+            background-position: center top;
+            background-size: 80%;
+            background-repeat: no-repeat;
+            padding: 10% 0;
+        }
+
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .login .container {
+                background-size: 70%;
+                padding: 12% 0;
+            }
+        }
+
+
+        .login-area {
+            display: flex;
+            height: 100%;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width:768px) and (max-width:991px) {
+            .login .container {
+                background-size: 90%;
+                background-image: url('../image/login/login-frame-sm.png');
+            }
+
+            .login-area {
+                margin: 0 auto;
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .login .container {
+                background-size: 100%;
+                background-image: none;
+            }
+
+            .login-area {
+                width: 90%;
+                margin: 0 auto;
+                border: 2px solid #9C64A5;
+                padding: 20px;
+            }
+        }
+
+        .login-area h2 {
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .login-right,
+        .login-left {
+            padding: 20px 0;
+        }
+
+        .login-right form {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        @media screen and (max-width:767px) {
+            .login-right form {
+                width: 90%;
+            }
+        }
+
+        .login-right input.transparent-input {
+            background-color: #02021E !important;
+            font-size: 1rem;
+            color: #fff;
+            border: none !important;
+            padding-left: 30px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .input-frame {
+            border: solid 2px #B388FE;
+            border-radius: 5px;
+            position: relative;
+            height: 47px;
+        }
+
+        .input-frame i {
+            color: #B388FE;
+            padding: 13px 10px;
+            font-size: 15px;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+
+        .login-right .btn {
+            background-color: #9C64A5;
+            color: #fff;
+            height: 45px;
+            font-size: 1rem;
+        }
+
+        .login-left .btn {
+            background-color: #fff;
+            color: black;
+            width: 250px;
+            height: 45px;
+            line-height: 30px;
+            font-size: 1rem;
+            margin-top: 20%;
+        }
+
+        @media screen and (min-width:768px) and (max-width:991px) {
+            .login-left .btn {
+                margin-top: 0;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .login-left .btn {
+                margin-top: 0;
+                width: 80%;
+            }
+        }
+
+        .login-left .btn img {
+            height: 20px;
+            padding-bottom: 2px;
+        }
+
+        .login-right form p a {
+            text-decoration: underline;
+        }
+
+        .login-left {
+            border-right: 2px solid;
+            border-image: linear-gradient(to bottom,
+                    #11C2FF,
+                    rgba(123, 22, 255)) 1 100%;
+        }
+
+        @media screen and (max-width:991px) {
+            .login-left {
+                border-right: none;
+                padding: 50px 0;
+            }
+
+            .login-right {
+                padding: 50px 0;
+                border-top: 2px solid #9C64A5;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <div class="container">
+            <div class="login-area row">
+                <div class="login-left col-12 col-lg-6 flex-column text-center">
+                    <h2 class="text-light text-center">快速登入</h2>
+                    <div class="btn-box align-items-center">
+                        <button type="submit" class="btn">
+                            <img src="../image/login/google-login.png" alt="google-login"> Google登入</button>
+                    </div>
+                </div>
+                <div class="login-right col-12 col-lg-6">
+                    <h2 class="text-light text-center">一般登入</h2>
+                    <form>
+                        <div class="input-box">
+                            <div class="input-frame">
+                                <i class="far fa-user"></i>
+                                <input type="email" class="form-control transparent-input " id="inputEmail1"
+                                    aria-describedby="emailHelp" placeholder="E-mail">
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted hidden">We'll never share your email with
+                                anyone.</small>
+                        </div>
+                        <div class="input-box my-3">
+                            <div class="input-frame">
+                                <i class="fas fa-unlock-alt"></i>
+                                <input type="password" class="form-control transparent-input" id="inputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted hidden">We'll never share your email with
+                                anyone.</small>
+                        </div>
+                        <button type="submit" class="btn btn-block">登入</button>
+                        <p class="text-light mt-3 text-center">還沒有會員？<a href="#">註冊會員</a></p>
+                        <p class="text-center mt-0"><a href="#">忘記密碼</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

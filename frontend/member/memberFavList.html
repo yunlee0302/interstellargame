@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
+
+    <title>Member Favorite List</title>
+
+    <style>
+        * {
+            font-size: 1rem;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: .5px;
+        }
+
+        @media screen and (max-width:768px) {
+            * {
+                font-size: .75rem;
+            }
+        }
+
+        body {
+            background-image: url('../image/bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 1000px;
+        }
+
+        .member-btn-group {
+            margin: 20px 0;
+            width: 60%;
+            margin: auto;
+        }
+
+        .member-btn p {
+            line-height: 40px;
+            color: white;
+        }
+
+        .member-btn:hover p,
+        .member-btn:hover img {
+            text-shadow: 1px 1px 5px rgb(255, 234, 1, .6);
+            filter: drop-shadow(1px 1px 5px rgb(255, 234, 1, .6));
+        }
+
+        .table {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+
+
+        .table th {
+            color: #02021E;
+        }
+
+        .table th,
+        .table td {
+            border-top: 1px solid #CE93D7;
+            border-bottom: 1px solid #CE93D7;
+        }
+
+        .table thead,
+        .table tbody {
+            border-left: 1px solid #CE93D7;
+            border-right: 1px solid #CE93D7;
+        }
+
+        .table thead th {
+            border-bottom: none;
+        }
+
+        .table thead tr {
+            background-color: #CE93D7;
+            color: white;
+        }
+
+        .table tbody tr {
+            color: white;
+            line-height: 60px;
+        }
+
+        .table .order-btn {
+            height: 50%;
+            background-color: #CE93D7;
+            border-radius: 5px;
+            color: #02021E;
+            font-size: 1rem;
+            width: 70%;
+            margin: auto;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:768px) {
+            .table {
+                font-size: .75rem;
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .table .order-btn {
+                height: 40px;
+                padding: 6%;
+                line-height: 15px;
+            }
+
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+        }
+
+        .text-yellow {
+            color: #FFEA01;
+        }
+
+        tbody tr .item-img img {
+            width: 100%;
+        }
+
+
+        tbody tr .item-img {
+            width: 80px;
+        }
+
+        td i {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="member-btn-group text-center row">
+            <div class="member-btn col col1">
+                <img src="../image/member/fun00.png" alt="">
+                <p class="py-1 m-0">會員中心</p>
+            </div>
+            <div class="member-btn col col2">
+                <img src="../image/member/fun01.png" alt="">
+                <p class="py-1 m-0">查詢訂單</p>
+            </div>
+            <div class="member-btn col col3">
+                <img src="../image/member/fun02.png" alt="">
+                <p class="py-1 m-0">查詢訂單</p>
+            </div>
+            <div class="member-btn col col4">
+                <img src="../image/member/fun03.png" alt="">
+                <p class="py-1 m-0">查詢訂單</p>
+            </div>
+            <div class="member-btn col col5">
+                <img src="../image/member/fun04.png" alt="">
+                <p class="py-1 m-0">查詢訂單</p>
+            </div>
+        </div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3">商品</th>
+                        <th scope="col">金額</th>
+                        <th scope="col">移除最愛</th>
+                        <th scope="col">商品詳細</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-img"><img src="../image/member/item001.jpg" alt="目擊者之夜商品圖"></td>
+                        <td>目擊者之夜</td>
+                        <td></td>
+                        <td>NT$1800</td>
+                        <td><i class="far fa-trash-alt"></i></td>
+                        <td>
+                            <div class="order-btn">查看商品</div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
