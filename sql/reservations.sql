@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `reservations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reservations` (
   `reservationId` int NOT NULL COMMENT '預約編號',
-  `memberId` int NOT NULL COMMENT '會員編號',
+  `userId` int NOT NULL COMMENT '會員編號',
   `date` date NOT NULL COMMENT '預約時間',
   `startTime` int NOT NULL COMMENT '開始時間,24小時制',
   `storeId` int NOT NULL COMMENT '分店編號',
