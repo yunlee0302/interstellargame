@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `reservations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reservations` (
-  `reservationId` int NOT NULL COMMENT '預約編號',
+  `reservationId` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '預約編號',
   `userId` int NOT NULL COMMENT '會員編號',
   `date` date NOT NULL COMMENT '預約時間',
   `startTime` int NOT NULL COMMENT '開始時間,24小時制',
   `storeId` int NOT NULL COMMENT '分店編號',
   `numberOfPeople` tinyint NOT NULL COMMENT '預約人數範圍',
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增時間',
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,11 +38,11 @@ CREATE TABLE `reservations` (
 -- Dumping data for table `reservations`
 --
 
-LOCK TABLES `reservations` WRITE;
-/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
-INSERT INTO `reservations` VALUES (1,1,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03'),(2,1,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03'),(3,2,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03'),(4,2,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03');
-/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
-UNLOCK TABLES;
+-- LOCK TABLES `reservations` WRITE;
+-- /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+-- INSERT INTO `reservations` VALUES (1,1,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03'),(2,1,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03'),(3,2,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03'),(4,2,'2021-07-21',13,2,6,'2021-05-13 11:37:03','2021-05-13 11:37:03');
+-- /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
+-- UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
