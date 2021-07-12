@@ -265,7 +265,9 @@ CREATE TABLE `reservations` (
   `storeId` int NOT NULL COMMENT '分店編號',
   `numberOfPeople` tinyint NOT NULL COMMENT '預約人數範圍',
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增時間',
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間'
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  PRIMARY KEY (`reservationId`),
+  UNIQUE KEY `reservationId_UNIQUE` (`reservationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
