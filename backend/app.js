@@ -27,10 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); 
 app.use('/booking', bookingRouter);
-app.use('/users', userRouter);
-app.use('/cart', cartRouter);
-app.use('/message', messageRouter);
-app.use('/items', itemRouter);
+
+// 先comment掉 因為檔案目前沒有export東西會噴錯誤
+// app.use('/users', userRouter);
+// app.use('/cart', cartRouter);
+// app.use('/message', messageRouter);
+// app.use('/items', itemRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
