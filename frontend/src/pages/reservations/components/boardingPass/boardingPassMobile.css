@@ -3,7 +3,9 @@
 .boarding-pass-mobile-wrapper {
 	width: 325px;
 	height: 368px;
-	position: relative;
+	position: relative;	
+	margin-left: auto;
+    margin-right: auto;
 	/* todo: fix font size */
 }
 .booking-info-wrapper-m {
