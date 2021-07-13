@@ -1,238 +1,169 @@
 # 資料夾Tree
 
-# 更新版 20210707
+# 更新版 20210713 
+- 前端資料夾架構
+
 ```
 .
 ├── README.md
-├── backend                                         #後端資料夾，npx express-generator的架構
-│   ├── app.js                                      #有加CORS處理
-│   ├── bin
-│   │   └── www
-│   ├── database
-│   │   └── db.connect.js                           #資料庫連接檔案
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── public
-│   │   ├── images
-│   │   ├── javascripts
-│   │   └── stylesheets
-│   │       └── style.css
-│   ├── routes
-│   │   ├── booking.js                              #預約route
-│   │   └── index.js
-│   ├── views
-│   │   ├── error.jade
-│   │   ├── index.jade
-│   │   └── layout.jade
-│   └── yarn.lock
-├── font
-│   ├── NotoSansCJKtc-Black.otf
-│   ├── NotoSansCJKtc-Bold.otf
-│   ├── NotoSansCJKtc-DemiLight.otf
-│   ├── NotoSansCJKtc-Light.otf
-│   ├── NotoSansCJKtc-Medium.otf
-│   ├── NotoSansCJKtc-Regular.otf
-│   ├── NotoSansCJKtc-Thin.otf
-│   ├── NotoSansMonoCJKtc-Bold.otf
-│   └── NotoSansMonoCJKtc-Regular.otf
-├── frontend                                        #轉成JSX 依頁面丟到react-frontend這裏
-│   ├── blank.html
-│   ├── fontawesome
-│   │   ├── css
-│   │   │   ├── all.css
-│   │   │   ├── all.min.css
-│   │   │   ├── brands.css
-│   │   │   ├── brands.min.css
-│   │   │   ├── fontawesome.css
-│   │   │   ├── fontawesome.min.css
-│   │   │   ├── regular.css
-│   │   │   ├── regular.min.css
-│   │   │   ├── solid.css
-│   │   │   ├── solid.min.css
-│   │   │   ├── svg-with-js.css
-│   │   │   ├── svg-with-js.min.css
-│   │   │   ├── v4-shims.css
-│   │   │   └── v4-shims.min.css
-│   │   └── webfonts
-│   │       ├── fa-brands-400.eot
-│   │       ├── fa-brands-400.svg
-│   │       ├── fa-brands-400.ttf
-│   │       ├── fa-brands-400.woff
-│   │       ├── fa-brands-400.woff2
-│   │       ├── fa-regular-400.eot
-│   │       ├── fa-regular-400.svg
-│   │       ├── fa-regular-400.ttf
-│   │       ├── fa-regular-400.woff
-│   │       ├── fa-regular-400.woff2
-│   │       ├── fa-solid-900.eot
-│   │       ├── fa-solid-900.svg
-│   │       ├── fa-solid-900.ttf
-│   │       ├── fa-solid-900.woff
-│   │       └── fa-solid-900.woff2
-│   ├── image
-│   │   ├── bg.png
-│   │   ├── login
-│   │   │   ├── google-login.png
-│   │   │   ├── login-frame-sm.png
-│   │   │   ├── login-frame.png
-│   │   │   ├── register-frame-sm.png
-│   │   │   └── register-frame.png
-│   │   └── member
-│   │       ├── fun00.png
-│   │       ├── fun01.png
-│   │       ├── fun02.png
-│   │       ├── fun03.png
-│   │       ├── fun04.png
-│   │       ├── google-login.png
-│   │       ├── item001.jpg
-│   │       └── member-img.png
-│   ├── login
-│   │   ├── forgetPwd.html
-│   │   ├── forgetPwdMailSent\ .html
-│   │   ├── loginindex.html
-│   │   └── register.html
-│   └── member
-│       ├── memberEdit.html
-│       ├── memberEditSuccess.html
-│       ├── memberFavList.html
-│       ├── memberOder.html
-│       ├── memberPwdEdit.html
-│       ├── memberPwdEditSuccess.html
-│       └── memberindex.html
-├── react-frontend
-│   ├── README.md
-│   ├── package.json
-│   ├── public
-│   │   ├── favicon.ico
-│   │   ├── index.html
-│   │   ├── logo192.png
-│   │   ├── logo512.png
-│   │   ├── manifest.json
-│   │   └── robots.txt
-│   ├── src
-│   │   ├── App.js
-│   │   ├── components
-│   │   │   ├── Breadcrumbs.js
-│   │   │   ├── Button.js
-│   │   │   ├── Footer.js
-│   │   │   └── Navbar.js
-│   │   ├── index.js
-│   │   ├── pages
-│   │   │   ├── About.js
-│   │   │   ├── cart
-│   │   │   ├── game
-│   │   │   ├── index.js
-│   │   │   ├── member
-│   │   │   ├── message
-│   │   │   ├── products
-│   │   │   └── reservation                                 #預約頁面 待更新
-│   │   │       ├── ReservationsIndex.js
-│   │   │       ├── components
-│   │   │       │   ├── Button.js
-│   │   │       │   ├── Calendar-unfinished
-│   │   │       │   │   ├── DatePicker.js
-│   │   │       │   │   └── datePicker.css
-│   │   │       │   ├── boardingPass
-│   │   │       │   │   ├── BoardingPass.js
-│   │   │       │   │   ├── BoardingPassMobile.js
-│   │   │       │   │   ├── BoardingPassPc.js
-│   │   │       │   │   ├── boardingPass.css
-│   │   │       │   │   └── boardingPassMobile.css
-│   │   │       │   ├── peopleRadioButton
-│   │   │       │   │   ├── PeopleRadioButton.js
-│   │   │       │   │   ├── PeopleSelect.js
-│   │   │       │   │   └── peopleRadioButton.css
-│   │   │       │   ├── stepCards
-│   │   │       │   │   ├── Carousel.js
-│   │   │       │   │   ├── StepCard.css
-│   │   │       │   │   └── StepCard.js
-│   │   │       │   └── storeInfo
-│   │   │       │       ├── Store.js
-│   │   │       │       ├── StoreInfo.js
-│   │   │       │       ├── TimeButton.js
-│   │   │       │       ├── store.css
-│   │   │       │       └── timeButton.css
-│   │   │       ├── images
-│   │   │       │   ├── astronaut.svg
-│   │   │       │   ├── boardingPass.png
-│   │   │       │   ├── boardingPassMobile.png
-│   │   │       │   ├── boardingPassStamp.png
-│   │   │       │   ├── boardingPassStampMobile.png
-│   │   │       │   ├── flat.svg
-│   │   │       │   ├── pricing.png
-│   │   │       │   ├── step1.png
-│   │   │       │   ├── step2.png
-│   │   │       │   ├── step3.png
-│   │   │       │   └── step4.png
-│   │   │       ├── index.js
-│   │   │       ├── orderData.js
-│   │   │       ├── stepData.js
-│   │   │       └── storeData.js
-│   │   └── styles
-│   │       └── global.scss                                 #共用的scss檔
-│   └── yarn.lock
-└── sql
-    ├── boardgame.sql                                       #共用的database
-    ├── categories.sql
-    ├── delivery_types.sql
-    ├── favlist.sql
-    ├── item_lists.sql
-    ├── items.sql
-    ├── members.sql
-    ├── orders.sql
-    ├── payment_types.sql
-    ├── reservations.sql
-    └── store.sql
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src                                         #詳細見下圖
+│   ├── App.js
+│   ├── components                              #共用元件
+│   ├── hooks                                   #custom hooks
+│   ├── index.js
+│   └── pages                                   #放大家分別的資料夾
+│       ├── reservations                        #預約
+│       ├── member                              #會員
+│       ├── game                                #遊戲
+│       ├── cart                                #購物車
+│       ├── items                               #商品
+│       ├── message                             #留言板
+│       ├── About.js                            #關於我們
+│       └── Homepage.js                         #首頁的頁面元件(如果需要 再建成另個資料夾)
+└── yarn.lock
 ```
-# 20210702
+
+<br>
+
+
+- 前端資料夾src架構
 ```
 .
-├── RESTful.txt
-├── backend
-│   └── images
-├── frontend
-│   ├── README.md
-│   ├── package.json
-│   ├── public
-│   │   ├── favicon.ico
-│   │   ├── fonts
-│   │   ├── index.html
-│   │   ├── logo192.png
-│   │   ├── logo512.png
-│   │   ├── manifest.json
-│   │   └── robots.txt
-│   ├── src
-│   │   ├── App.js
-│   │   ├── components
-│   │   │   ├── Buttons.js
-│   │   │   ├── Footer.js
-│   │   │   └── Navbar.js
-│   │   ├── index.js
-│   │   ├── pages
-│   │   │   ├── About.js
-│   │   │   ├── cart
-│   │   │   │   └── CartIndex.js
-│   │   │   ├── game
-│   │   │   │   └── GameIndex.js
-│   │   │   ├── index.js
-│   │   │   ├── member
-│   │   │   │   └── MemberIndex.js
-│   │   │   ├── message
-│   │   │   │   └── MessageIndex.js
-│   │   │   ├── products
-│   │   │   │   └── ProductsIndex.js
-│   │   │   └── reservation
-│   │   │       └── ReservationIndex.js
-│   │   └── styles
-│   │       └── global.scss
-│   └── yarn.lock
-└── mysql
+├── App.js                                      #放大家的index元件
+├── components                                  #共用元件
+│   ├── Breadcrumbs.js
+│   ├── Button.js
+│   ├── Footer.js
+│   └── Navbar.js
+├── hooks                                       #我寫的custom hooks 回傳當前螢幕寬度
+│   └── useScreen.js
+├── index.js
+├── pages                                       #每個功能一個資料夾
+│   ├── About.js
+│   ├── Homepage.js                             #首頁的頁面元件(如果需要 再建成另個資料夾)
+│   ├── cart                                    #購物車
+│   │   └── CartIndex.js
+│   ├── game                                    #遊戲
+│   │   └── GameIndex.js
+│   ├── items                                   #商品
+│   │   └── ItemIndex.js
+│   ├── member                                  #會員
+│   │   └── MemberIndex.js
+│   ├── message                                 #留言板
+│   │   └── MessageIndex.js
+│   └── reservations                            #預約
+│       ├── ReservationIndex.js
+│       ├── components
+│       │   ├── Button.js                       #這個其實已經算是共用元件了
+│       │   ├── SelectButton.js
+│       │   ├── boardingPass
+│       │   │   ├── BoardingPass.js
+│       │   │   ├── BoardingPassMobile.js
+│       │   │   ├── BoardingPassPc.js
+│       │   │   ├── boardingPass.css
+│       │   │   └── boardingPassMobile.css
+│       │   ├── button.css
+│       │   ├── calendar
+│       │   │   ├── DatePicker.js
+│       │   │   └── datePicker.css
+│       │   ├── peopleSelect
+│       │   │   ├── PeopleButtonMobile.js
+│       │   │   ├── PeopleRadioButton.js
+│       │   │   ├── PeopleSelect.js
+│       │   │   └── peopleRadioButton.css
+│       │   ├── stepCards
+│       │   │   ├── Carousel.js
+│       │   │   ├── StepCard.css
+│       │   │   └── StepCard.js
+│       │   ├── storeInfo
+│       │   │   ├── Store.js
+│       │   │   ├── StoreInfo.js
+│       │   │   ├── TimeButton.js
+│       │   │   ├── store.css
+│       │   │   └── timeButton.css
+│       │   └── storeSelectButtons
+│       │       ├── StoreSelectButtons.js
+│       │       └── storeSelect.css
+│       ├── images
+│       │   ├── allStore.svg
+│       │   ├── astronaut.svg
+│       │   ├── boardingPass.png
+│       │   ├── boardingPassMobile.png
+│       │   ├── boardingPassStamp.png
+│       │   ├── boardingPassStampMobile.png
+│       │   ├── daanStore.svg
+│       │   ├── flat.svg
+│       │   ├── pricing.png
+│       │   ├── songShanStore.svg
+│       │   ├── step1.png
+│       │   ├── step2.png
+│       │   ├── step3.png
+│       │   └── step4.png
+│       ├── index.js
+│       ├── orderData.js
+│       ├── pages
+│       │   ├── BookingConfirm.js
+│       │   ├── BookingProcess.js
+│       │   ├── BookingStep.js
+│       │   ├── BookingSuccess.js
+│       │   ├── bookingConfirm.css
+│       │   ├── bookingProcess.css
+│       │   └── bookingStep.css
+│       ├── stepData.js
+│       └── storeData.js
+└── styles
+    └── global.scss
 
 ```
+<br>
+- 後端資料夾架構 記得要自己加個.env檔案
+
+```
+.
+├── app.js                                          #import自己的route到這
+├── bin
+│   └── www                                         #設定port
+├── controllers
+│   ├── booking.js                                  #未來會把route裡面的function拆到這
+├── database
+│   ├── db.connect.js
+│   └── seeds                                       #for seeding database
+│       └── reservations.js                         #add 100 booking records to db
+├── package-lock.json
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── booking.js                                  #預約
+│   ├── index.js                                    #對應到下面的normal route: 首頁、關於我們、會員登入etc
+│   ├── cart.js                                     #對應到下面的cart route
+│   ├── coupon.js                                   #折價卷 下面還沒列 
+│   ├── items.js                                    #對應到下面的商品route
+│   ├── message.js                                  #對應到留言板route
+│   └── user.js                                     #對應到下面的會員中心route
+├── views                                           #這個來亂的 應該不會用到
+│   ├── error.jade
+│   ├── index.jade
+│   └── layout.jade
+└── yarn.lock
+
+```
+
 <br/>
 <br/>
 
-# 後端路由REST API
+# 後端路由REST API (參考用 預約目前已確定)
 
 ```
 -------------------------------------------------------------------------
@@ -288,10 +219,10 @@ POST	  /checkout	              送出訂單資料
 Reservation Route
 -------------------------------------------------------------------------
 [Method]  [Route]
-GET       /booking-steps          預約流程介紹
-GET       /booking                預約介面
-POST	  /booking	              送出預約資料
-GET	      /booking/success	      預約成功頁面
+GET       /booking/steps              預約流程介紹
+GET       /booking                    預約介面
+POST	  /booking	                  送出預約資料
+GET	      /booking/success/:id	      預約成功頁面
 
 
 -------------------------------------------------------------------------

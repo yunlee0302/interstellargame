@@ -1,22 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import BookingStep from './pages/reservations/pages/BookingStep'
-import BookingProcess from './pages/reservations/pages/BookingProcess'
-import BookingConfirm from './pages/reservations/pages/BookingConfirm'
-import BookingSuccess from './pages/reservations/pages/BookingSuccess'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
+// import 路徑： './pages/你負責的功能/你的index'
+import Homepage from './pages/Homepage'
+import About from './pages/About'
+import ReservationIndex from './pages/reservations/ReservationIndex'
+import MemberIndex from './pages/reservations/MemberIndex'
+import ItemIndex from './pages/items/ItemIndex'
+import CartIndex from './pages/cart/CartIndex'
+import MessageIndex from './pages/message/MessageIndex'
+
 
 const App = () => {
+
+  // 會員登入： 1. 在這邊設立狀態然後分別傳下去嗎？ 2. 有沒有其他做法
+  const [auth, setAuth] = useState(false)
+
   return (
     <Router>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Switch>
-        <Route path="/booking/steps" exact component={BookingStep} />
-        <Route path="/booking" exact component={BookingProcess} />
-        <Route path="/booking/confirm" exact component={BookingConfirm} />
-        <Route path="/booking/success/:id" component={BookingSuccess} />
+        
+        <Homepage />
+        <About />
+        <MemberIndex />
+        <ReservationIndex />
+        <ItemIndex />
+        <CartIndex />
+        <MessageIndex/>
+
       </Switch>
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   )
 }
