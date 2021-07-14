@@ -192,9 +192,9 @@ GET	      /users/:id/orders	            會員訂單紀錄一覽
 GET	      /users/:id/orders/:orderid	單筆訂單查詢
 
 #預約相關
-GET	      /users/:id/booking	        會員預約紀錄一覽
-GET	      /users/:id/booking/:id	    查詢單筆預約詳情
-DELETE	  /users/:id/booking/:id	    取消預約
+GET	      /users/booking	            會員預約紀錄一覽
+GET	      /users/booking/:id    	    查詢單筆預約詳情
+DELETE	  /users/booking/:id	        取消預約
 
 -------------------------------------------------------------------------
 Products Route
@@ -223,6 +223,11 @@ GET       /booking/steps              預約流程介紹
 GET       /booking                    預約介面
 POST	  /booking	                  送出預約資料
 GET	      /booking/success/:id	      預約成功頁面
+
+#會員相關
+GET	      /users/booking	            會員預約紀錄一覽
+GET	      /users/booking/:id    	    查詢單筆預約詳情
+DELETE	  /users/booking/:id	        取消預約
 
 
 -------------------------------------------------------------------------
