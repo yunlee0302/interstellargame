@@ -18,22 +18,22 @@ router.get('/about', function (req, res, next) {
 
 /* GET login page. */
 router.get('/login', function (req, res, next) {
-  
+  console.log(process.env.PASSWORD);
 });
 
 /* POST login page. */
 router.post('/login', function (req, res, next) {
-  
+  console.log(process.env.PASSWORD);
 });
 
 /* GET register page. */
 router.get('/register', function (req, res, next) {
-  
+  console.log(process.env.PASSWORD);
 });
 
 /* POST register page. */
 router.post('/register', function (req, res, next) {
-  
+  console.log(process.env.PASSWORD);
 });
 
 
