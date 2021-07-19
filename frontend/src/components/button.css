@@ -1,0 +1,53 @@
+/* .general-button {
+  min-width: 150px;
+  color: var(--white);
+  padding: 10px 20px;
+  border: transparent;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #37afff, #2e94e2);
+  box-shadow: 2px 2px 2px #2985cb, -2px -2px 2px #3dc3ff;
+}
+.button-disabled {
+  background: #878787;
+  box-shadow: 2px 2px 2px #7e7e7e, -2px -2px 2px #909090;
+} */
+/* ---------- */
+.btn {
+  width: 175px;
+  height: 55px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.booking {
+  background: #33a4fb;
+}
+.booking:hover {
+  background: transparent;
+  border: 5px solid #33a4fb;
+  color: white;
+}
+.items:hover,
+.cart:hover {
+  background-color: transparent;
+  border: 5px solid #9c64a5;
+  color: white;
+}
+.goHome:hover,
+.goBack:hover {
+  background-color: transparent;
+  border: 5px solid #ce93d7;
+  color: white;
+}
+
+.items,
+.cart {
+  background-color: #9c64a5;
+}
+.goHome,
+.goBack {
+  background-color: #ce93d7;
+}
