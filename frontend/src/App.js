@@ -12,11 +12,20 @@ import ReservationIndex from './pages/reservations/ReservationIndex'
 // import ItemIndex from './pages/items/ItemIndex'
 // import CartIndex from './pages/cart/CartIndex'
 // import MessageIndex from './pages/message/MessageIndex'
+//Hannah
+import MemberIndex from './pages/member/MemberIndex'
+import MemberEdit from './pages/member/MemberEdit'
+import MemberFavList from './pages/member/MemberFavList'
+import MemberOrder from './pages/member/MemberOrder'
+import MemberCoupon from './pages/member/MemberCoupon'
+import MemberPwdEdit from './pages/member/MemberPwdEdit'
+import MemberPwdEditSuccess from './pages/member/MemberPwdEditSuccess'
+import LoginIndex from './pages/login/LoginIndex'
+import Register from './pages/login/Register'
+import ForgetPwd from './pages/login/ForgetPwd'
+import ForgetPwdMailSent from './pages/login/ForgetPwdMailSent'
 
 const App = () => {
-  // 會員登入： 1. 在這邊設立狀態然後分別傳下去嗎？ 2. 有沒有其他做法
-  const [auth, setAuth] = useState(false)
-
   return (
     <Router>
       <Navbar />
@@ -24,6 +33,40 @@ const App = () => {
         {/* <Homepage />
         <About />
         <MemberIndex /> */}
+        {/* Hannah */}
+        <Route path="/login">
+          <LoginIndex />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/forgetPwd">
+          <ForgetPwd />
+        </Route>
+        <Route path="/forgetPwdMailSent">
+          <ForgetPwdMailSent />
+        </Route>
+        <Route path="/member/memberPwdEditSuccess">
+          <MemberPwdEditSuccess />
+        </Route>
+        <Route path="/member/memberPwdEdit">
+          <MemberPwdEdit />
+        </Route>
+        <Route path="/member/memberCoupon">
+          <MemberCoupon />
+        </Route>
+        <Route path="/member/memberOrder">
+          <MemberOrder />
+        </Route>
+        <Route path="/member/memberEdit">
+          <MemberEdit />
+        </Route>
+        <Route path="/member/memberFavList">
+          <MemberFavList />
+        </Route>
+        <Route path="/member">
+          <MemberIndex />
+        </Route>
         <ReservationIndex />
         {/* <ItemIndex />
         <CartIndex />
