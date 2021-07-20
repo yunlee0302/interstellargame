@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import './styles/memberEdit.scss'
-import SelectButton from './components/SelectButton'
 
 //pop up套件
 import swal from 'sweetalert'
@@ -14,9 +13,11 @@ import googleLogin from './images/google-login.png'
 const moment = require('moment-timezone')
 
 function MemberEdit(props) {
-  // 從localStorage抓取該會員ID
+  // 從localStorage抓取該會員所有資料
   const userId = JSON.parse(localStorage.getItem('userId'))
-
+  // console.log(userData)
+  // const userB = moment(userData.userBirthday).format('YYYY-MM-DD')
+  // console.log(userB)
   const [nickname, setNickname] = useState('')
   const [name, setName] = useState('')
   const [gender, setGender] = useState('')
@@ -24,53 +25,6 @@ function MemberEdit(props) {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
-
-  const [userDataIsExist, setUserDataIsExist] = useState(true)
-
-  // 載入會員資料
-  async function getUserFromServer() {
-    // 開啟載入指示
-
-    // 連接的伺服器資料網址
-    const url = 'http://localhost:3000/members/getUser/' + userId
-
-    // 注意header資料格式要設定，伺服器才知道是json格式
-    const request = new Request(url, {
-      method: 'GET',
-      headers: new Headers({
-        Accept: 'application/json',
-        'Content-Type': 'appliaction/json',
-      }),
-    })
-
-    const response = await fetch(request)
-    const data = await response.json()
-    console.log('data', data)
-    // 設定資料
-
-    // const newData = data
-    // console.log(newData)
-
-    setNickname(data.userNickname)
-    setName(data.userName)
-    setGender(data.userGender)
-    setBirthday(data.userBirthday)
-    setEmail(data.userEmail)
-    setPhone(data.userPhone)
-    setAddress(data.userAddress)
-
-    // 如果從伺服器回傳的資料沒有id值
-    if (!data.userId) {
-      setUserDataIsExist(false)
-      return
-    }
-    console.log('data:', data)
-  }
-
-  // 一開始就會開始載入資料
-  useEffect(() => {
-    getUserFromServer()
-  }, [])
 
   // 更新會員資料
   async function updateUserToSever() {
@@ -114,6 +68,16 @@ function MemberEdit(props) {
         button: false,
         timer: 3000,
       })
+
+      // 如果登入成功
+      // 改動react App母層變數以紀錄現在的用戶登入狀態
+      // setCurrentUser(data.userId)
+      // localStorage.setItem('userData', JSON.stringify(data))
+      // console.log(
+      //   'localStorge:',
+      //   localStorage.getItem('userId', JSON.stringify(data.userId))
+      // )
+      // setLoginmode(true)
     } else {
       swal({
         text: '個人資料儲存失敗，請重新編輯',
@@ -160,15 +124,6 @@ function MemberEdit(props) {
 
   //   console.log('伺服器回傳的json資料', data)
   // }
-
-  // 轉換日期格式
-  function convert_date(date_text) {
-    // date_text
-    const myDate = new Date(date_text)
-    const date_text_new = myDate.toISOString().substring(0, 10)
-    return `${date_text_new}`
-  }
-
   const display = (
     <>
       ;
@@ -239,7 +194,7 @@ function MemberEdit(props) {
                   className="form-control transparent-input "
                   id="gender"
                   placeholder="E-mail"
-                  value={this.state.value}
+                  value={gender}
                   onChange={(event) => {
                     setGender(event.target.value)
                   }}
@@ -248,7 +203,7 @@ function MemberEdit(props) {
                   <option value="female">女</option>
                 </select>
               </div>
-              <small id="gender" className="form-text hidden" />
+              {/* <small id="gender" className="form-text hidden" /> */}
             </div>
             <div className="input-box py-4">
               <label htmlFor="gender">生日*</label>
@@ -257,7 +212,7 @@ function MemberEdit(props) {
                   type="date"
                   className="form-control transparent-input "
                   id="gender"
-                  value={convert_date(birthday)}
+                  value={birthday}
                   pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
                   onChange={(event) => {
                     setBirthday(event.target.value)

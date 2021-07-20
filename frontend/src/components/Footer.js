@@ -1,8 +1,8 @@
 import React from 'react'
 import './footer.css'
 
-import location from '../image/svg/icon-location.svg'
-import phone from '../image/svg/icon-phone.svg'
+import location from '../pages/image/svg/icon-location.svg'
+import phone from '../pages/image/svg/icon-phone.svg'
 
 const Footer = () => {
   return (

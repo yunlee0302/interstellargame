@@ -153,8 +153,6 @@ function Shoppingcart3(props) {
     setTimeout(() => {
       setDataLoading(false)
     }, 500)
-     //把購物車清空
- 
   }
   const loading = (
     <>
@@ -375,7 +373,6 @@ function Shoppingcart3(props) {
           onClick={() => {
             props.history.push('/Shoppingcart4')
             addtextToSever()
-            localStorage.removeItem('cart')
           }}
         >
           送出訂單
