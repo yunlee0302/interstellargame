@@ -1,0 +1,101 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #02021e;
+  position: fixed;
+  justify-content: center;
+}
+.navbar-c {
+  width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 20%;
+  height: 100%;
+  padding-top: 25px;
+}
+.navbar-ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* .navbar-nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+} */
+.nav-item {
+  height: 100%;
+  /* line-height: 100px; */
+  list-style: none;
+}
+.nav-item a {
+  height: 100%;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.active {
+  background-color: #b388fe;
+  transition: 0.5s;
+}
+.nav-item:hover {
+  /* background-color: #b388fe; */
+  padding-bottom: 20px;
+  transition: 0.5s;
+}
+.nav-item a:hover {
+  background-color: #b388fe;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  transition: 0.5s;
+}
+.right-items {
+  display: flex;
+  align-items: center;
+}
+.shopping-cart {
+  width: 5%;
+  position: relative;
+  align-items: center;
+}
+.shopping-cart img {
+  height: 25px;
+  padding: 0 20px;
+}
+.shopping-count {
+  height: fit-content;
+  padding: 0px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 100%;
+  background-color: #ff695e;
+  position: absolute;
+  top: -10px;
+  left: 45px;
+}
+.login-registered {
+  background: transparent;
+  width: 125px;
+  height: 55px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: 80px;
+  align-items: center;
+}
+.login-registered:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+.login-registered img {
+  width: 120px;
+  height: 50px;
+}
