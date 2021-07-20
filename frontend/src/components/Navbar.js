@@ -66,7 +66,7 @@ const Navbar = () => {
             <div className="btn-login-registered">
               <Button
                 className="login-registered"
-                link="/pages/member/MemberIndex"
+                link="/login"
                 buttonText="登入 / 註冊"
               />
               {/* <div class="memberLogin"></div> */}
