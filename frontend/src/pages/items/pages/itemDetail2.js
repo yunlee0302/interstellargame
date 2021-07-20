@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 // import "../assets/css/bootstrap.min.css"
 import "./itemDetail2.css"
 import itemImage from '../img/13道線索.jpg'
@@ -12,14 +11,9 @@ import heartImage from '../img/heart.png'
 import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from "../components/itemCards/ItemCard"
-import { Modal, Button } from 'react-bootstrap'
-// import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../itemData"
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
 
-// import {Carousel} from "react-bootstrap";
-// // 引入图片
-// import image1 from "../img/1.png";
-// import image2 from "../img/2.jpg";
+
 const midImage = {
     width: '80px',
     margin: '5px'
@@ -30,67 +24,16 @@ const itemStyle = {
 }
 
 const ItemDetail = (props) => {
-    const [Mycart, setMycart] = useState([])
-    const [show, setShow] = useState(false)
-    const [productName, setProductName] = useState('')
-  
-    const handleClose = () => setShow(false)
-    const handleShow = () => setShow(true)
-  
-    const updateCartToLocalStorage = (item) => {
-      const currentCart = JSON.parse(localStorage.getItem('cart')) || []
-  
-      // find if the product in the localstorage with its id
-      const index = currentCart.findIndex((v) => v.itemId === item.itemId)
-      console.log(currentCart)
-      // found: index! == -1id\
-      if (index > -1) {
-        //currentCart[index].amount++
-        setProductName('已加入過此商品')
-        handleShow()
-        return
-      } else {
-        currentCart.push(item)
-      }
-  
-      localStorage.setItem('cart', JSON.stringify(currentCart))
-  
-      // 設定資料
-      setMycart(currentCart)
-      setProductName('產品：' + item.name + '已成功加入購物車')
-      handleShow()
-    }
-    const messageModal = (
-        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{productName} </Modal.Body>
-        <Modal.Footer>
-          <Button   className="button55" onClick={() => {
-              props.history.push('/item-list')
-            }}>
-            繼續購物
-          </Button>
-          <Button  className="button66"
-            variant="primary"
-            onClick={() => {
-              props.history.push('/Shoppingcart1')
-            }}
-          >
-            前往結帳
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    )
-    const display = (
+    const {
+    } = props
+    return (
         <>
             <div className="itemDetail">
                 <div className="container">
                     <div className="">
                         <div className="itemDetail-card-body row">
                             <div className="itemDetail-left text-center ">
-                               <div className="itemDetailA mb-1">
+                                <div className="itemDetailA mb-1">
                                     <img src={itemImage} alt="" />
                                 </div>
                                 <div className="container">
@@ -99,7 +42,7 @@ const ItemDetail = (props) => {
                                             <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
                                         </div>
                                         <div>
-                                        <img src={itemImage} style={midImage} alt="" />
+                                            <img src={itemImage} style={midImage} alt="" />
                                         </div>
                                         <div>
                                             <img src={itemImage1} style={midImage} alt="" />
@@ -119,7 +62,7 @@ const ItemDetail = (props) => {
                                     </div>
                                 </div>
                             </div>
-                          {/* <div className="row">
+                            {/* <div className="row">
                                 <div className="">
                                     <div className="">
                                         <div className="divimg" id="img1"><img src={itemImage} className="bigimg3 active" alt="" /></div>
@@ -139,23 +82,6 @@ const ItemDetail = (props) => {
                                     </div>
                                 </div>
                             </div> */}
-                            {/* <div id="tab-demo">
-                                <ul class="tab-title">
-                                    <li><a href="#tab01">tab01</a></li>
-                                    <li><a href="#tab02">tab02</a></li>
-                                    <li><a href="#tab03">tab03</a></li>
-                                </ul>
-                                <div id="tab01" class="tab-inner">
-                                    <p>tab01的內容</p>
-                                </div>
-                                <div id="tab02" class="tab-inner">
-                                    <p>tab02的內容</p>
-                                </div>
-                                <div id="tab03" class="tab-inner">
-                                    <p>tab03的內容</p>
-                                </div>
-                            </div> */}
-
                             <div className="itemDetail-middle col-12 col-lg-6">
                                 <div className="d-flex">
                                     <div className="info-title p-1">000002</div>
@@ -172,30 +98,16 @@ const ItemDetail = (props) => {
                                 <div className="d-flex">
                                     <div className="card-text2 p-1">特價NT$990</div>
                                 </div>
-                            
                                 <div className="d-flex cardB">
-
-                                <ul className="counter">
+                                    {/* <button className="btn1">-</button>
+                                    <input type="text" className="input px-0" />
+                                    <button className="btn2">+</button> */}
+                                    <ul className="counter">
                                         <li id="minus" className="btn11"><input type="button" onclick="minuser()" value="-" className="button11" /></li>
                                         <li id="countnum" className="btn12">1</li>
                                         <li id="plus" className="btn13"><input type="button" onclick="adder()" value="+" className="button13" /></li>
                                     </ul>
-                                 
-                                    <button
-                    type="button"
-                  
-                    onClick={() => {
-                      updateCartToLocalStorage({
-                        itemId: 101,
-                        name: '13道線索',
-                        amount: 1,
-                        price: 990,
-                     
-                      })
-                    }}
-                  >
-                    加入購物車
-                  </button>
+                                    <button className="join ml-2">加入購物車</button>
                                 </div>
                             </div>
                             <div className="itemDetail-right">
@@ -207,7 +119,7 @@ const ItemDetail = (props) => {
             </div>
             <div className="container">
                 <div className="row itemcontent">
-                <p>數起兇殘的犯罪案件震驚了1899年的倫敦，<br />
+                    <p>數起兇殘的犯罪案件震驚了1899年的倫敦，<br />
                         謎樣的案情掩蓋了真相，蘇格蘭警場在黑暗中摸索，號召一群優秀的偵探前來協助破案。<br />
                         每位偵探必須利用敏銳的直覺，從13道線索中找出蛛絲馬跡，負責解開自己的謎題，比其他人更快偵破自己的案件！
                     </p>
@@ -220,7 +132,6 @@ const ItemDetail = (props) => {
                     </p>
                 </div>
             </div>
-          
             <div className="container">
                 <div className="">
                     <div className="thumbnail text-center">
@@ -241,14 +152,6 @@ const ItemDetail = (props) => {
             </div>
         </>
     )
-return (
-    <>
-      {messageModal}
-      {display}
-    </>
-  )
 }
-
-
 
 export default ItemDetail

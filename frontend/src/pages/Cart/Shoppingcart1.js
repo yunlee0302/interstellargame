@@ -7,51 +7,19 @@ import './Shoppingcart2.css'
 import grayline from './img/grayline.svg'
 import launch from './img/launch.svg'
 import launch2 from './img/launch2.svg'
-
 function Shoppingcart1(props) {
-  const [clickpopup, setclickpopup] = useState(false)
   console.log(props)
   const [ItemOne, setItemOne] = useState(1)
   const [ItemTwo, setItemTwo] = useState(1)
   const [ItemThree, setItemThree] = useState(1)
   const {} = props
-  const [show, setshow] = useState(1)
-  const [handclose, sethandclose] = useState(1)
-
   const currentCart = JSON.parse(localStorage.getItem('cart')) || ''
   // 代表每個產品的單價
   const [mycart, setMycart] = useState([])
   const [dataLoading, setDataLoading] = useState(false)
   const [mycartDisplay, setMycartDisplay] = useState([])
   const { updateCartNum } = props
-  const messageModal = (
-    <Modal show={show} onHide={handclose} backdrop="static" keyboard={false}>
-      <Modal.Header closeButton>
-        <Modal.Title></Modal.Title>
-      </Modal.Header>
-      <Modal.Body>“購物車是空的”</Modal.Body>
-      <Modal.Footer>
-        <Button
-          className="button55"
-          onClick={() => {
-            props.history.push('/item-list')
-          }}
-        >
-          繼續購物
-        </Button>
-        <Button
-          className="button66"
-          variant="primary"
-          onClick={() => {
-            props.history.push('/Shoppingcart1')
-          }}
-        >
-          前往結帳
-        </Button>
-      </Modal.Footer>
-    </Modal>)
   function getCartFromLocalStorage() {
-
     // 開啟載入的指示圖示
     setDataLoading(true)
 
@@ -115,7 +83,6 @@ function Shoppingcart1(props) {
 
     localStorage.setItem('cart', JSON.stringify(currentCart))
 
-    
     // 設定資料
     setMycart(currentCart)
   }
@@ -152,14 +119,7 @@ function Shoppingcart1(props) {
     }
     // updateCartNum()
   }
-  if (
-    !localStorage.getItem('cart') ||
-    JSON.parse(localStorage.getItem('cart')).length === 0
-  ) {
-  
-    
-  }
-  
+
   // 計算總價
   const loading = (
     <>
@@ -175,25 +135,38 @@ function Shoppingcart1(props) {
 
   return (
     <>
-   
-      <div className="cart1title1 p-3 mt-5">
-        <p>購物車</p>
+      <div className="container">
+        <div className="top m-5">
+          <img src={launch} alt width={100} height={100} />
+
+          <img src={grayline} alt width={200} height={100} />
+          <img src={launch2} alt width={100} height={100} />
+          <img src={grayline} alt width={200} height={100} />
+          <img src={launch2} alt width={100} height={100} />
+        </div>
+        <div className="top1 mb-4 ">
+          <p2>購物明細</p2>
+          <p3>付款資料</p3>
+          <p3>訂單資訊</p3>
+        </div>
       </div>
-    
+      <div className="cart1title1 p-3 mt-5">
+        <p>購物明細</p>
+      </div>
+
       <table className="cart1title2">
         <tbody>
           <tr>
             <th width="100px "></th>
-            <th width="150px"><p>商品名稱</p></th>
-            <th width="250px"><p>商品單價</p></th>
-            <th width="200px"><p>商品數量</p></th>
-            <th width="200px"><p>金額小計</p></th>
+            <th width="150px">商品名稱</th>
+            <th width="250px">商品單價</th>
+            <th width="200px">商品數量</th>
+            <th width="200px">金額小計</th>
             <th width="100px" />
           </tr>
           {mycart.map((item, index) => {
             return (
               <tr key={item.itemId}>
-           
                 <td
                   id={item.itemId}
                   onClick={() => {
@@ -217,9 +190,8 @@ function Shoppingcart1(props) {
                 <td height="130px">{item.name}</td>
                 <td>{item.price}</td>
                 <td>
-                
-                  <div className="counter2  ">
-                    <li  class="ccc" id="minus">
+                  <div className="counter  ">
+                    <li className="ccc" id="minus">
                       <a
                         href="#/"
                         onClick={() => {
@@ -228,7 +200,6 @@ function Shoppingcart1(props) {
                           updateCartToLocalStorage(item, false)
                         }}
                       >
-
                         <input
                           type="button"
                           onclick="minuser()"
@@ -237,7 +208,10 @@ function Shoppingcart1(props) {
                       </a>
                     </li>
 
-                    <li  id="countnum2"> {item.amount}</li>
+                    <li className="" id="countnum">
+                      {' '}
+                      {item.amount}
+                    </li>
 
                     <li id="plus">
                       <a
@@ -267,7 +241,6 @@ function Shoppingcart1(props) {
               </tr>
             )
           })}
-        
         </tbody>
       </table>
       <div className="end  p-5 mb-5">

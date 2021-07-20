@@ -90,7 +90,7 @@ export default class Shoppingcart4 extends React.Component {
             </div>
             <div className="cart4title1 ">
               <div className="cart4title2 ">
-                <div className="m-4"><p>訂單編號：{data.orderId}</p></div>
+                <div className="m-4">訂單編號：{data.orderId}</div>
                 <div className=" frame pl-4 pt-4 ">
                   <p> 收件人：{data.orderName}</p>
                   <br></br>
@@ -120,16 +120,16 @@ export default class Shoppingcart4 extends React.Component {
                 <tr className="cart4th ">
                   <th className="cart4th " width="120px" />
                   <th className="cart4th " width="200px">
-                   <p>商品名稱</p> 
+                    商品名稱
                   </th>
                   <th className="cart4th " width="200px">
-                  <p>商品單價</p> 
+                    商品單價
                   </th>
                   <th className="cart4th " width="180px">
-                  <p>商品數量</p> 
+                    商品數量
                   </th>
                   <th className="cart4th " width="200px">
-                  <p>金額小計</p> 
+                    金額小計
                   </th>
                 </tr>
 
