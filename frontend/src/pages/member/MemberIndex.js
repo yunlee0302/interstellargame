@@ -13,7 +13,7 @@ import fun03 from './images/fun03.png'
 import fun04 from './images/fun04.png'
 
 function MemberIndex(props) {
-  // 從localStorage抓取會員ID
+  // 從localStorage抓取該會員所有資料
   const userId = JSON.parse(localStorage.getItem('userId'))
 
   const [nickname, setNickname] = useState('')
@@ -47,37 +47,29 @@ function MemberIndex(props) {
     console.log('data', data)
     // 設定資料
 
-    // const newData = data
-    // console.log(newData)
-
-    setNickname(data.userNickname)
-    setName(data.userName)
-    setGender(data.userGender)
-    setBirthday(data.userBirthday)
-    setEmail(data.userEmail)
-    setPhone(data.userPhone)
-    setAddress(data.userAddress)
-
     // 如果從伺服器回傳的資料沒有id值
-    if (!data.userId) {
+    if (!data.id) {
       setUserDataIsExist(false)
       return
     }
     console.log('data:', data)
+
+    const newData = data
+    console.log(newData)
+
+    setNickname(newData.userNickname)
+    setName(newData.userName)
+    setGender(newData.userGender)
+    setBirthday(newData.userBirthday)
+    setEmail(newData.userEmail)
+    setPhone(newData.userPhone)
+    setAddress(newData.userAddress)
   }
 
   // 一開始就會開始載入資料
   useEffect(() => {
     getUserFromServer()
   }, [])
-
-  // 轉換日期格式
-  function convert_date(date_text) {
-    // date_text
-    const myDate = new Date(date_text)
-    const date_text_new = myDate.toISOString().substring(0, 10)
-    return `${date_text_new}`
-  }
 
   // 會員登出
   async function logoutToSever() {
@@ -128,7 +120,7 @@ function MemberIndex(props) {
                   <button
                     className="btn my-3"
                     onClick={() => {
-                      props.history.push('/member/memberPwdEdit/' + userId)
+                      props.history.push('/member/memberPwdEdit/')
                     }}
                   >
                     修改密碼
@@ -155,9 +147,14 @@ function MemberIndex(props) {
                   </div>
                 </div> */}
                 <div className="py-2 d-flex">
-                  <div className="info-title p-1">生日</div>
+                  <div
+                    className="info-title p-1"
+                    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                  >
+                    生日
+                  </div>
                   <div className="info-text p-1">
-                    {birthday ? convert_date(birthday) : '未設定'}
+                    {birthday ? birthday : '未設定'}
                   </div>
                 </div>
                 <div className="py-2 d-flex">

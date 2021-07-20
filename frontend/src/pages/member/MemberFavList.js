@@ -1,16 +1,12 @@
 import { React, useState, useEffect } from 'react'
 import { withRouter, Redirect } from 'react-router-dom'
 import './styles/memberFavList.scss'
-
-//pop up套件
-import swal from 'sweetalert'
-
-// images
 import fun00 from './images/fun00.png'
 import fun01 from './images/fun01.png'
 import fun02 from './images/fun02.png'
 import fun03 from './images/fun03.png'
 import fun04 from './images/fun04.png'
+import item001 from './images/item001.jpg'
 
 function MemberFavList(props) {
   const userId = JSON.parse(localStorage.getItem('userId'))

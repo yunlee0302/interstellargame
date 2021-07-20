@@ -5,7 +5,7 @@ function GameAttention() {
     <>
       <div className="attention">
         <div className="attentionTitle">注意事項</div>
-        <div class="attentionContent">
+        <div className="attentionContent">
           <p>1.折價券使用是以每筆訂單為單，每筆訂單限使用一張折價券。</p>
           <p>2.不可與其他優惠方案合併使用。</p>
           <p>

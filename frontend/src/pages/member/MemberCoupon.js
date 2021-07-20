@@ -1,90 +1,27 @@
-import { React, useState, useEffect } from 'react'
+import React from 'react'
 import { withRouter, Redirect } from 'react-router-dom'
 import './styles/memberFavList.scss'
-
-//pop up套件
-import swal from 'sweetalert'
-
-// images
 import fun00 from './images/fun00.png'
 import fun01 from './images/fun01.png'
 import fun02 from './images/fun02.png'
 import fun03 from './images/fun03.png'
 import fun04 from './images/fun04.png'
-import MemberFavList from './MemberFavList'
 
 function MemberCoupon(props) {
-  const userId = JSON.parse(localStorage.getItem('userId'))
-  const [coupon, setCoupon] = useState([])
+  const { auth } = props
 
-  async function getCouponFromServer() {
-    // 連接的伺服器資料網址
-    const url = `http://localhost:3000/members/getCoupon/` + userId
+  if (!auth) return <Redirect to="/login" />
 
-    // 注意header資料格式要設定，伺服器才知道是json格式
-    const request = new Request(url, {
-      method: 'GET',
-      headers: new Headers({
-        Accept: 'application/json',
-        'Content-Type': 'appliaction/json',
-      }),
-    })
-
-    const response = await fetch(request)
-    const data = await response.json()
-    console.log(data)
-    // 設定資料
-    setCoupon(data)
-
-    console.log(data)
-  }
-
-  // 轉換日期格式
-  function convert_date(date_text) {
-    // date_text
-    const myDate = new Date(date_text)
-    const date_text_new = myDate.toISOString().substring(0, 10)
-    return `${date_text_new}`
-  }
-
-  useEffect(() => {
-    getCouponFromServer()
-  }, [])
-
-  const couponDisplay = (
-    <>
-      <div className="container">
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">優惠券名稱</th>
-              <th scope="col">優惠內容</th>
-              <th scope="col">獲得日期</th>
-              {/* <th scope="col">使用期限</th> */}
-              <th scope="col">使用狀況</th>
-            </tr>
-          </thead>
-          <tbody>
-            {coupon.length &&
-              coupon.map((coupon) => {
-                return (
-                  <tr>
-                    <td>{coupon.voucherName}</td>
-                    <td>商城購物結帳金額-{coupon.voucherPrice}元</td>
-                    <td>{convert_date(coupon.created_at)}</td>
-                    {/* <td>2021-07-31</td> */}
-                    <td>{coupon.discountUse === 0 ? '已使用' : '未使用'}</td>
-                  </tr>
-                )
-              })}
-          </tbody>
-        </table>
-      </div>
-    </>
-  )
+  //   if (!auth)
+  //     return (
+  //       <Redirect>
+  //         你沒登入，請連到<Link to="/login">登入頁面</Link>
+  //       </Redirect>
+  //     )
 
   return (
     <>
+      ;
       <div className="container mt-5">
         <div className="member-btn-group text-center row">
           <div
@@ -134,8 +71,27 @@ function MemberCoupon(props) {
             <p className="py-1 m-0 btn-active">我的優惠券</p>
           </div>
         </div>
+        <div className="container">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">優惠券名稱</th>
+                <th scope="col">優惠內容</th>
+                <th scope="col">獲得日期</th>
+                <th scope="col">使用期限</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>6月份小遊戲優惠券</td>
+                <td>商城購物結帳金額-100元</td>
+                <td>2021-06-08</td>
+                <td>2021-07-31</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      {couponDisplay}
     </>
   )
 }
