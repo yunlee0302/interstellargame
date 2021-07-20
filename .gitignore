@@ -1,2 +1,7 @@
 .vscode 
 .DS_Store
+frontend/package-lock.json
+frontend/package.json
+frontend/yarn.lock
+frontend/src/index.js
+frontend/src/AppTest.js
