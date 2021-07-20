@@ -4,8 +4,8 @@ import $ from 'jquery'
 import './navbar.css'
 import Button from './Button'
 
-import logo from '../pages/image/svg/logo.svg'
-import icon_shop from '../pages/image/svg/icon-shop.svg'
+import logo from '../image/svg/logo.svg'
+import icon_shop from '../image/svg/icon-shop.svg'
 
 const Navbar = () => {
   useEffect(() => {
@@ -60,13 +60,13 @@ const Navbar = () => {
             <div className="shopping-cart">
               <a href="../pages/cart/CartIndex.js">
                 <img src={icon_shop} alt="" />
-                <span className="shopping-count">0</span>
+                {/* <span className="shopping-count">0</span> */}
               </a>
             </div>
             <div className="btn-login-registered">
               <Button
                 className="login-registered"
-                link="/pages/member/MemberIndex"
+                link="/login"
                 buttonText="登入 / 註冊"
               />
               {/* <div class="memberLogin"></div> */}
