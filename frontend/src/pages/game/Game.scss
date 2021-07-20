@@ -1,8 +1,5 @@
 .gameApp {
   background: url(./img/wp7505888.jpg) center;
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: column;
 }
 
 .gameTitle {
@@ -38,17 +35,16 @@
       font-size: 32px;
       margin-bottom: 40px;
     }
-
     .playNowBtn {
       width: fit-content;
       padding: 15px 60px;
-      margin: 0 auto;
-      background-color: #33a4fb;
-      border-radius: 4px;
-      text-decoration: none;
       color: white;
       font-weight: bold;
       font-size: 24px;
+      margin: 0 auto;
+      background-color: #33a4fb;
+      border-radius: 4px;
+      cursor: pointer;
     }
   }
 }
@@ -56,7 +52,7 @@
 .gameDescription {
   display: flex;
   width: 1140px;
-  margin: 0 auto 150px;
+  margin: 0 auto;
 
   .processContainer {
     color: #ffffff;
@@ -107,13 +103,5 @@
       border: 5px solid #ce93d7;
       border-radius: 5px;
     }
-  }
-}
-
-#gameArea {
-  margin: 0 auto;
-  width: fit-content;
-  canvas {
-    display: block;
   }
 }
