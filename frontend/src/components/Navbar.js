@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="navbar-link" id="navbarText">
             <ul className="navbar-ul mx-auto">
               <li className="nav-item">
-                <a href="/booking">預約艙房</a>
+                <a href="/booking/steps">預約艙房</a>
               </li>
               <li className="nav-item">
                 <a href="/item-list">宇宙市集</a>
