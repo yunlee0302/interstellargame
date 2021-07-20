@@ -9,9 +9,6 @@ import swal from 'sweetalert'
 import memberImg from './images/member-img.png'
 import googleLogin from './images/google-login.png'
 
-// 日期格式套件
-const moment = require('moment-timezone')
-
 function MemberEdit(props) {
   // 從localStorage抓取該會員ID
   const userId = JSON.parse(localStorage.getItem('userId'))
