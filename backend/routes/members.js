@@ -229,6 +229,13 @@ router.get('/getFavlist/:userId', (req, res, next) => {
   executeSQL(User.getUserFavlistByIdSQL(userId), res, 'get', true)
 })
 
+// get 獲取最愛列表，使用會員id
+router.get('/getCoupon/:userId', (req, res, next) => {
+
+  userId = +req.params.userId
+
+  executeSQL(User.getUserCouponByIdSQL(userId), res, 'get', true)
+})
 
 // 上傳圖片
 

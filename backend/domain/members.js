@@ -62,6 +62,15 @@ class User {
     console.log(sql)
     return sql
   }
+  // get 會員優惠券
+  static getUserCouponByIdSQL(id) {
+    let sql = ` SELECT voucher.voucherName, voucher.voucherPrice, discount.created_at
+    FROM voucher
+    LEFT JOIN discount ON discount.voucherId=voucher.voucherId
+    WHERE  discount.userId = ${id}`
+    console.log(sql)
+    return sql
+  }
   
 
 }
