@@ -13,19 +13,19 @@ const Footer = () => {
             <span className="foo-title">探索星際漫遊</span>
             <hr />
             <div className="foo-link">
-              <a href="./Homepage.js">首頁</a>
-              <a href="./message/MessageIndex.js">太空交誼廳</a>
-              <a href="./items/ItemIndex.js">宇宙市集</a>
-              <a href="./game/GameIndex.js">星際任務</a>
+              <a href="/Homepage">首頁</a>
+              <a href="/messageboard">太空交誼廳</a>
+              <a href="/item-list">宇宙市集</a>
+              <a href="/GameProcess">星際任務</a>
             </div>
           </div>
           <div className="foobox1">
             <span className="foo-title">線上服務</span>
             <hr />
             <div className="foo-link">
-              <a href="./member/MemberIndex.js">會員中心</a>
-              <a href="./reservations/ReservationIndex.js">預約艙房</a>
-              <a href="./About.js">FAQ 常見問題</a>
+              <a href="/member">會員中心</a>
+              <a href="/booking/steps">預約艙房</a>
+              <a href="/About">FAQ 常見問題</a>
             </div>
           </div>
           <div className="foobox1">

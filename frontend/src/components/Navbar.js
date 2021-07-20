@@ -8,8 +8,10 @@ import logo from '../pages/image/svg/logo.svg'
 import icon_shop from '../pages/image/svg/icon-shop.svg'
 
 const Navbar = () => {
+  const userId = JSON.parse(localStorage.getItem('userId'))
+
   useEffect(() => {
-    $('.nav-item')
+    $('.nav-ul')
       .click(function () {
         // 找 li 裡的 a href'#id'
         const $this = $(this),
@@ -33,43 +35,50 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-c">
           <div className="logo">
-            <a href="../pages/Homepage.js">
+            <a href="/homepage">
               <img src={logo} alt="" />
             </a>
           </div>
           <div className="navbar-link" id="navbarText">
             <ul className="navbar-ul mx-auto">
               <li className="nav-item">
-                <a href="../pages/reservations/ReservationIndex.js">預約艙房</a>
+                <a href="/booking">預約艙房</a>
               </li>
               <li className="nav-item">
-                <a href="../pages/items/ItemIndex.js">宇宙市集</a>
+                <a href="/item-list">宇宙市集</a>
               </li>
               <li className="nav-item">
-                <a href="../pages/game/GameIndex.js">星際任務</a>
+                <a href="/Game">星際任務</a>
               </li>
               <li className="nav-item">
-                <a href="../pages/message/MessageIndex.js">太空交誼廳</a>
+                <a href="/messageboard">太空交誼廳</a>
               </li>
               <li className="nav-item">
-                <a href="../pages/About.js">聯絡總署</a>
+                <a href="/about">聯絡總署</a>
               </li>
             </ul>
           </div>
           <div className="right-items">
             <div className="shopping-cart">
-              <a href="../pages/cart/CartIndex.js">
+              <a href="/ShoppingCart1">
                 <img src={icon_shop} alt="" />
                 <span className="shopping-count">0</span>
               </a>
             </div>
-            <div className="btn-login-registered">
-              <Button
-                className="login-registered"
-                link="/pages/member/MemberIndex"
-                buttonText="登入 / 註冊"
-              />
-              {/* <div class="memberLogin"></div> */}
+            <div className="button-control">
+              {userId ? (
+                <Button
+                  className="btn2 memberCenter"
+                  link="/member"
+                  buttonText="會員中心"
+                />
+              ) : (
+                <Button
+                  className="btn2 login-registered"
+                  link="/login"
+                  buttonText="登入 / 註冊"
+                />
+              )}
             </div>
           </div>
         </div>
