@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-
+import ScrollToTop from './components/ScrollToTop'
 // import 路徑： './pages/你負責的功能/你的index'
 // import Homepage from './pages/Homepage'
 // import About from './pages/About'
@@ -24,11 +24,15 @@ import LoginIndex from './pages/login/LoginIndex'
 import Register from './pages/login/Register'
 import ForgetPwd from './pages/login/ForgetPwd'
 import ForgetPwdMailSent from './pages/login/ForgetPwdMailSent'
-
+import Shoppingcart4 from './pages/Cart/Shoppingcart4'
+import Shoppingcart1 from './pages/Cart/Shoppingcart1'
+import Shoppingcart2 from './pages/Cart/Shoppingcart2'
+import Shoppingcart3 from './pages/Cart/Shoppingcart3'
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop>
       <Switch>
         {/* <Homepage />
         <About />
@@ -67,11 +71,24 @@ const App = () => {
         <Route path="/member">
           <MemberIndex />
         </Route>
+        <Route path="/Shoppingcart1">
+            <Shoppingcart1 />
+          </Route>
+       <Route path="/Shoppingcart2">
+            <Shoppingcart2 />
+          </Route> 
+          <Route path="/Shoppingcart3">
+            <Shoppingcart3 />
+          </Route>
+          <Route path="/Shoppingcart4">
+            <Shoppingcart4 />
+          </Route>
         <ReservationIndex />
         {/* <ItemIndex />
         <CartIndex />
         <MessageIndex/> */}
       </Switch>
+      </ScrollToTop>
       <Footer />
     </Router>
   )

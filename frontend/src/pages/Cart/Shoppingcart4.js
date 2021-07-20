@@ -78,14 +78,14 @@ export default class Shoppingcart4 extends React.Component {
                 height={100}
               />
             </div>
-            <div className="cart4top1 mb-5 ">
+            <div className="cart4top mb-5 mr-5">
               <p2>購物明細</p2>
               <p2>付款資料</p2>
               <p2>訂單資訊</p2>
             </div>
             <div className="  cart4order1    p-3">
               <div className="cart4ordertitle ">
-                <p>訂單資訊</p>
+                <p4>訂單資訊</p4>
               </div>
             </div>
             <div className="cart4title1 ">
