@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
           <div className="right-items">
             <div className="shopping-cart">
-              <a href="/ShoppingCart1">
+              <a href="/Shoppingcart1">
                 <img src={icon_shop} alt="" />
                 <span className="shopping-count">0</span>
               </a>
