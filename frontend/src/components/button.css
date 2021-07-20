@@ -22,32 +22,53 @@
   border-radius: 5px;
   font-size: 16px;
 }
+.btn2 {
+  width: 120px;
+  height: 55px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+}
 .booking {
   background: #33a4fb;
 }
 .booking:hover {
   background: transparent;
-  border: 5px solid #33a4fb;
+  border: 3px solid #33a4fb;
   color: white;
 }
-.items:hover,
-.cart:hover {
-  background-color: transparent;
-  border: 5px solid #9c64a5;
-  color: white;
-}
-.goHome:hover,
-.goBack:hover {
-  background-color: transparent;
-  border: 5px solid #ce93d7;
-  color: white;
-}
-
 .items,
 .cart {
   background-color: #9c64a5;
 }
+.items:hover,
+.cart:hover {
+  background-color: transparent;
+  border: 3px solid #9c64a5;
+  color: white;
+}
 .goHome,
 .goBack {
   background-color: #ce93d7;
+}
+.goHome:hover,
+.goBack:hover {
+  background-color: transparent;
+  border: 3px solid #ce93d7;
+  color: white;
+}
+.login-registered,
+.memberCenter {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.login-registered:hover,
+.memberCenter:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
 }
