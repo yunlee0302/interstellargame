@@ -135,7 +135,7 @@ function Shoppingcart1(props) {
 
   return (
     <>
-    <div className="container">
+      <div className="container">
         <div className="top m-5">
           <img src={launch} alt width={100} height={100} />
 
@@ -153,7 +153,7 @@ function Shoppingcart1(props) {
       <div className="cart1title1 p-3 mt-5">
         <p>購物明細</p>
       </div>
-    
+
       <table className="cart1title2">
         <tbody>
           <tr>
@@ -167,7 +167,6 @@ function Shoppingcart1(props) {
           {mycart.map((item, index) => {
             return (
               <tr key={item.itemId}>
-           
                 <td
                   id={item.itemId}
                   onClick={() => {
@@ -191,9 +190,8 @@ function Shoppingcart1(props) {
                 <td height="130px">{item.name}</td>
                 <td>{item.price}</td>
                 <td>
-                
                   <div className="counter  ">
-                    <li  class="ccc" id="minus">
+                    <li className="ccc" id="minus">
                       <a
                         href="#/"
                         onClick={() => {
@@ -202,7 +200,6 @@ function Shoppingcart1(props) {
                           updateCartToLocalStorage(item, false)
                         }}
                       >
-
                         <input
                           type="button"
                           onclick="minuser()"
@@ -211,7 +208,10 @@ function Shoppingcart1(props) {
                       </a>
                     </li>
 
-                    <li class="" id="countnum"> {item.amount}</li>
+                    <li className="" id="countnum">
+                      {' '}
+                      {item.amount}
+                    </li>
 
                     <li id="plus">
                       <a
@@ -241,7 +241,6 @@ function Shoppingcart1(props) {
               </tr>
             )
           })}
-        
         </tbody>
       </table>
       <div className="end  p-5 mb-5">
