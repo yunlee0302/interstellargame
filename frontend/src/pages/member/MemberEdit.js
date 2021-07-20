@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import './styles/memberEdit.scss'
-import SelectButton from './components/SelectButton'
 
 //pop up套件
 import swal from 'sweetalert'
@@ -248,15 +247,15 @@ function MemberEdit(props) {
                   <option value="female">女</option>
                 </select>
               </div>
-              <small id="gender" className="form-text hidden" />
+              <small id="birthday" className="form-text hidden" />
             </div>
             <div className="input-box py-4">
-              <label htmlFor="gender">生日*</label>
+              <label htmlFor="birthday">生日*</label>
               <div className="input-frame">
                 <input
                   type="date"
                   className="form-control transparent-input "
-                  id="gender"
+                  id="birthday"
                   value={convert_date(birthday)}
                   pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
                   onChange={(event) => {
