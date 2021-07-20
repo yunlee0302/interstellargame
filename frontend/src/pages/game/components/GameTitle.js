@@ -11,7 +11,9 @@ function GameTitle() {
         <div className="titleText">
           <p>FIND YOUR VOUCHER</p>
           <p>玩遊戲領取你的優惠券</p>
-          <div className="playNowBtn">馬上玩</div>
+          <a className="playNowBtn" href="#gameArea">
+            馬上玩
+          </a>
         </div>
       </div>
     </>
