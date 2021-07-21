@@ -270,10 +270,10 @@ const ItemDetail3 = (props) => {
                   className="join"
                   onClick={() => {
                     updateCartToLocalStorage({
-                      itemId: 101,
-                      name: '13道線索',
-                      amount: 1,
-                      price: 990,
+                        itemId: 102,
+                        name: '504',
+                        amount: 1,
+                        price: 2650,
 
                     })
                   }}
