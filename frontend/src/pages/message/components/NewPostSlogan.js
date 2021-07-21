@@ -5,7 +5,7 @@ function NewPostSlogan() {
   return (
     <>
       <div className="postSlogan">
-        <div className="container">
+        <div className="postcontainer">
           <h5>
             找不到合適的團隊嗎?
             <br />
