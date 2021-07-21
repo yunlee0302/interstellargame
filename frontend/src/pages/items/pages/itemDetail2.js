@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 // import "../assets/css/bootstrap.min.css"
 import "./itemDetail2.css"
+import { withRouter } from 'react-router-dom'
 import itemImage from '../img/13道線索.jpg'
 import itemImage1 from '../img/13道線索2.jpg'
 import itemImage2 from '../img/13道線索3.jpg'
@@ -29,7 +30,7 @@ const itemStyle = {
     border: '0px'
 }
 
-const ItemDetail = (props) => {
+const ItemDetail2 = (props) => {
     const [Mycart, setMycart] = useState([])
     const [show, setShow] = useState(false)
     const [productName, setProductName] = useState('')
@@ -251,4 +252,4 @@ return (
 
 
 
-export default ItemDetail
+export default withRouter(ItemDetail2)
