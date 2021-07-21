@@ -32,7 +32,7 @@ html {
   }
 }
 
-.item-card {
+.na-itemCard {
   margin: 5px;
   width: var(--item-card-width);
   height: var(--item-card-height);
@@ -61,13 +61,14 @@ html {
   bottom: 180px;
   left: 50%;
   transform: translateX(-50%);
+  transition: 2s;
 }
 
 .button-show {
   display: inline-block;
 }
 
-.item {
+.na-itemName {
   font-size: 16px;
   text-align: center;
   color: var(--white);

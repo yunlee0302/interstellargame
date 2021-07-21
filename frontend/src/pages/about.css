@@ -50,7 +50,7 @@
   background: url(../pages/image/bg/bg-innerpagae.png);
   height: 5130px;
 }
-.container {
+.about-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,6 +58,9 @@
   align-items: center;
 }
 /* --- server-title --- */
+.about-fontWeight {
+  font-weight: bold;
+}
 .server-title,
 .server-items,
 .venue-rental {
@@ -73,7 +76,7 @@
 .fontcolor-b {
   color: black;
 }
-.littile-title {
+.little-title {
   margin: 0;
   font-size: 24px;
 }
@@ -140,19 +143,6 @@
   border: 50px solid transparent;
   border-image: url(../pages/image/svg/about_border-5.svg) 50;
 }
-.btn {
-  width: 175px;
-  height: 55px;
-  margin: 20px;
-}
-.btn-booking {
-  background-color: #33a4fb;
-}
-.btn-booking:hover {
-  background-color: transparent;
-  border: 3px solid #33a4fb;
-  color: white;
-}
 .vr-pic {
   margin-left: 20px;
 }
@@ -171,14 +161,6 @@
   width: 580px;
   height: 350px;
   transform: translate(-20px, 80px);
-}
-.btn-shop {
-  background-color: #9c64a5;
-}
-.btn-shop:hover {
-  background-color: transparent;
-  border: 3px solid #9c64a5;
-  color: white;
 }
 /* --- fqa --- */
 .fqa,

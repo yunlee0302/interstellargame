@@ -65,11 +65,15 @@ const About = () => {
 
   return (
     <div className="bg-about">
-      <div className="container">
+      <div className="about-container">
         <div className="server-title">
           <div className="server-text">
-            <p className="littile-title fontcolor-w">關於星際漫遊</p>
-            <p className="about-title2 fontcolor-w">服務項目、場地租借、桌遊訂購</p>
+            <p className="little-title fontcolor-w about-fontWeight">
+              關於星際漫遊
+            </p>
+            <p className="about-title2 fontcolor-w about-fontWeight">
+              服務項目、場地租借、桌遊訂購
+            </p>
           </div>
           <div className="server-icon">
             <img className="earth about-downup" src={iconEarth} alt="" />
@@ -80,8 +84,10 @@ const About = () => {
             <img src={about_01} alt="" />
           </div>
           <div className="si-content">
-            <p className="si-title littile-title fontcolor-b">服務項目</p>
-            <p className="content-text si-text fontcolor-b">
+            <p className="si-title little-title fontcolor-b about-fontWeight">
+              服務項目
+            </p>
+            <p className="content-text si-text fontcolor-b about-fontWeight">
               門市除了專業的解說人員及舒適的空間，控延伸許多種進階服務項目。包含揪團留言板與桌遊產品訂購。
             </p>
           </div>
@@ -89,10 +95,12 @@ const About = () => {
         <div className="venue-rental">
           <div className="introdution-box">
             <div className="ib-title">
-              <p className="about-title2 title-bg fontcolor-w">場地租借</p>
+              <p className="about-title2 title-bg fontcolor-w about-fontWeight">
+                場地租借
+              </p>
             </div>
             <div className="ib-content">
-              <p className="content-text border-bg fontcolor-w">
+              <p className="content-text border-bg fontcolor-w about-fontWeight">
                 門市有著整潔、乾淨、明亮的環境，適合親子同樂也是好友相約的好所在。各種遊戲的玩法都有點元的親切說明，我們秉持著帶給客人最大歡樂的宗旨。
               </p>
               <Button
@@ -112,10 +120,12 @@ const About = () => {
           </div>
           <div className="introdution-box bgo-box">
             <div className="ib-title">
-              <p className="about-title2 title-bg fontcolor-w">桌遊訂購</p>
+              <p className="about-title2 title-bg fontcolor-w about-fontWeight">
+                桌遊訂購
+              </p>
             </div>
             <div className="ib-content">
-              <p className="content-text border-bg fontcolor-w">
+              <p className="content-text border-bg fontcolor-w about-fontWeight">
                 不論是指定商品或是您的特定需求，我們將盡力達成!且提供種類豐富的遊戲種類，讓您購買到理想的遊戲。
               </p>
               <Button
@@ -128,7 +138,9 @@ const About = () => {
         </div>
         <div className="fqa">
           <div className="fqa-title">
-            <p className="about-title fontcolor-b">常見 Q&amp;A</p>
+            <p className="about-title fontcolor-b about-fontWeight">
+              常見 Q&amp;A
+            </p>
           </div>
           <div className="fqa-bookmark">
             <ul className="click-title">
@@ -161,7 +173,7 @@ const About = () => {
         </div>
         <div className="store-location">
           <div className="sl-title">
-            <p className="about-title foncolor-b">門市位置</p>
+            <p className="about-title foncolor-b about-fontWeight">門市位置</p>
           </div>
           <div className="sl-group">
             <input
