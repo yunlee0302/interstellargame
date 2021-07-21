@@ -2,6 +2,15 @@
 //   border: 1px solid red;
 // }
 
+@keyframes downup {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(60%);
+  }
+}
+
 .mesApp {
   background: url(./img/wp7505888.jpg);
 }
@@ -16,12 +25,14 @@
   img {
     position: absolute;
     width: 150px;
-    left: 10%;
+    left: 15%;
+    top: 150px;
+    animation: downup linear infinite alternate forwards;
   }
   .text01 {
     font-size: 24px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 65px;
   }
   .text02 {
     font-size: 48px;
@@ -242,7 +253,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .container {
+  .postcontainer {
     position: relative;
     margin-bottom: 95px;
     h5 {
