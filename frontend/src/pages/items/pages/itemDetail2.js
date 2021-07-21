@@ -16,6 +16,7 @@ import ItemCard from "../components/itemCards/ItemCard"
 import { Modal, Button } from 'react-bootstrap'
 // import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../itemData"
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
+import Add from '../../../components/Add'
 
 // import {Carousel} from "react-bootstrap";
 // // 引入图片
@@ -176,13 +177,14 @@ const ItemDetail2 = (props) => {
                             <div className="d-flex cardB">
 
                                 <ul className="counter1">
-                                    <li id="minus" className="btn11">
+                                    <div className="Additem"><Add /></div>
+                                    {/* <li id="minus" className="btn11">
                                         <input type="button" onclick="minuser()" value="-" className="button11" />
                                     </li>
                                     <li id="countnum1" className="btn12">1</li>
                                     <li id="plus" className="btn13">
                                         <input type="button" onclick="adder()" value="+" className="button13" />
-                                    </li>
+                                    </li> */}
                                 </ul>
 
                                 <button
@@ -209,14 +211,14 @@ const ItemDetail2 = (props) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row itemcontent">
+                <div className=" itemcontent">
                     <p>數起兇殘的犯罪案件震驚了1899年的倫敦，<br />
                         謎樣的案情掩蓋了真相，蘇格蘭警場在黑暗中摸索，號召一群優秀的偵探前來協助破案。<br />
-                        每位偵探必須利用敏銳的直覺，從13道線索中找出蛛絲馬跡，負責解開自己的謎題，比其他人更快偵破自己的案件！
+                        每位偵探必須利用敏銳的直覺，從13道線索中找出蛛絲馬跡，負責解開自己的謎題，比其他人更快偵破自己的案件！<br />
                     </p>
 
                     <p>作者｜Andrés J. Voicu<br />
-                        插畫｜Giacomo Tappainer<br />
+                        插畫｜Giacomo Tappainer<br /><br />
                         ★2013 德國年度玩家遊戲獎推薦<br />
                         ★2013 德國玩家票選最佳遊戲第一名<br />
                         ★2013 國際玩家獎最佳多人策略遊戲入圍

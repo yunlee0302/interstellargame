@@ -12,6 +12,7 @@ import heartImage from '../img/heart.png'
 import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from "../components/itemCards/ItemCard"
+import Add from '../../../components/Add'
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
 
 const midImage = {
@@ -103,13 +104,14 @@ const ItemDetail8 = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                                 <ul className="counter1">
-                                    <li id="minus" className="btn11">
+                                    <div className="Additem"><Add /></div>
+                                    {/* <li id="minus" className="btn11">
                                         <input type="button" onclick="minuser()" value="-" className="button11" />
                                     </li>
                                     <li id="countnum1" className="btn12">1</li>
                                     <li id="plus" className="btn13">
                                         <input type="button" onclick="adder()" value="+" className="button13" />
-                                    </li>
+                                    </li> */}
                                 </ul>
                                 <button className="join ml-2">加入購物車</button>
                             </div>
@@ -121,10 +123,10 @@ const ItemDetail8 = (props) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row itemcontent">
-                    <p>昨天午夜發生了謀殺案，刑事組從檔案中過濾出四位最有可能的嫌疑犯，關鍵線索還是要靠民眾提供，但是目擊證人們所提出的證詞相互矛盾、眾說紛紜！
-                        到底誰是兇手？<br />
-                        誰會是破案的關鍵證人？<br />
+                <div className=" itemcontent">
+                    <p>昨天午夜發生了謀殺案，刑事組從檔案中過濾出四位最有可能的嫌疑犯，關鍵線索還是要靠民眾提供，<br />
+                    但是目擊證人們所提出的證詞相互矛盾、眾說紛紜！<br />
+                        到底誰是兇手？誰會是破案的關鍵證人？<br />
                         緊張！懸疑！刺激！提供最多正確線索的人將贏得勝利。<br />
                     </p>
                     <p>作者｜Markus Nikisch<br />

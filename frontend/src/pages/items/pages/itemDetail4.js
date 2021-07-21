@@ -14,6 +14,7 @@ import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from "../components/itemCards/ItemCard"
 import { Modal, Button } from 'react-bootstrap'
+import Add from '../../../components/Add'
 // import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../itemData"
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
 
@@ -178,13 +179,14 @@ const ItemDetail4 = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                                 <ul className="counter1">
-                                    <li id="minus" className="btn11">
+                                    <div className="Additem"><Add /></div>
+                                    {/* <li id="minus" className="btn11">
                                         <input type="button" onclick="minuser()" value="-" className="button11" />
                                     </li>
                                     <li id="countnum1" className="btn12">1</li>
                                     <li id="plus" className="btn13">
                                         <input type="button" onclick="adder()" value="+" className="button13" />
-                                    </li>
+                                    </li> */}
                                 </ul>
 
                                 <button
@@ -211,7 +213,7 @@ const ItemDetail4 = (props) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row itemcontent">
+                <div className=" itemcontent">
                     <p>快速又有趣的數字運算！<br />
 
                         這遊戲和數1、2、3一樣簡單！<br />
@@ -223,7 +225,7 @@ const ItemDetail4 = (props) => {
                     </p>
 
                     <p>作者｜Maureen Hiron<br />
-                        插畫｜John Kovalic, Cathleen Quinn-Kinney<br />
+                        插畫｜John Kovalic, Cathleen Quinn-Kinney<br /><br />
                         ★2011 美國遊戲雜誌獎最佳家庭遊戲入圍<br />
                     </p>
                 </div>
