@@ -99,7 +99,7 @@ const Homepage = () => {
   return (
     <>
       <div className="bg-homepage">
-        <div className="container">
+        <div className="h-container">
           <div className="kv">
             <div className="kv-slogan fontcolor-w">
               <p className="kv-slogan-t">地球的生活太枯燥乏味？</p>
