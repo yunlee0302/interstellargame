@@ -351,19 +351,19 @@ li img {
 .content {
   font-size: 16px;
 }
-.step1 {
+.stepOne {
   margin: 20px 0 20px 100px;
   animation-duration: 1s;
 }
-.step2 {
+.stepTwo {
   margin: 20px 0 20px 420px;
   animation-duration: 1.2s;
 }
-.step3 {
+.stepThree {
   margin: 20px 0 20px 250px;
   animation-duration: 1.5s;
 }
-.step4 {
+.stepFour {
   margin: 20px 0 20px 550px;
   animation-duration: 1.8s;
 }

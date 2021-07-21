@@ -1,12 +1,12 @@
-/* step card */
+/* item card */
 /* width: 486px, height: 655px */
 /* mobile: width: 330px, height: 454px */
 
-/* step-icon */
+/* item-icon */
 /* width: 178px, height: 175px */
 /* mobile: width: 123px, height: 121px */
 
-/* step-image */
+/* item-image */
 /* height: 392px */
 
 :root {
@@ -17,8 +17,8 @@
   /* --yellow: #ffea01; */
   --white: #fff;
   --gray: #bababa;
-  --step-card-width: 270px;
-  --step-card-height: 418.8px;
+  --item-card-width: 270px;
+  --item-card-height: 418.8px;
 }
 
 html {
@@ -27,16 +27,16 @@ html {
 }
 
 @media screen and (min-width: 769px) {
-  .step-card{
+  .item-card {
     width: 20%;
   }
 }
 
-.step-card {
+.item-card {
   margin: 5px;
-  width: var(--step-card-width);
-  height: var(--step-card-height);
-  font-weight:bold;
+  width: var(--item-card-width);
+  height: var(--item-card-height);
+  font-weight: bold;
   overflow: hidden;
   background-color: var(--muted-bule);
   position: relative;
@@ -67,42 +67,43 @@ html {
   display: inline-block;
 }
 
-.step {
+.item {
   font-size: 16px;
   text-align: center;
   color: var(--white);
 }
 
-.item-group {
-  margin-top: 10px;
+.item-groupA {
+  margin-top: 20px;
+  margin-right: 120px;
 }
 
-.item-header {
+.item-headerA {
   font-size: 12px;
   color: var(--gray);
   padding: 0 20px;
   text-decoration: line-through;
 }
 
-.item-detail {
+.item-detailA {
   padding: 0 20px;
   font-size: 1rem;
   text-align: start;
-  color: #FFF536;
+  color: #fff536;
 }
 
-.heart1-icon {
-  width: var(--step-icon-width);
-  height: var(--step-icon-height);
+.heartA {
+  width: var(--item-icon-width);
+  height: var(--item-icon-height);
   position: absolute;
   bottom: 40px;
   left: 65%;
   transform: translateX(-50%);
 }
 
-.cart-icon {
-  width: var(--step-icon-width);
-  height: var(--step-icon-height);
+.cartA {
+  width: var(--item-icon-width);
+  height: var(--item-icon-height);
   position: absolute;
   bottom: 40px;
   left: 85%;

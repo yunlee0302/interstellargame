@@ -8,7 +8,8 @@ import logo from '../pages/image/svg/logo.svg'
 import icon_shop from '../pages/image/svg/icon-shop.svg'
 
 const Navbar = () => {
-  const userId = JSON.parse(localStorage.getItem('userId'))
+  // const userId = JSON.parse(localStorage.getItem('userId'))
+  const userId = 220
 
   useEffect(() => {
     $('.nav-ul')

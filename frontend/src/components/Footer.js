@@ -16,7 +16,7 @@ const Footer = () => {
               <a href="/Homepage">首頁</a>
               <a href="/messageboard">太空交誼廳</a>
               <a href="/item-list">宇宙市集</a>
-              <a href="/GameProcess">星際任務</a>
+              <a href="/Game">星際任務</a>
             </div>
           </div>
           <div className="foobox1">
