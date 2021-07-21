@@ -102,13 +102,17 @@ function LoginIndex(props) {
   const display = (
     <>
       <div className="login">
-        <div className="container">
+        <div className="container l-container">
           <div className="login-area row">
             <div className="login-left col-12 col-lg-6 flex-column text-center">
-              <h2 className="text-light text-center">快速登入</h2>
+              <h2 className="text-light text-center login-left-h2">快速登入</h2>
               <div className="btn-box align-items-center">
-                <button type="submit" className="btn">
-                  <img src={googleLogin} alt={googleLogin} />
+                <button type="submit" className="btn login-left-btn">
+                  <img
+                    src={googleLogin}
+                    alt={googleLogin}
+                    className="login-left-img"
+                  />
                   Google登入
                 </button>
               </div>
@@ -153,7 +157,7 @@ function LoginIndex(props) {
               </div>
 
               <button
-                className="btn btn-block mt-3"
+                className="btn btn-block mt-3 login-right-btn"
                 onClick={() => {
                   loginToServer()
                 }}
@@ -162,10 +166,14 @@ function LoginIndex(props) {
               </button>
               <p className="text-light mt-3 text-center">
                 還沒有會員？
-                <Link to="/register">註冊會員</Link>
+                <Link to="/register" className="login-right-link">
+                  註冊會員
+                </Link>
               </p>
               <p className="text-center mt-0">
-                <Link to="/forgetPwd">忘記密碼</Link>
+                <Link to="/forgetPwd" className="login-right-link">
+                  忘記密碼
+                </Link>
               </p>
             </div>
           </div>

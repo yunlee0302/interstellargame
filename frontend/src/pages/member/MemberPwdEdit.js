@@ -86,19 +86,21 @@ function MemberPwdEdit(props) {
     <>
       ;
       <div>
-        <div className="container">
-          <div className="pwd-edit row text-center ">
-            <h1 className="text-light">修改密碼</h1>
-            <div className="edit-form">
+        <div className="container m-container">
+          <div className="m-pwd-edit row text-center ">
+            <h1 className="text-light m-pwd-edit-h1">修改密碼</h1>
+            <div className="m-pwd-edit-form">
               <div className="input-box pb-4">
-                <label htmlFor="password">當前密碼*</label>
+                <label htmlFor="password" className="m-pwd-edit-label">
+                  當前密碼*
+                </label>
                 <div className="input-frame">
                   <input
                     type="password"
                     name="password"
                     value={password}
                     required
-                    className="form-control transparent-input "
+                    className="form-control m-edit-input "
                     id="userPwd"
                     placeholder="請輸入目前的密碼"
                     minLength="6"
@@ -146,7 +148,7 @@ function MemberPwdEdit(props) {
               </div>
               <button
                 type="submit"
-                className="btn btn-block"
+                className="btn btn-block m-pwd-edit-btn"
                 onClick={() => {
                   updatePwdToSever()
                 }}
