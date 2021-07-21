@@ -2,11 +2,11 @@ body {
   background-image: url(img/bg.png);
 }
 
-* {
+/* * {
   font-size: 1.4rem;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: .5px;
-}
+} */
 
 .top {
   display: flex;
@@ -19,11 +19,11 @@ body {
 margin-left: 80px;
 
 } 
-p {
+/* p {
   font-size: 20px;
   margin: auto;
-}
-p1{color:white;
+} */
+/* p1{color:white;
   font-size: 20px;
   margin-left: 175px; }
  
@@ -38,7 +38,7 @@ p3 {
   margin-left: 135px;
   margin-right: 75px;
   color:#707480;
-}
+}  */
 
 
 

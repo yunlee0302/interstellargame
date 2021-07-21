@@ -146,30 +146,30 @@ function Shoppingcart2(props) {
           <img src={launch2} alt width={100} height={100} />
         </div>
         <div className="top1 mb-4 ">
-          <p2>購物明細</p2>
-          <p3>付款資料</p3>
-          <p3>訂單資訊</p3>
+          <p2 className="cartwhite">購物明細</p2>
+          <p3 className="cartgray">付款資料</p3>
+          <p3 className="cartgray">訂單資訊</p3>
         </div>
       </div>
       <div className="cart1title1 p-3 mt-5">
-        <p4>購物明細</p4>
+        <p4 class="cartbold">購物明細</p4>
       </div>
     
-      <table className="cart1title2">
+      <table className="cart1title2 tablecart">
         <tbody>
           <tr>
-            <th width="100px "></th>
-            <th width="150px">商品名稱</th>
-            <th width="250px">商品單價</th>
-            <th width="200px">商品數量</th>
-            <th width="200px">金額小計</th>
-            <th width="100px" />
+            <th className="thcart" width="100px "></th>
+            <th className="thcart" width="150px">商品名稱</th>
+            <th className="thcart" width="250px">商品單價</th>
+            <th className="thcart" width="200px">商品數量</th>
+            <th className="thcart" width="200px">金額小計</th>
+            <th className="thcart" width="100px" />
           </tr>
           {mycart.map((item, index) => {
             return (
               <tr key={item.itemId}>
            
-                <td
+                <td className="tdcart"
                   id={item.itemId}
                   onClick={() => {
                     const cartList = [...mycart]
@@ -189,9 +189,9 @@ function Shoppingcart2(props) {
                     height={100}
                   />
                 </td>  */}
-                <td height="130px">{item.name}</td>
-                <td>{item.price}</td>
-                <td>
+                <td className="tdcart" height="130px">{item.name}</td>
+                <td className="tdcart">{item.price}</td>
+                <td className="tdcart">
                 
                   <div className="counter2  ">
                     <li  className="ccc" id="minus">
@@ -230,8 +230,8 @@ function Shoppingcart2(props) {
                     </li>
                   </div>
                 </td>
-                <td> NT${item.amount * item.price}</td>
-                <td>
+                <td className="tdcart"> NT${item.amount * item.price}</td>
+                <td className="tdcart">
                   <i
                     className=" far fa-trash-alt"
                     onClick={() => {
@@ -249,8 +249,8 @@ function Shoppingcart2(props) {
         <p>訂單總金額: NT${sum(mycartDisplay)}</p>
       </div>
 
-      <div className="button1 pb-4">
-        <button
+      <div className="buttoncart1 pb-4">
+        <button  className="cartbtn "
           onClick={() => {
             props.history.push('/Shoppingcart3')
           }}

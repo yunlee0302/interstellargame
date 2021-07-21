@@ -4,11 +4,11 @@
  
   } */
 
-* {
+/* * {
       font-size: 1.4rem;
       font-family: 'Noto Sans TC', sans-serif;
       letter-spacing: .5px;
-  }
+  } */
 .cart4ordertitle{
   margin-left: 350px;
 
@@ -28,13 +28,13 @@ margin-left: 80px;
 } 
 
 
-p {
+/* p {
   font-size: 20px;
   margin: auto;
 
-}
+} */
 
-p1{color:white;
+/* p1{color:white;
   font-size: 20px;
   margin-left: 175px; 
 
@@ -46,18 +46,18 @@ p2 {
   margin-right: 75px;
   color:white;
 
-}
+} */
 
 /* p3 {
   font-size: 20px;
   margin-left: 135px;
   margin-right: 75px;
   color:#707480;
-}
-*/
+} */
+  
 
 
-.icon {
+.icon333 {
   position: absolute;
   margin-left:920px;
 }
@@ -113,8 +113,8 @@ border-left: none;
 .frame{
   border:rgb(20, 19, 19) 1px solid;
   width:630px;
-  height:390px
- 
+  height:390px;
+
   
 }
 .select{
@@ -168,3 +168,8 @@ border-top:none;
   color:rgb(12, 9, 9);
   border:none;
   } 
+
+  .cartp{
+ font-size:18px;
+
+  }
