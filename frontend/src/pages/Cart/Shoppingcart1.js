@@ -137,6 +137,7 @@ function Shoppingcart1(props) {
       console.log(v)
       if (index !== i) {
         return v
+       
       }
     })
     console.log(a)
@@ -261,6 +262,7 @@ function Shoppingcart1(props) {
                     className=" far fa-trash-alt"
                     onClick={() => {
                       updateCartRemove(index)
+                     
                     }}
                   />
                 </td>
