@@ -40,34 +40,44 @@ function MemberFavList(props) {
 
   const favlistDisplay = (
     <>
-      <div className="container">
-        <table className="table">
-          <thead>
+      <div className="container m-container">
+        <table className="m-favlist-table">
+          <thead className="m-favlist-thead">
             <tr>
-              <th scope="col" colSpan={3}>
+              <th scope="col" colSpan={3} className="m-favlist-th m-favlist-th">
                 商品
               </th>
-              <th scope="col">金額</th>
-              <th scope="col">移除最愛</th>
-              <th scope="col">商品詳細</th>
+              <th scope="col" className="m-favlist-th">
+                金額
+              </th>
+              <th scope="col" className="m-favlist-th">
+                移除最愛
+              </th>
+              <th scope="col" className="m-favlist-th">
+                商品詳細
+              </th>
             </tr>
           </thead>
           <tbody>
             {favlist.length &&
               favlist.map((favlist) => {
                 return (
-                  <tr>
-                    <td className="item-img">
-                      <img src={favlist.itemImg} alt="商品圖" />
+                  <tr className="m-favlist-tr">
+                    <td className="item-img m-favlist-td">
+                      <img
+                        src={favlist.itemImg}
+                        alt="商品圖"
+                        className="m-favlist-img"
+                      />
                     </td>
-                    <td>{favlist.itemName}</td>
+                    <td className="m-favlist-td">{favlist.itemName}</td>
                     <td />
-                    <td>{favlist.itemPrice}</td>
-                    <td>
-                      <i className="far fa-trash-alt" />
+                    <td className="m-favlist-td">{favlist.itemPrice}</td>
+                    <td className="m-favlist-td">
+                      <i className="far fa-trash-alt m-favlist-i" />
                     </td>
-                    <td>
-                      <div className="order-btn">查看商品</div>
+                    <td className="m-favlist-td">
+                      <div className="m-favlist-btn">查看商品</div>
                     </td>
                   </tr>
                 )
@@ -87,7 +97,7 @@ function MemberFavList(props) {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5 m-container">
         <div className="member-btn-group text-center row">
           <div
             className="member-btn col col1"
@@ -96,7 +106,7 @@ function MemberFavList(props) {
             }}
           >
             <img src={fun00} alt={fun00} />
-            <p className="py-1 m-0">會員中心</p>
+            <p className="py-1 m-0 member-btn-p">會員中心</p>
           </div>
           <div
             className="member-btn col col2"
@@ -105,7 +115,7 @@ function MemberFavList(props) {
             }}
           >
             <img src={fun01} alt={fun01} />
-            <p className="py-1 m-0">查詢訂單</p>
+            <p className="py-1 m-0 member-btn-p">查詢訂單</p>
           </div>
           <div
             className="member-btn col col3"
@@ -114,7 +124,7 @@ function MemberFavList(props) {
             }}
           >
             <img src={fun02} alt={fun02} />
-            <p className="py-1 m-0">查詢預約</p>
+            <p className="py-1 m-0 member-btn-p">查詢預約</p>
           </div>
           <div
             className="member-btn col col4"
@@ -122,8 +132,8 @@ function MemberFavList(props) {
               props.history.push('/member/memberFavList')
             }}
           >
-            <img src={fun03} alt={fun03} className="btn-active" />
-            <p className="py-1 m-0 btn-active">我的最愛</p>
+            <img src={fun03} alt={fun03} className="m-btn-active" />
+            <p className="py-1 m-0 member-btn-p m-btn-active">我的最愛</p>
           </div>
 
           <div
@@ -133,7 +143,7 @@ function MemberFavList(props) {
             }}
           >
             <img src={fun04} alt={fun04} />
-            <p className="py-1 m-0">我的優惠券</p>
+            <p className="py-1 m-0  member-btn-p">我的優惠券</p>
           </div>
         </div>
       </div>

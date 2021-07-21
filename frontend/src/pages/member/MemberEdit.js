@@ -178,10 +178,10 @@ function MemberEdit(props) {
       >
         <input type="file" className="" id="avatar" name="avatar" />
       </form>
-      <div className="container">
-        <div className="member-edit row text-center ">
-          <h1 className="text-light">修改個人資訊</h1>
-          {/* <button type="submit" className="btn">
+      <div className="container m-container">
+        <div className="m-edit row text-center ">
+          <h1 className="text-light m-edit-h1">修改個人資訊</h1>
+          {/* <button type="submit" className="btn m-edit-btn">
             <img src={googleLogin} alt="googleLogin" /> Google登入中
           </button> */}
           <div className="m-editTop text-center">
@@ -193,8 +193,8 @@ function MemberEdit(props) {
               />
             </div>
             <div className="m-memberB">
-              <button className="btn  mb-3">上傳頭貼</button>
-              <button type="submit" className="btn my-3">
+              <button className="btn mb-3 m-edit-btn">上傳頭貼</button>
+              <button type="submit" className="btn my-3 m-edit-btn">
                 確認上傳
               </button>
             </div>
@@ -214,12 +214,14 @@ function MemberEdit(props) {
                   }}
                 />
               </div>
-              {/* <small id="nickname" className="form-text hidden">
+              {/* <small id="nickname" className="form-text hidden m-edit-small">
                   此暱稱已有人使用過
                 </small> */}
             </div>
             <div className="input-box py-4">
-              <label htmlFor="name">真實姓名*</label>
+              <label htmlFor="name" className="m-edit-label">
+                真實姓名*
+              </label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -232,7 +234,7 @@ function MemberEdit(props) {
                   }}
                 />
               </div>
-              {/* <small id="name" className="form-text hidden" /> */}
+              {/* <small id="name" className="form-text hidden m-edit-small" /> */}
             </div>
             <div className="input-box py-4">
               <label htmlFor="gender">性別*</label>
@@ -249,7 +251,7 @@ function MemberEdit(props) {
                   <option value="女">女</option>
                 </select>
               </div>
-              <small id="birthday" className="form-text hidden" />
+              {/* <small id="birthday" className="form-text hidden m-edit-small" /> */}
             </div>
             {/* <div className="input-box py-4">
               <label htmlFor="birthday">生日*</label>
@@ -277,7 +279,7 @@ function MemberEdit(props) {
                   value={email}
                 />
               </div>
-              {/* <small id="email" className="form-text text-left text-danger" />
+              {/* <small id="email" className="form-text text-left text-danger m-edit-small" />
               Email作為登入帳號無法變更 */}
             </div>
             <div className="input-box py-4">
@@ -294,7 +296,7 @@ function MemberEdit(props) {
                   }}
                 />
               </div>
-              {/* <small id="phone" className="form-text hidden" /> */}
+              {/* <small id="phone" className="form-text hidden m-edit-small" /> */}
             </div>
             <div className="input-box py-4">
               <label htmlFor="address">地址*</label>
@@ -310,18 +312,18 @@ function MemberEdit(props) {
                   }}
                 />
               </div>
-              {/* <small id="address" className="form-text hidden" /> */}
+              {/* <small id="address" className="form-text hidden m-edit-small" /> */}
             </div>
 
             <button
-              className="btn btn-block"
+              className="btn btn-block m-edit-btn"
               onClick={() => {
                 updateUserToSever()
               }}
             >
               儲存會員資料
             </button>
-            <Link className="btn btn-block" to="/member">
+            <Link className="btn btn-block m-edit-btn" to="/member">
               回會員中心
             </Link>
           </div>

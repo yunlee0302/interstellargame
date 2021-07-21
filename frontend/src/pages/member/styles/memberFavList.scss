@@ -1,20 +1,13 @@
-* {
+.m-container {
   font-size: 1rem;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 768px) {
-  * {
+  .m-container {
     font-size: 0.75rem;
   }
-}
-
-body {
-  background-image: url('../images/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 1000px;
 }
 
 .member-btn-group {
@@ -24,58 +17,58 @@ body {
 }
 
 .member-btn {
-  p {
+  .member-btn-p {
     line-height: 40px;
     color: white;
   }
 
   &:hover {
-    p,
-    img {
+    .member-btn-p,
+    .member-btn-img {
       text-shadow: 1px 1px 5px rgb(255, 234, 1, 0.6);
       filter: drop-shadow(1px 1px 5px rgb(255, 234, 1, 0.6));
     }
   }
 }
 
-.table {
+.m-table {
   text-align: center;
   margin: 50px 0;
 
-  th {
+  .m-favlist-th {
     color: #02021e;
     border-top: 1px solid #ce93d7;
     border-bottom: 1px solid #ce93d7;
   }
 
-  td {
+  .m-favlist-td {
     border-top: 1px solid #ce93d7;
     border-bottom: 1px solid #ce93d7;
   }
 
-  thead,
-  tbody {
+  .m-favlist-thead,
+  .m-favlist-tbody {
     border-left: 1px solid #ce93d7;
     border-right: 1px solid #ce93d7;
   }
 
-  thead {
-    th {
+  .m-favlist-thead {
+    .m-favlist-th {
       border-bottom: none;
     }
 
-    tr {
+    .m-favlist-tr {
       background-color: #ce93d7;
       color: white;
     }
   }
 
-  tbody tr {
+  .m-favlist-tr {
     color: white;
     line-height: 60px;
   }
 
-  .order-btn {
+  .m-favlist-btn {
     height: 50%;
     background-color: #ce93d7;
     border-radius: 5px;
@@ -89,21 +82,21 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .table {
+  .m-favlist-table {
     font-size: 0.75rem;
     width: 100%;
     display: block;
     overflow-x: auto;
     white-space: nowrap;
 
-    .order-btn {
+    .m-favlist-btn {
       height: 40px;
       padding: 6%;
       line-height: 15px;
     }
   }
 
-  table {
+  .m-favlist-table {
     width: 100%;
     display: block;
     overflow-x: auto;
@@ -111,23 +104,23 @@ body {
   }
 }
 
-.text-yellow {
+.m-text-yellow {
   color: #ffea01;
 }
 
-tbody tr .item-img {
-  img {
+.m-favlist-td {
+  .m-favlist-img {
     width: 100%;
   }
 
   width: 80px;
 }
 
-td i {
+.m-favlist-i {
   cursor: pointer;
 }
 
-.btn-active {
+.m-btn-active {
   text-shadow: 1px 1px 5px rgba(179, 136, 254, 0.9);
   filter: drop-shadow(1px 1px 5px rgba(179, 136, 254, 0.9));
 }

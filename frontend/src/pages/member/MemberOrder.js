@@ -99,7 +99,7 @@ function MemberOrder(props) {
   return (
     <>
       ;
-      <div className="container mt-5">
+      <div className="container mt-5 m-container">
         <div className="member-btn-group text-center row">
           <div
             className="member-btn col col1"
@@ -108,7 +108,7 @@ function MemberOrder(props) {
             }}
           >
             <img src={fun00} alt={fun00} />
-            <p className="py-1 m-0">會員中心</p>
+            <p className="py-1 m-0 member-btn-p">會員中心</p>
           </div>
           <div
             className="member-btn col col2"
@@ -116,8 +116,8 @@ function MemberOrder(props) {
               props.history.push('/member/memberOrder')
             }}
           >
-            <img src={fun01} alt={fun01} className="btn-active" />
-            <p className="py-1 m-0 btn-active">查詢訂單</p>
+            <img src={fun01} alt={fun01} className="m-btn-active" />
+            <p className="py-1 m-0 member-btn-p m-btn-active">查詢訂單</p>
           </div>
           <div
             className="member-btn col col3"
@@ -126,7 +126,7 @@ function MemberOrder(props) {
             }}
           >
             <img src={fun02} alt={fun02} />
-            <p className="py-1 m-0">查詢預約</p>
+            <p className="py-1 m-0 member-btn-p">查詢預約</p>
           </div>
           <div
             className="member-btn col col4"
@@ -135,7 +135,7 @@ function MemberOrder(props) {
             }}
           >
             <img src={fun03} alt={fun03} />
-            <p className="py-1 m-0">我的最愛</p>
+            <p className="py-1 m-0 member-btn-p">我的最愛</p>
           </div>
 
           <div
@@ -145,7 +145,7 @@ function MemberOrder(props) {
             }}
           >
             <img src={fun04} alt={fun04} />
-            <p className="py-1 m-0">我的優惠券</p>
+            <p className="py-1 m-0  member-btn-p">我的優惠券</p>
           </div>
         </div>
       </div>

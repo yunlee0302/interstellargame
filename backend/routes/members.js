@@ -184,7 +184,7 @@ router.post('/login', function (req, res, next) {
   })
 
 
-// get 獲取訂單，使用會員id
+// get 獲取訂單資訊，使用會員id
 router.get('/getOrder/:userId', (req, res, next) => {
 
   userId = +req.params.userId
@@ -192,7 +192,7 @@ router.get('/getOrder/:userId', (req, res, next) => {
   executeSQL(user.getUserOrderByIdSQL(userId), res, 'get', true)
 })
 
-// get 獲取最愛列表，使用會員id
+// get 獲取我的最愛，使用會員id
 router.get('/getFavlist/:userId', (req, res, next) => {
 
   userId = +req.params.userId

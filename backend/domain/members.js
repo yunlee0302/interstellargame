@@ -56,14 +56,16 @@ class User {
     return sql
   }
   
-  // get 會員最愛
+
+
+  // get 會員 我的最愛
   static getUserFavlistByIdSQL(id) {
-    let sql = ` SELECT items.itemName, items.itemImg, items.itemPrice FROM favlist LEFT JOIN items ON favlist.itemId=items.itemId WHERE favlist.userId = ${id}`
+    let sql = `SELECT items.itemName, items.itemImg, items.itemPrice FROM favlist LEFT JOIN items ON favlist.itemId=items.itemId WHERE favlist.userId = ${id}`
     console.log(sql)
     return sql
   }
 
-  // get 會員最愛
+  // get 會員 我的優惠券
   static getUserCouponByIdSQL(id) {
     let sql = ` SELECT voucher.voucherName, voucher.voucherPrice, discount.created_at , discount.discountUse FROM discount LEFT JOIN voucher ON voucher.voucherId=discount.voucherId WHERE discount.userId = ${id}`
     console.log(sql)

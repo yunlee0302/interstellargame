@@ -39,25 +39,37 @@ function MemberCoupon(props) {
 
   const couponDisplay = (
     <>
-      <div className="container">
-        <table className="member-coupon-table">
-          <thead>
-            <tr>
-              <th scope="col">優惠券名稱</th>
-              <th scope="col">優惠內容</th>
-              <th scope="col">獲得日期</th>
-              <th scope="col">使用狀況</th>
+      <div className="container m-container">
+        <table className="m-coupon-table">
+          <thead className="m-coupon-thead">
+            <tr className="m-coupon-tr">
+              <th scope="col" className="m-coupon-th">
+                優惠券名稱
+              </th>
+              <th scope="col" className="m-coupon-th">
+                優惠內容
+              </th>
+              <th scope="col" className="m-coupon-th">
+                獲得日期
+              </th>
+              <th scope="col" className="m-coupon-th">
+                使用狀況
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="m-coupon-tbody">
             {coupon.length &&
               coupon.map((coupon) => {
                 return (
-                  <tr>
-                    <td>{coupon.voucherName}</td>
-                    <td>商城購物結帳金額-{coupon.voucherPrice}元</td>
-                    <td>{coupon}.created_at}</td>
-                    <td>{(coupon.discountUse = 0 ? '未使用' : '已使用')}</td>
+                  <tr className="m-coupon-tr">
+                    <td className="m-coupon-td">{coupon.voucherName}</td>
+                    <td className="m-coupon-td">
+                      商城購物結帳金額-{coupon.voucherPrice}元
+                    </td>
+                    <td className="m-coupon-td">{coupon.created_at}</td>
+                    <td className="m-coupon-td">
+                      {(coupon.discountUse = 0 ? '未使用' : '已使用')}
+                    </td>
                   </tr>
                 )
               })}
@@ -69,8 +81,7 @@ function MemberCoupon(props) {
 
   return (
     <>
-      ;
-      <div className="container mt-5">
+      <div className="container mt-5 m-container">
         <div className="member-btn-group text-center row">
           <div
             className="member-btn col col1"
@@ -79,7 +90,7 @@ function MemberCoupon(props) {
             }}
           >
             <img src={fun00} alt={fun00} />
-            <p className="py-1 m-0">會員中心</p>
+            <p className="py-1 m-0 member-btn-p">會員中心</p>
           </div>
           <div
             className="member-btn col col2"
@@ -88,7 +99,7 @@ function MemberCoupon(props) {
             }}
           >
             <img src={fun01} alt={fun01} />
-            <p className="py-1 m-0">查詢訂單</p>
+            <p className="py-1 m-0 member-btn-p">查詢訂單</p>
           </div>
           <div
             className="member-btn col col3"
@@ -97,7 +108,7 @@ function MemberCoupon(props) {
             }}
           >
             <img src={fun02} alt={fun02} />
-            <p className="py-1 m-0">查詢預約</p>
+            <p className="py-1 m-0 member-btn-p">查詢預約</p>
           </div>
           <div
             className="member-btn col col4"
@@ -106,7 +117,7 @@ function MemberCoupon(props) {
             }}
           >
             <img src={fun03} alt={fun03} />
-            <p className="py-1 m-0">我的最愛</p>
+            <p className="py-1 m-0 member-btn-p">我的最愛</p>
           </div>
 
           <div
@@ -115,11 +126,12 @@ function MemberCoupon(props) {
               props.history.push('/member/memberCoupon')
             }}
           >
-            <img src={fun04} alt={fun04} className="btn-active" />
-            <p className="py-1 m-0 btn-active">我的優惠券</p>
+            <img src={fun04} alt={fun04} className="m-btn-active" />
+            <p className="py-1 m-0 m-btn-active member-btn-p">我的優惠券</p>
           </div>
         </div>
       </div>
+      {couponDisplay}
     </>
   )
 }

@@ -1,20 +1,13 @@
-* {
+.m-container {
   font-size: 1rem;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 768px) {
-  * {
+  .m-container {
     font-size: 0.75rem;
   }
-}
-
-body {
-  background-image: url('../images/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 1000px;
 }
 
 .member-btn-group {
@@ -24,86 +17,68 @@ body {
 }
 
 .member-btn {
-  p {
+  .member-btn-p {
     line-height: 40px;
     color: white;
   }
 
   &:hover {
-    p,
-    img {
+    .member-btn-p,
+    .member-btn-img {
       text-shadow: 1px 1px 5px rgb(255, 234, 1, 0.6);
       filter: drop-shadow(1px 1px 5px rgb(255, 234, 1, 0.6));
     }
   }
 }
 
-.member-coupon-table {
+.m-coupon-table {
   text-align: center;
   margin: 50px 0;
 
-  th {
+  .m-coupon-th {
     color: #02021e;
     border-top: 1px solid #ce93d7;
     border-bottom: 1px solid #ce93d7;
   }
 
-  td {
+  .m-coupon-td {
     border-top: 1px solid #ce93d7;
     border-bottom: 1px solid #ce93d7;
   }
 
-  thead,
-  tbody {
+  .m-coupon-thead,
+  .m-coupon-tbody {
     border-left: 1px solid #ce93d7;
     border-right: 1px solid #ce93d7;
   }
 
-  thead {
-    th {
+  .m-coupon-thead {
+    .m-coupon-th {
       border-bottom: none;
     }
 
-    tr {
+    .m-coupon-tr {
       background-color: #ce93d7;
       color: white;
     }
   }
 
-  tbody tr {
+  .m-coupon-tbody .m-coupon-tr {
     color: white;
     line-height: 30px;
-  }
-
-  .order-btn {
-    height: 35px;
-    background-color: #ce93d7;
-    border-radius: 5px;
-    color: #02021e;
-    font-size: 0.75rem;
-    width: 70%;
-    margin: auto;
-    line-height: 35px;
-    cursor: pointer;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .table {
+  .m-coupon-table {
     font-size: 0.75rem;
     width: 100%;
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-
-    .order-btn {
-      height: 40px;
-      padding: 6%;
-      line-height: 15px;
-    }
   }
 
-  table {
+  .m-coupon-table {
     width: 100%;
     display: block;
     overflow-x: auto;
@@ -111,11 +86,11 @@ body {
   }
 }
 
-.text-yellow {
+.m-text-yellow {
   color: #ffea01;
 }
 
-.btn-active {
+.m-btn-active {
   text-shadow: 1px 1px 5px rgba(179, 136, 254, 0.9);
   filter: drop-shadow(1px 1px 5px rgba(179, 136, 254, 0.9));
 }
