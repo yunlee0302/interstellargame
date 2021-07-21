@@ -12,6 +12,7 @@ import heartImage from '../img/heart.png'
 import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from "../components/itemCards/ItemCard"
+import Add from '../../../components/Add'
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
 
 const midImage = {
@@ -102,13 +103,14 @@ const ItemDetail5 = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                                 <ul className="counter1">
-                                    <li id="minus" className="btn11">
+                                    <div className="Additem"><Add /></div>
+                                    {/* <li id="minus" className="btn11">
                                         <input type="button" onclick="minuser()" value="-" className="button11" />
                                     </li>
                                     <li id="countnum1" className="btn12">1</li>
                                     <li id="plus" className="btn13">
                                         <input type="button" onclick="adder()" value="+" className="button13" />
-                                    </li>
+                                    </li> */}
                                 </ul>
                                 <button className="join ml-2">加入購物車</button>
                             </div>
@@ -120,7 +122,7 @@ const ItemDetail5 = (props) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row itemcontent">
+                <div className=" itemcontent">
                     <p>料理界的奇觀！<br /><br />
                         大家都知道，人多手雜就會壞了事。在這款遊戲中，玩家們在嘶嘶作響的爐火上烹煮料理，<br />
                         並暗自期望著與自己爭奪大廚職位的對手們，會端出太鹹而且毫無價值的菜餚。<br />
@@ -130,7 +132,7 @@ const ItemDetail5 = (props) => {
                     </p>
 
                     <p>作者｜Karl-Heinz Schmiel<br />
-                        插畫｜Christof Tisch<br />
+                        插畫｜Christof Tisch<br /><br />
                         ★2001 德國年度遊戲獎入圍 料理界的奇觀！<br />
                     </p>
                 </div>

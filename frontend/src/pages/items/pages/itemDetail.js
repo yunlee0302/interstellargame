@@ -12,6 +12,7 @@ import heartImage from '../img/heart.png'
 import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from '../components/itemCards/ItemCard'
+import Add from '../../../components/Add'
 import {
   item1,
   item2,
@@ -178,13 +179,14 @@ const ItemDetail = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                 <ul className="counter1">
-                  <li id="minus" className="btn11">
+                  <div className="Additem"><Add /></div>
+                  {/* <li id="minus" className="btn11">
                     <input type="button" onclick="minuser()" value="-" className="button11" />
                   </li>
                   <li id="countnum1" className="btn12">1</li>
                   <li id="plus" className="btn13">
                     <input type="button" onclick="adder()" value="+" className="button13" />
-                  </li>
+                  </li> */}
                 </ul>
                 <button
                   type="button"
@@ -209,7 +211,7 @@ const ItemDetail = (props) => {
         </div>
       </div>
       <div className="container ">
-        <div className="row itemcontent">
+        <div className=" itemcontent">
           <p>疑神疑鬼的密室推理陣營遊戲</p>
           <p>
             山中作客的夜晚，主人慘遭殺害！
@@ -221,7 +223,7 @@ const ItemDetail = (props) => {
           <p>
             作者｜ぎゅんぶく屋、すごろくや
             <br />
-            插畫｜渋江玖流（ぎゅんぶく屋）
+            插畫｜渋江玖流（ぎゅんぶく屋）<br />
             <br />★ 2021 天鵝獎｜最佳陣營遊戲
           </p>
         </div>

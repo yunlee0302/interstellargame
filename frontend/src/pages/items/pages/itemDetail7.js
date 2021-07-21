@@ -12,6 +12,7 @@ import heartImage from '../img/heart.png'
 import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from "../components/itemCards/ItemCard"
+import Add from '../../../components/Add'
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
 
 const midImage = {
@@ -103,13 +104,14 @@ const ItemDetail7 = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                                 <ul className="counter1">
-                                    <li id="minus" className="btn11">
+                                    <div className="Additem"><Add /></div>
+                                    {/* <li id="minus" className="btn11">
                                         <input type="button" onclick="minuser()" value="-" className="button11" />
                                     </li>
                                     <li id="countnum1" className="btn12">1</li>
                                     <li id="plus" className="btn13">
                                         <input type="button" onclick="adder()" value="+" className="button13" />
-                                    </li>
+                                    </li> */}
                                 </ul>
                                 <button className="join ml-2">加入購物車</button>
                             </div>
@@ -121,7 +123,7 @@ const ItemDetail7 = (props) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row itemcontent">
+                <div className=" itemcontent">
                     <p>想來點睡前的輕鬆寧靜遊戲嗎？<br />
                         玩家依序出一、二或三張牌以湊成一排，當一排中有三張「3」、四張「4」、五張「5」、六張「6」或七張「7」時，這排便完成了。<br />
                         你獲得你所完成的那排中所有的紙牌。<br />
@@ -129,7 +131,7 @@ const ItemDetail7 = (props) => {
                         簡單的規則讓全家大小輕鬆上手，享受寧靜的刀光劍影！
                     </p>
 
-                    <p>作者｜Leo Colvini & Dario di Toffoli<br />
+                    <p>作者｜Leo Colvini & Dario di Toffoli<br /><br />
                         ★想來點睡前的輕鬆寧靜遊戲嗎？<br />
                     </p>
                 </div>

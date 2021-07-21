@@ -12,6 +12,7 @@ import heartImage from '../img/heart.png'
 import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from "../components/itemCards/ItemCard"
+import Add from '../../../components/Add'
 import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../components/itemCards/itemData1"
 
 const midImage = {
@@ -102,13 +103,14 @@ const ItemDetail6 = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                                 <ul className="counter1">
-                                    <li id="minus" className="btn11">
+                                    <div className="Additem"><Add /></div>
+                                    {/* <li id="minus" className="btn11">
                                         <input type="button" onclick="minuser()" value="-" className="button11" />
                                     </li>
                                     <li id="countnum1" className="btn12">1</li>
                                     <li id="plus" className="btn13">
                                         <input type="button" onclick="adder()" value="+" className="button13" />
-                                    </li>
+                                    </li> */}
                                 </ul>
                                 <button className="join ml-2">加入購物車</button>
                             </div>
@@ -120,7 +122,7 @@ const ItemDetail6 = (props) => {
                 </div>
             </div>
             <div className="container">
-                <div className="row itemcontent">
+                <div className=" itemcontent">
                     <p>聰明媽媽必備小手段：<br />
                         讓一個孩子負責切派，其他的孩子可以先選要吃哪一片，切派的人就會盡量讓每一片大小一樣，即使自己最後才拿，也不吃虧。<br />
                         這個手段在這款遊戲中不見得管用，甚至有可能要反其道而行：<br />
@@ -128,7 +130,7 @@ const ItemDetail6 = (props) => {
                         聰明地切派並善於察顏觀色，才能讓你成為最終的贏家。
                     </p>
 
-                    <p>作者｜Jeffrey D. Allers<br />
+                    <p>作者｜Jeffrey D. Allers<br /><br />
                         ★2009年金畸獎最佳兒童桌上遊戲獎項提名！<br />
                     </p>
                 </div>

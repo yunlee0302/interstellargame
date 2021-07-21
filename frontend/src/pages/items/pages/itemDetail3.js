@@ -13,6 +13,7 @@ import cartImage from '../img/cart.png'
 import btnFavImage from '../img/btn-fav.png'
 import ItemCard from '../components/itemCards/ItemCard'
 import { Modal, Button } from 'react-bootstrap'
+import Add from '../../../components/Add'
 // import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../itemData"
 import {
   item1,
@@ -254,13 +255,14 @@ const ItemDetail3 = (props) => {
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
                 <ul className="counter1">
-                  <li id="minus" className="btn11">
+                  <div className="Additem"><Add /></div>
+                  {/* <li id="minus" className="btn11">
                     <input type="button" onclick="minuser()" value="-" className="button11" />
                   </li>
                   <li id="countnum1" className="btn12">1</li>
                   <li id="plus" className="btn13">
                     <input type="button" onclick="adder()" value="+" className="button13" />
-                  </li>
+                  </li> */}
                 </ul>
 
                 <button
@@ -287,7 +289,7 @@ const ItemDetail3 = (props) => {
         </div>
       </div>
       <div className="container">
-        <div className="row itemcontent">
+        <div className=" itemcontent">
           <p>
             本遊戲提供504種不同的玩法！
             <br />
@@ -308,7 +310,7 @@ const ItemDetail3 = (props) => {
             作者｜Friedemann Friese
             <br />
             插畫｜Harald Lieske
-            <br />
+            <br /><br />
             ★2013 德國年度玩家遊戲獎推薦
             <br />
             ★2013 德國玩家票選最佳遊戲第一名
