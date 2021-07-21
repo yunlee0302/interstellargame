@@ -4,11 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
-// import 路徑： './pages/你負責的功能/你的index'
-// import Homepage from './pages/Homepage'
-// import About from './pages/About'
+import Homepage from './pages/Homepage'
+import About from './pages/About'
 import ReservationIndex from './pages/reservations/ReservationIndex'
-// import MemberIndex from './pages/reservations/MemberIndex'
 // import ItemIndex from './pages/items/ItemIndex'
 // import CartIndex from './pages/cart/CartIndex'
 // import MessageIndex from './pages/message/MessageIndex'
@@ -33,65 +31,65 @@ const App = () => {
     <Router>
       <Navbar />
       <ScrollToTop>
-      <Switch>
-        {/* <MemberIndex /> */}
-        {/* Hannah */}
-        <Route path="/login">
-          <LoginIndex />
-        </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
-        <Route path="/forgetPwd">
-          <ForgetPwd />
-        </Route>
-        <Route path="/forgetPwdMailSent">
-          <ForgetPwdMailSent />
-        </Route>
-        <Route path="/member/memberPwdEditSuccess">
-          <MemberPwdEditSuccess />
-        </Route>
-        <Route path="/member/memberPwdEdit">
-          <MemberPwdEdit />
-        </Route>
-        <Route path="/member/memberCoupon">
-          <MemberCoupon />
-        </Route>
-        <Route path="/member/memberOrder">
-          <MemberOrder />
-        </Route>
-        <Route path="/member/memberEdit">
-          <MemberEdit />
-        </Route>
-        <Route path="/member/memberFavList">
-          <MemberFavList />
-        </Route>
-        <Route path="/member">
-          <MemberIndex />
-        </Route>
-        <Route path="/Shoppingcart1">
+        <Switch>
+          {/* <MemberIndex /> */}
+          {/* Hannah */}
+          <Route path="/login">
+            <LoginIndex />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/forgetPwd">
+            <ForgetPwd />
+          </Route>
+          <Route path="/forgetPwdMailSent">
+            <ForgetPwdMailSent />
+          </Route>
+          <Route path="/member/memberPwdEditSuccess">
+            <MemberPwdEditSuccess />
+          </Route>
+          <Route path="/member/memberPwdEdit">
+            <MemberPwdEdit />
+          </Route>
+          <Route path="/member/memberCoupon">
+            <MemberCoupon />
+          </Route>
+          <Route path="/member/memberOrder">
+            <MemberOrder />
+          </Route>
+          <Route path="/member/memberEdit">
+            <MemberEdit />
+          </Route>
+          <Route path="/member/memberFavList">
+            <MemberFavList />
+          </Route>
+          <Route path="/member">
+            <MemberIndex />
+          </Route>
+          <Route path="/Shoppingcart1">
             <Shoppingcart1 />
           </Route>
-       <Route path="/Shoppingcart2">
+          <Route path="/Shoppingcart2">
             <Shoppingcart2 />
-          </Route> 
+          </Route>
           <Route path="/Shoppingcart3">
             <Shoppingcart3 />
           </Route>
           <Route path="/Shoppingcart4">
             <Shoppingcart4 />
           </Route>
-        <ReservationIndex />
-        {/* <ItemIndex />
+          <ReservationIndex />
+          {/* <ItemIndex />
         <CartIndex />
         <MessageIndex/> */}
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/">
-          <Homepage />
-        </Route>
-      </Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Homepage />
+          </Route>
+        </Switch>
       </ScrollToTop>
       <Footer />
     </Router>
