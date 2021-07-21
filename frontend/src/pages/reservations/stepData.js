@@ -3,6 +3,8 @@ import STEP2 from './images/step2.png'
 import STEP3 from './images/step3.png'
 import STEP4 from './images/step4.png'
 import pricing from './images/pricing.png'
+import storeImg from '../image/jpg/about_store2-2.jpg'
+import lastImg from '../image/jpg/about_bgordering-01.jpg'
 import Button from './components/Button'
 
 export const step1 = {
@@ -19,7 +21,7 @@ export const step1 = {
 export const step2 = {
   step: 'STEP2',
   stepIcon: STEP2,
-  stepImage: 'https://fakeimg.pl/300/', //this will be tricky, a carousel component maybe?
+  stepImage: storeImg,
   Hover: Button,
   link: '#',
   buttonText: '查看艙房',
@@ -41,7 +43,7 @@ export const step3 = {
 export const step4 = {
   step: 'STEP3',
   stepIcon: STEP4,
-  stepImage: 'https://fakeimg.pl/300/', //要再去找一個情境圖片
+  stepImage: lastImg,
   Hover: null,
   link: null,
   buttonText: null,
