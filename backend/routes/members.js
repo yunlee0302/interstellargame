@@ -145,10 +145,7 @@ router.post('/login', function (req, res, next) {
       req.body.email,
       req.body.password
     )
-    // console.log('user:',user)
 
-  
-    // 回應都寫在userLogin方法裡(async-await)
     userLogin(user.getUserByEmailAndPasswordSQL(), req, res, user)
   })
 
@@ -156,11 +153,7 @@ router.post('/login', function (req, res, next) {
   router.post('/try-upload/:userId',upload.single('avatar'), (req, res)=>{
     console.log(req.file);
     res.json(req.file); // 用json傳給前端
-  
-    // 包含其他檔案
-    // res.json(file: req.file,
-    //   bocy:req.body,
-    //   ); 
+
   
   }); 
   
@@ -191,28 +184,6 @@ router.post('/login', function (req, res, next) {
   })
 
 
-// 檢查是否登入
-router.get('/checklogin', function (req, res, next) {
-  const sess = req.session
-  console.log('sess:',sess)
-
-  // const id = sess.loginId
-  // const username = sess.loginUsername
-  // const name = sess.loginName
-  // const email = sess.loginEmail
-  // const createDate = sess.loginCreatedDate
-
-  // const isLogined = !!name
-
-  // if (isLogined) {
-  //   res.status(200).json({ id, name, username, email, createDate })
-  // } else {
-  //   // 登出狀態時回傳`{id:0}`
-  //   res.status(200).json({ id: 0 })
-  // }
-})
-
-
 // get 獲取訂單，使用會員id
 router.get('/getOrder/:userId', (req, res, next) => {
 
@@ -229,6 +200,13 @@ router.get('/getFavlist/:userId', (req, res, next) => {
   executeSQL(User.getUserFavlistByIdSQL(userId), res, 'get', true)
 })
 
+// get 獲取優惠券，使用會員id
+router.get('/getCoupon/:userId', (req, res, next) => {
+
+  userId = +req.params.userId
+
+  executeSQL(User.getUserCouponByIdSQL(userId), res, 'get', true)
+})
 
 // 上傳圖片
 
@@ -246,8 +224,8 @@ router.get('/try-upload/:userId', (req, res)=>{
 // put 更新一筆資料
 router.put('/updateInfo/:userId', (req, res) => {
   let user = new User(
-    'email',
-    'password',
+    req.body.email,
+    req.body.password,
     req.body.name,
     req.body.nickname,
     req.body.gender,

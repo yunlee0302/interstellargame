@@ -35,13 +35,13 @@ body {
   align-items: center;
   position: relative;
 
-  p {
+  .member-card-title-p {
     width: 100%;
     line-height: 100%;
     margin: 0;
   }
 
-  span {
+  .member-card-title-tips {
     position: absolute;
     color: #ffea01;
     font-size: 0.75rem;
@@ -52,8 +52,7 @@ body {
 .member-card-body {
   background-color: #fff;
   color: #02021e;
-  padding: 0 10%;
-  padding: 10%;
+  padding: 8%;
 }
 
 @media screen and (max-width: 991px) {
@@ -64,12 +63,12 @@ body {
   .member-left {
     display: flex;
 
-    .memberA {
+    .member-card-memberA {
       width: 50%;
       padding: 5%;
     }
 
-    .memberB {
+    .member-card-memberB {
       width: 50%;
       padding: 5%;
 
@@ -79,36 +78,36 @@ body {
 }
 
 .member-left {
-  img {
+  .member-left-img {
     border: 2px solid #ccc;
     width: 100%;
   }
 
-  p {
+  .member-left-p {
     text-align: center;
     line-height: 50px;
     margin: 0;
   }
 
-  .btn {
+  .member-left-btn {
     width: 100%;
     height: 40px;
     font-size: 0.75rem;
   }
 }
 
-.member-right .btn {
+.member-right-btn {
   width: 100%;
   height: 40px;
   font-size: 0.75rem;
 }
 
-.member-left .btn {
+.member-left-btn {
   background-color: #b388fe;
   color: white;
 }
 
-.member-right .btn {
+.member-right-btn {
   background-color: #ffea01;
   color: #02021e;
 }
@@ -121,18 +120,20 @@ body {
 }
 
 .member-middle {
-  .info-title {
+  text-align: center;
+
+  .member-middle-info-title {
     color: #33a4fb;
     min-width: 30%;
   }
 
-  .info-text {
+  .member-middle-info-text {
     overflow: visible;
   }
 }
 
 @media screen and (max-width: 991px) {
-  .member-middle .info-title {
+  .member-middle-info-title {
     min-width: 20%;
   }
 }
@@ -142,14 +143,14 @@ body {
   width: 60%;
   margin: 0 auto;
 
-  p {
+  .member-btn-group-p {
     line-height: 40px;
     color: white;
   }
 
   .col-6:hover {
-    p,
-    img {
+    .member-btn-group-p,
+    .member-btn-group-img {
       text-shadow: 1px 1px 5px rgb(255, 234, 1, 0.6);
       filter: drop-shadow(1px 1px 5px rgb(255, 234, 1, 0.6));
     }

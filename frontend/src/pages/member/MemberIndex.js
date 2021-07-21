@@ -23,6 +23,7 @@ function MemberIndex(props) {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
+  const [img, setImg] = useState('')
 
   const [userDataIsExist, setUserDataIsExist] = useState(true)
 
@@ -45,7 +46,16 @@ function MemberIndex(props) {
     const response = await fetch(request)
     const data = await response.json()
     console.log('data', data)
+
     // 設定資料
+    setNickname(data.userNickname)
+    setName(data.userName)
+    setGender(data.userGender)
+    setBirthday(data.userBirthday)
+    setEmail(data.userEmail)
+    setPhone(data.userPhone)
+    setAddress(data.userAddress)
+    setImg(data.userImg)
 
     // 如果從伺服器回傳的資料沒有id值
     if (!data.id) {
@@ -56,14 +66,6 @@ function MemberIndex(props) {
 
     const newData = data
     console.log(newData)
-
-    setNickname(newData.userNickname)
-    setName(newData.userName)
-    setGender(newData.userGender)
-    setBirthday(newData.userBirthday)
-    setEmail(newData.userEmail)
-    setPhone(newData.userPhone)
-    setAddress(newData.userAddress)
   }
 
   // 一開始就會開始載入資料
@@ -101,24 +103,38 @@ function MemberIndex(props) {
     window.location.replace(`/login/`)
   }
 
+  // 轉換日期格式
+  function convert_date(date_text) {
+    // date_text
+    const myDate = new Date(date_text)
+    const date_text_new = myDate.toISOString().substring(0, 10)
+    return `${date_text_new}`
+  }
+
   const display = (
     <>
       <div className="member mt-5">
         <div className="container">
           <div className="member-card">
             <div className="member-card-title row">
-              <p className="text-light">ID CARD</p>
-              {/* <span className="tips">完成個人資訊可獲得折價券！</span> */}
+              <p className="text-light member-card-title-p">ID CARD</p>
+              {/* <span className="member-card-title-tips">完成個人資訊可獲得折價券！</span> */}
             </div>
             <div className="member-card-body row">
               <div className="member-left col-12 col-lg-3 text-center ">
-                <div className="memberA">
-                  <img src={memberImg} alt="memberImg" />
-                  <p>{nickname ? nickname : '未設定暱稱'}</p>
+                <div className="member-card-memberA">
+                  <img
+                    src={img ? img : memberImg}
+                    alt="memberImg"
+                    className="member-left-img"
+                  />
+                  <p className="member-left-p">
+                    {nickname ? nickname : '未設定暱稱'}
+                  </p>
                 </div>
-                <div className="memberB">
+                <div className="member-card-memberB">
                   <button
-                    className="btn my-3"
+                    className="btn my-1 member-left-btn"
                     onClick={() => {
                       props.history.push('/member/memberPwdEdit/')
                     }}
@@ -126,7 +142,7 @@ function MemberIndex(props) {
                     修改密碼
                   </button>
                   <button
-                    className="btn my-3"
+                    className="btn my-3 member-left-btn"
                     onClick={() => {
                       logoutToSever()
                     }}
@@ -137,46 +153,48 @@ function MemberIndex(props) {
               </div>
               <div className="member-middle col-12 col-lg-6">
                 <div className="pb-2 d-flex">
-                  <div className="info-title p-1">姓名</div>
-                  <div className="info-text p-1">{name ? name : '未設定'}</div>
+                  <div className="member-middle-info-title p-1">姓名</div>
+                  <div className="member-middle-info-text p-1">
+                    {name ? name : '未設定'}
+                  </div>
                 </div>
-                {/* <div className="py-2 d-flex">
-                  <div className="info-title p-1">性別</div>
-                  <div className="info-text p-1">
+                <div className="py-2 d-flex">
+                  <div className="member-middle-info-title p-1">性別</div>
+                  <div className="member-middle-info-text p-1">
                     {gender ? gender : '未設定'}
                   </div>
-                </div> */}
+                </div>
                 <div className="py-2 d-flex">
                   <div
-                    className="info-title p-1"
+                    className="member-middle-info-title p-1"
                     pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
                   >
                     生日
                   </div>
-                  <div className="info-text p-1">
-                    {birthday ? birthday : '未設定'}
+                  <div className="member-middle-info-text p-1">
+                    {birthday ? convert_date(birthday) : '未設定'}
                   </div>
                 </div>
                 <div className="py-2 d-flex">
-                  <div className="info-title p-1">Email</div>
-                  <div className="info-text p-1">{email}</div>
+                  <div className="member-middle-info-title p-1">Email</div>
+                  <div className="member-middle-info-text p-1">{email}</div>
                 </div>
                 <div className="py-2 d-flex">
-                  <div className="info-title p-1">手機</div>
-                  <div className="info-text p-1">
+                  <div className="member-middle-info-title p-1">手機</div>
+                  <div className="member-middle-info-text p-1">
                     {phone ? phone : '未設定'}
                   </div>
                 </div>
                 <div className="py-2 d-flex">
-                  <div className="info-title p-1">地址</div>
-                  <div className="info-text p-1">
+                  <div className="member-middle-info-title p-1">地址</div>
+                  <div className="member-middle-info-text p-1">
                     {address ? address : '未設定'}
                   </div>
                 </div>
               </div>
               <div className="member-right col-12 col-lg-3">
                 <button
-                  className="btn"
+                  className="btn member-right-btn"
                   onClick={() => {
                     props.history.push('/member/memberEdit/' + userId)
                   }}
@@ -196,8 +214,8 @@ function MemberIndex(props) {
               props.history.push('/member/memberOrder')
             }}
           >
-            <img src={fun01} alt="fun01" />
-            <p className="py-1">查詢訂單</p>
+            <img src={fun01} alt="fun01" className="member-btn-group-img" />
+            <p className="py-1 member-btn-group-p">查詢訂單</p>
           </div>
           <div
             className="col-6 col-lg-3"
@@ -205,8 +223,8 @@ function MemberIndex(props) {
               props.history.push('/member/memberOrder')
             }}
           >
-            <img src={fun02} alt="fun02" />
-            <p className="py-1">查詢預約</p>
+            <img src={fun02} alt="fun02" className="member-btn-group-img" />
+            <p className="py-1 member-btn-group-p">查詢預約</p>
           </div>
           <div
             className="col-6 col-lg-3"
@@ -214,8 +232,8 @@ function MemberIndex(props) {
               props.history.push('/member/memberFavList')
             }}
           >
-            <img src={fun03} alt="fun03" />
-            <p className="py-1">我的最愛</p>
+            <img src={fun03} alt="fun03" className="member-btn-group-img" />
+            <p className="py-1 member-btn-group-p">我的最愛</p>
           </div>
           <div
             className="col-6 col-lg-3"
@@ -223,8 +241,8 @@ function MemberIndex(props) {
               props.history.push('/member/memberCoupon')
             }}
           >
-            <img src={fun04} alt="fun04" />
-            <p className="py-1">我的優惠券</p>
+            <img src={fun04} alt="fun04" className="member-btn-group-img" />
+            <p className="py-1 member-btn-group-p">我的優惠券</p>
           </div>
         </div>
       </div>

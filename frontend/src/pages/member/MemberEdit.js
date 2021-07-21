@@ -7,7 +7,7 @@ import swal from 'sweetalert'
 
 // image
 import memberImg from './images/member-img.png'
-import googleLogin from './images/google-login.png'
+// import googleLogin from './images/google-login.png'
 
 function MemberEdit(props) {
   // 從localStorage抓取該會員ID
@@ -20,6 +20,7 @@ function MemberEdit(props) {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
+  const [img, setImg] = useState('')
 
   const [userDataIsExist, setUserDataIsExist] = useState(true)
 
@@ -54,6 +55,7 @@ function MemberEdit(props) {
     setEmail(data.userEmail)
     setPhone(data.userPhone)
     setAddress(data.userAddress)
+    setImg(data.userImg)
 
     // 如果從伺服器回傳的資料沒有id值
     if (!data.userId) {
@@ -182,18 +184,22 @@ function MemberEdit(props) {
           {/* <button type="submit" className="btn">
             <img src={googleLogin} alt="googleLogin" /> Google登入中
           </button> */}
-          <div className="editTop text-center">
-            <div className="memberA">
-              <img src={memberImg} alt="memberImg" />
+          <div className="m-editTop text-center">
+            <div className="m-memberA">
+              <img
+                src={img ? img : memberImg}
+                alt="memberImg"
+                className="m-edit-img"
+              />
             </div>
-            <div className="memberB">
-              <button className="btn mb-3">上傳頭貼</button>
+            <div className="m-memberB">
+              <button className="btn  mb-3">上傳頭貼</button>
               <button type="submit" className="btn my-3">
                 確認上傳
               </button>
             </div>
           </div>
-          <div className="edit-form">
+          <div className="m-edit-form">
             <div className="input-box pb-4">
               <label htmlFor="nickname">暱稱*</label>
               <div className="input-frame">
@@ -234,19 +240,18 @@ function MemberEdit(props) {
                 <select
                   className="form-control transparent-input "
                   id="gender"
-                  placeholder="E-mail"
-                  value={this.state.value}
+                  value={gender}
                   onChange={(event) => {
                     setGender(event.target.value)
                   }}
                 >
-                  <option value="male">男</option>
-                  <option value="female">女</option>
+                  <option value="男">男</option>
+                  <option value="女">女</option>
                 </select>
               </div>
               <small id="birthday" className="form-text hidden" />
             </div>
-            <div className="input-box py-4">
+            {/* <div className="input-box py-4">
               <label htmlFor="birthday">生日*</label>
               <div className="input-frame">
                 <input
@@ -254,14 +259,13 @@ function MemberEdit(props) {
                   className="form-control transparent-input "
                   id="birthday"
                   value={convert_date(birthday)}
-                  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
                   onChange={(event) => {
                     setBirthday(event.target.value)
                   }}
                 />
               </div>
-              {/* <small id="gender" className="form-text hidden" /> */}
-            </div>
+              <small id="gender" className="form-text hidden" />
+            </div> */}
             <div className="input-box py-4">
               <label htmlFor="email">E-mail*</label>
               <div className="input-frame">
