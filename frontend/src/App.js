@@ -79,7 +79,7 @@ const App = () => {
           <Route path="/Homepage">
             <Homepage />
           </Route>
-          <Router path="/MessageIndex">
+          <Router path="/messageboard">
             <MessageIndex />
           </Router>
           <Router path="/Game">
