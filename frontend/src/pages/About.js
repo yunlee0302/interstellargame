@@ -69,7 +69,7 @@ const About = () => {
         <div className="server-title">
           <div className="server-text">
             <p className="littile-title fontcolor-w">關於星際漫遊</p>
-            <p className="title2 fontcolor-w">服務項目、場地租借、桌遊訂購</p>
+            <p className="about-title2 fontcolor-w">服務項目、場地租借、桌遊訂購</p>
           </div>
           <div className="server-icon">
             <img className="earth about-downup" src={iconEarth} alt="" />
@@ -89,7 +89,7 @@ const About = () => {
         <div className="venue-rental">
           <div className="introdution-box">
             <div className="ib-title">
-              <p className="title2 title-bg fontcolor-w">場地租借</p>
+              <p className="about-title2 title-bg fontcolor-w">場地租借</p>
             </div>
             <div className="ib-content">
               <p className="content-text border-bg fontcolor-w">
@@ -112,7 +112,7 @@ const About = () => {
           </div>
           <div className="introdution-box bgo-box">
             <div className="ib-title">
-              <p className="title2 title-bg fontcolor-w">桌遊訂購</p>
+              <p className="about-title2 title-bg fontcolor-w">桌遊訂購</p>
             </div>
             <div className="ib-content">
               <p className="content-text border-bg fontcolor-w">
