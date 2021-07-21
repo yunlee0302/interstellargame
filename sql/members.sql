@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-07-03 19:11:27
--- 伺服器版本： 10.4.19-MariaDB
--- PHP 版本： 8.0.7
+-- 產生時間： 2021-07-21 12:32:29
+-- 伺服器版本： 10.4.20-MariaDB
+-- PHP 版本： 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,9 +48,10 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`userId`, `userEmail`, `userPwd`, `userName`, `userNickname`, `userGender`, `userPhone`, `userImg`, `userBirthday`, `userAddress`, `userBIN`, `created_at`, `updated_at`) VALUES
-(1, 'test000@gmail.com', 'f988c245b3c789a608b34cd1b7c1b612542dbd09', '林志財', '財哥', '男', '0956701197', '20210511091339.jpg', '2001-04-11', '台北市信義區虎林街119號', 0, '2021-07-03 20:26:38', '2021-07-03 20:26:38'),
-(2, 'bobo567@gmail.com', 'f988c245b3c789a608b34cd1b7c1b612542dbd09', '林靜利', '小靜', '女', '0912539668', '20210514044333.jpg', '2000-12-12', '雲林縣斗六市北平路272號', 0, '2021-07-03 20:30:20', '2021-07-03 20:30:20'),
-(3, 'apple0918@gmail.com', 'f988c245b3c789a608b34cd1b7c1b612542dbd09', '張佩璇', '佩璇', '女', '0928474076', '20210511101842.jpg', '1995-08-06', '新北市土城區中央路三段254號', 0, '2021-07-03 20:32:10', '2021-07-03 20:32:10');
+(1, 'test000@gmail.com', '12345', '林志財', '財哥', '男', '0956701197', 'https://imgur.com/d8DfRrZ.jpg', '2001-04-11', '台北市信義區虎林街119號', 0, '2021-07-03 20:26:38', '2021-07-03 20:26:38'),
+(2, 'bobo567@gmail.com', '12345', '林靜利', '小靜', '女', '0912539668', 'https://imgur.com/1910uUS.jpg', '2000-12-12', '雲林縣斗六市北平路272號', 0, '2021-07-03 20:30:20', '2021-07-03 20:30:20'),
+(3, 'apple0918@gmail.com', '12345', '張佩璇', '佩璇', '女', '0928474076', 'https://imgur.com/FLvG67h.jpg', '1995-08-06', '新北市土城區中央路三段254號', 0, '2021-07-03 20:32:10', '2021-07-03 20:32:10'),
+(4, 'panda@gmail.com', '12345', '雷胖達', 'panda', '男', '0988638961', 'https://imgur.com/aoU3gi3.jpg', '1899-11-29', '宜蘭縣羅東鎮興東路228號', 0, '2021-07-21 12:23:24', '2021-07-21 12:23:24');
 
 --
 -- 已傾印資料表的索引
@@ -70,7 +71,7 @@ ALTER TABLE `members`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `members`
 --
 ALTER TABLE `members`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT COMMENT '會員編號', AUTO_INCREMENT=4;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT COMMENT '會員編號', AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
