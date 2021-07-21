@@ -120,7 +120,9 @@ function LoginIndex(props) {
             <div className="login-right col-12 col-lg-6">
               <h2 className="text-light text-center">一般登入</h2>
               <div className="input-box">
-                <label htmlFor="email">E-mail</label>
+                <label htmlFor="email" className="login-label">
+                  E-mail
+                </label>
                 <div className="input-frame">
                   <input
                     type="email"
@@ -137,7 +139,9 @@ function LoginIndex(props) {
                 </div>
               </div>
               <div className="input-box my-3">
-                <label htmlFor="password">密碼</label>
+                <label htmlFor="password" className="login-label">
+                  密碼
+                </label>
                 <div className="input-frame">
                   <i className="fas fa-unlock-alt" />
                   <input
