@@ -1,21 +1,13 @@
-* {
+.m-container {
   font-size: 0.75rem;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.5px;
 }
 
-@media screen and (max-width: 991px) {
-  * {
+@media screen and (max-width: 768px) {
+  .m-container {
     font-size: 0.85rem;
   }
-}
-
-body {
-  background-color: #000;
-  background-image: url('../images/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 1000px;
 }
 
 .member-card {

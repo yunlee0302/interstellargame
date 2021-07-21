@@ -74,10 +74,10 @@ function ForgetPwd(props) {
   return (
     <>
       ;
-      <div className="container mt-5">
+      <div className="container mt-5 forget-pwd-container">
         <div className="forget-pwd row text-center">
-          <h1 className="text-light">修改個人資訊</h1>
-          <p>
+          <h1 className="text-light forget-pwd-h1">修改個人資訊</h1>
+          <p className="forget-pwd-p">
             請輸入您的註冊電子郵件或手機號碼，
             <br />
             我們將會寄送『重新設定密碼』連結給您進行密碼設定。
@@ -87,10 +87,12 @@ function ForgetPwd(props) {
             onSubmit={handleSubmit}
             onChange={handleChange}
             onInvalid={handleInvalid}
-            className="pt-3"
+            className="pt-3 forget-pwd-form"
           >
             <div className="input-box">
-              <label htmlFor="userEmail">註冊信箱</label>
+              <label htmlFor="userEmail" className="forget-pwd-label">
+                註冊信箱
+              </label>
               <div className="input-frame">
                 <input
                   type="email"
@@ -113,7 +115,7 @@ function ForgetPwd(props) {
 
             <button
               type="submit"
-              className="btn btn-block mt-5"
+              className="btn btn-block mt-5 forget-pwd-btn"
               // onClick={() => {
               //   props.history.push('/forgetPwdMailSent')
               // }}

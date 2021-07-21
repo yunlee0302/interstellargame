@@ -95,22 +95,28 @@ function Register(props) {
 
   const display = (
     <>
-      <div className="login">
-        <div className="container">
-          <div className="login-area row">
-            <div className="login-left col-12 col-lg-6 flex-column text-center">
-              <h2 className="text-light text-center">快速註冊</h2>
+      <div className="regis">
+        <div className="container regis-container">
+          <div className="regis-area row">
+            <div className="regis-left col-12 col-lg-6 flex-column text-center">
+              <h2 className="text-light text-center regis-area-h2">快速註冊</h2>
               <div className="btn-box align-items-center">
-                <button type="submit" className="btn">
-                  <img src={googleLogin} alt="google-login" />
+                <button type="submit" className="btn regis-left-btn">
+                  <img
+                    src={googleLogin}
+                    alt="google-login"
+                    className="regis-left-img"
+                  />
                   Google帳號註冊
                 </button>
               </div>
             </div>
-            <div className="login-right col-12 col-lg-6">
+            <div className="regis-right col-12 col-lg-6">
               <h2 className="text-light text-center">一般註冊</h2>
               <div className="input-box pb-3">
-                <label htmlFor="email">E-mail*</label>
+                <label htmlFor="email" className="regis-label">
+                  E-mail*
+                </label>
                 <div className="input-frame">
                   <input
                     type="email"
@@ -127,7 +133,9 @@ function Register(props) {
                 </div>
               </div>
               <div className="input-box pb-3">
-                <label htmlFor="password">密碼*</label>
+                <label htmlFor="password" className="regis-label">
+                  密碼*
+                </label>
                 <div className="input-frame">
                   <input
                     type="text"
@@ -145,7 +153,9 @@ function Register(props) {
                 </div>
               </div>
               <div className="input-box pb-3">
-                <label htmlFor="checkPassword">確認密碼*</label>
+                <label htmlFor="checkPassword" className="regis-label">
+                  確認密碼*
+                </label>
                 <div className="input-frame">
                   <input
                     type="text"
@@ -180,7 +190,7 @@ function Register(props) {
                 </div> */}
               <button
                 type="submit"
-                className="btn btn-block mt-5"
+                className="btn btn-block mt-5 regis-right-btn"
                 onClick={() => {
                   addUserToSever()
                 }}
@@ -189,7 +199,9 @@ function Register(props) {
               </button>
               <p className="text-light mt-3 text-center">
                 已經有會員了？
-                <Link to="/login">會員登入</Link>
+                <Link to="/login" className="regis-right-link">
+                  會員登入
+                </Link>
               </p>
             </div>
           </div>

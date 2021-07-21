@@ -1,17 +1,10 @@
-* {
+.login {
   font-size: 0.75rem;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.5px;
 }
 
-body {
-  background-image: url('../images/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 1000px;
-}
-
-.login .container {
+.login .l-container {
   min-height: 700px;
   align-items: center;
   background-image: url('../images/login-frame.png');
@@ -22,7 +15,7 @@ body {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  .login .container {
+  .login .l-container {
     background-size: 70%;
     padding: 12% 0;
   }
@@ -34,14 +27,14 @@ body {
   max-width: 70%;
   margin: 0 auto;
 
-  h2 {
+  .login-left-h2 {
     font-size: 1rem;
     margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .login .container {
+  .login .l-container {
     background-size: 90%;
     background-image: url('../images/login-frame-sm.png');
   }
@@ -53,7 +46,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .login .container {
+  .login .l-container {
     background-size: 100%;
     background-image: none;
   }
@@ -72,10 +65,8 @@ body {
 }
 
 .login-right {
-  form {
-    margin: 0 auto;
-    width: 80%;
-  }
+  margin: 0 auto;
+  width: 80%;
 
   input.transparent-input {
     background-color: #02021e !important;
@@ -89,7 +80,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .login-right form {
+  .login-right {
     width: 90%;
   }
 }
@@ -99,25 +90,16 @@ body {
   border-radius: 5px;
   position: relative;
   height: 47px;
-
-  .icon {
-    color: #b388fe;
-    padding: 13px 10px;
-    font-size: 15px;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-  }
 }
 
-.login-right .btn {
+.login-right .login-right-btn {
   background-color: #9c64a5;
   color: #fff;
   height: 45px;
   font-size: 1rem;
 }
 
-.login-left .btn {
+.login-left .login-left-btn {
   background-color: #fff;
   color: black;
   width: 250px;
@@ -126,26 +108,26 @@ body {
   font-size: 1rem;
   margin-top: 20%;
 
-  img {
+  .login-left-img {
     height: 20px;
     padding-bottom: 2px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .login-left .btn {
+  .login-left .login-left-btn {
     margin-top: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .login-left .btn {
+  .login-left .login-left-btn {
     margin-top: 0;
     width: 80%;
   }
 }
 
-.login-right form p a {
+.login-right-link {
   text-decoration: underline;
 }
 
