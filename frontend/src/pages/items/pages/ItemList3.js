@@ -67,7 +67,7 @@ const ItemList3 = () => {
         <p className="titletext">商品列表</p>
       </div>
       <div className="container">
-        <div className="search">
+        {/* <div className="search">
           <div className="input-group">
             <input
               type="text"
@@ -75,11 +75,11 @@ const ItemList3 = () => {
               placeholder="  請輸入要搜尋的遊戲名稱"
             />
             <span className="input-group-btn">
-              {/* <!--不換行，與相鄰元素內聯--> */}
-              <button className="btn"><img src={search} alt="" /></button>
+              <!--不換行，與相鄰元素內聯-->
+              <button className="btnitem"><img src={search} alt="" /></button>
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="container">
         <div className="row">
@@ -93,7 +93,7 @@ const ItemList3 = () => {
         <div className="row Planetgroup">
           <a href="/item-list"><button className="PlanetA pagination1">
             <img src={all} alt="" />
-            <p className="PlanetText active">全部</p>
+            <p className="PlanetText">全部</p>
           </button></a>
           <a href="/item-list2"><button className="PlanetA">
             <img src={card} alt="" />
@@ -159,13 +159,13 @@ const ItemList3 = () => {
               <ul className="pagination">
                 <li><a href="#">«</a></li>
                 <li><a href="#">1</a></li>
-                <li><a class="" href="#">2</a></li>
+                {/* <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
                 <li><a href="#">6</a></li>
                 <li><a href="#">7</a></li>
-                <li><a class="eight" href="#">8</a></li>
+                <li><a href="#">8</a></li> */}
                 <li><a href="#">»</a></li>
               </ul>
             </div>

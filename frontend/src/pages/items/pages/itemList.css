@@ -73,6 +73,7 @@
 }
 
 .Planetgroup {
+  width: 100%;
   justify-content: space-between;
 }
 .PlanetA {
@@ -104,6 +105,9 @@ button.PlanetA p a:hover:not(.active) {
   position: relative;
   margin-top: -36px;
 }
+.input-group{
+  margin-right: 10px;
+}
 .search {
   position: relative;
   float: right;
@@ -114,7 +118,7 @@ button.PlanetA p a:hover:not(.active) {
   border-radius: 5px 0px 0px 5px;
   background-color: #02021ea9;
 }
-.input-group-btn {
+.input-group-btnitem {
   border: 1px solid #b388fe;
   border-radius: 0px 5px 5px 0px;
   background-color: #b388fe;

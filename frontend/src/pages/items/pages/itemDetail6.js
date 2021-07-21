@@ -30,39 +30,38 @@ const ItemDetail6 = (props) => {
         <>
             <div className="itemDetail">
                 <div className="container">
-                    <div className="">
-                        <div className="itemDetail-card-body row">
-                            <div className="itemDetail-left text-center ">
-                                <div className="itemDetailA mb-1">
-                                    <img src={itemImage} alt="" />
-                                </div>
-                                <div className="container">
-                                    <div className="row ddd itemDetailB">
-                                        <div>
-                                            <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage1} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage2} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage1} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage2} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={rightImage} style={{ marginTop: '33px', paddingLeft: '5px' }} alt="" />
-                                        </div>
+                    <div className="itemDetail-card-body row">
+                        <div className="itemDetail-left text-center ">
+                            <div className="itemDetailA mb-1">
+                                <img src={itemImage} alt="" />
+                            </div>
+                            <div className="container">
+                                <div className="row ddd itemDetailB">
+                                    <div>
+                                        <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage1} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage2} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage1} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage2} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={rightImage} style={{ marginTop: '33px', paddingLeft: '5px' }} alt="" />
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="row">
+                        </div>
+                        {/* <div className="row">
                                 <div className="">
                                     <div className="">
                                         <div className="divimg" id="img1"><img src={itemImage} className="bigimg3 active" alt="" /></div>
@@ -82,37 +81,40 @@ const ItemDetail6 = (props) => {
                                     </div>
                                 </div>
                             </div> */}
-                            <div className="itemDetail-middle col-12 col-lg-6">
-                                <div className="d-flex">
-                                    <div className="info-title p-1">000006</div>
-                                </div>
-                                <div className=" d-flex">
-                                    <div className="info-title p-1" style={{ fontSize: '32px' }}>奶油還是派</div>
-                                </div>
-                                <div className="d-flex">
-                                    <div className="info-title p-1">★2009年金畸獎最佳兒童桌上遊戲獎項提名！</div>
-                                </div>
-                                <div className="d-flex cardA">
-                                    <div className="card-text1 p-1">定價NT$790</div>
-                                </div>
-                                <div className="d-flex">
-                                    <div className="card-text2 p-1">特價NT$690</div>
-                                </div>
-                                <div className="d-flex cardB">
-                                    {/* <button className="btn1">-</button>
+                        <div className="itemDetail-middle col-12 col-lg-6">
+                            <div className="d-flex">
+                                <div className="info-title p-1">000006</div>
+                            </div>
+                            <div className=" d-flex">
+                                <div className="info-title p-1" style={{ fontSize: '32px' }}>奶油還是派</div>
+                            </div>
+                            <div className="d-flex">
+                                <div className="info-title p-1">★2009年金畸獎最佳兒童桌上遊戲獎項提名！</div>
+                            </div>
+                            <div className="d-flex cardA">
+                                <div className="card-text1 p-1">定價NT$790</div>
+                            </div>
+                            <div className="d-flex">
+                                <div className="card-text2 p-1">特價NT$690</div>
+                            </div>
+                            <div className="d-flex cardB">
+                                {/* <button className="btn1">-</button>
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
-                                    <ul className="counter">
-                                        <li id="minus" className="btn11"><input type="button" onclick="minuser()" value="-" className="button11" /></li>
-                                        <li id="countnum" className="btn12">1</li>
-                                        <li id="plus" className="btn13"><input type="button" onclick="adder()" value="+" className="button13" /></li>
-                                    </ul>
-                                    <button className="join ml-2">加入購物車</button>
-                                </div>
+                                <ul className="counter1">
+                                    <li id="minus" className="btn11">
+                                        <input type="button" onclick="minuser()" value="-" className="button11" />
+                                    </li>
+                                    <li id="countnum1" className="btn12">1</li>
+                                    <li id="plus" className="btn13">
+                                        <input type="button" onclick="adder()" value="+" className="button13" />
+                                    </li>
+                                </ul>
+                                <button className="join ml-2">加入購物車</button>
                             </div>
-                            <div className="itemDetail-right">
-                                <img src={btnFavImage} alt="" />
-                            </div>
+                        </div>
+                        <div className="itemDetail-right">
+                            <img src={btnFavImage} alt="" />
                         </div>
                     </div>
                 </div>
@@ -120,7 +122,7 @@ const ItemDetail6 = (props) => {
             <div className="container">
                 <div className="row itemcontent">
                     <p>聰明媽媽必備小手段：<br />
-                    讓一個孩子負責切派，其他的孩子可以先選要吃哪一片，切派的人就會盡量讓每一片大小一樣，即使自己最後才拿，也不吃虧。<br />
+                        讓一個孩子負責切派，其他的孩子可以先選要吃哪一片，切派的人就會盡量讓每一片大小一樣，即使自己最後才拿，也不吃虧。<br />
                         這個手段在這款遊戲中不見得管用，甚至有可能要反其道而行：<br />
                         你可以用點詭計讓給別人較多的派，但自己在遊戲結束時卻得到較高的分數。
                         聰明地切派並善於察顏觀色，才能讓你成為最終的贏家。
