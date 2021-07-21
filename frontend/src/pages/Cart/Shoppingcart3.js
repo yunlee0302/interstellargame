@@ -22,68 +22,68 @@ function Shoppingcart3(props) {
   const [mycart, setMycart] = useState([])
   const { updateCartNum } = props
   const [mycartDisplay, setMycartDisplay] = useState([])
-  function getCartFromLocalStorage() {
-    // 開啟載入的指示圖示
-    setDataLoading(true)
-    const newCart = localStorage.getItem('cart')
-    console.log(JSON.parse(newCart))
-    setMycart(JSON.parse(newCart))
-  }
+  // function getCartFromLocalStorage() {
+  //   // 開啟載入的指示圖示
+  //   setDataLoading(true)
+  //   const newCart = localStorage.getItem('cart')
+  //   console.log(JSON.parse(newCart))
+  //   setMycart(JSON.parse(newCart))
+  // }
 
-  useEffect(() => {
-    getCartFromLocalStorage()
-  }, [])
+  // useEffect(() => {
+  //   getCartFromLocalStorage()
+  // }, [])
 
-  // / 每次mycart資料有改變，1秒後關閉載入指示
-  // componentDidUpdate
-  useEffect(() => {
-    setTimeout(() => setDataLoading(false),100)
-    // mycartDisplay運算
-    let newMycartDisplay = []
-    //尋找mycartDisplay
-    for (let i = 0; i < mycart.length; i++) {
-      //尋找mycartDisplay中有沒有此mycart[i].id
-      //有找到會返回陣列成員的索引值
-      //沒找到會返回-1
-      const index = newMycartDisplay.findIndex(
-        (value) => value.itemId === mycart[i].itemId
-      )
-      //有的話就數量+1
-      if (index !== -1) {
-        //每次只有加1個數量
-        //newMycartDisplay[index].amount++
-        //假設是加數量的
-        newMycartDisplay[index].amount += mycart[i].amount
-      } else {
-        //沒有的話就把項目加入，數量為1
-        const newItem = { ...mycart[i] }
-        newMycartDisplay = [...newMycartDisplay, newItem]
-      }
-    }
-    console.log(newMycartDisplay)
-    setMycartDisplay(newMycartDisplay)
-  }, [mycart])
+  // // / 每次mycart資料有改變，1秒後關閉載入指示
+  // // componentDidUpdate
+  // useEffect(() => {
+  //   setTimeout(() => setDataLoading(false),100)
+  //   // mycartDisplay運算
+  //   let newMycartDisplay = []
+  //   //尋找mycartDisplay
+  //   for (let i = 0; i < mycart.length; i++) {
+  //     //尋找mycartDisplay中有沒有此mycart[i].id
+  //     //有找到會返回陣列成員的索引值
+  //     //沒找到會返回-1
+  //     const index = newMycartDisplay.findIndex(
+  //       (value) => value.itemId === mycart[i].itemId
+  //     )
+  //     //有的話就數量+1
+  //     if (index !== -1) {
+  //       //每次只有加1個數量
+  //       //newMycartDisplay[index].amount++
+  //       //假設是加數量的
+  //       newMycartDisplay[index].amount += mycart[i].amount
+  //     } else {
+  //       //沒有的話就把項目加入，數量為1
+  //       const newItem = { ...mycart[i] }
+  //       newMycartDisplay = [...newMycartDisplay, newItem]
+  //     }
+  //   }
+  //   console.log(newMycartDisplay)
+  //   setMycartDisplay(newMycartDisplay)
+  // }, [mycart])
 
-  const newCart = localStorage.getItem('cart') || '[]'
-  const newCartJson = JSON.parse(newCart)
-  const neworderData2 = { newCartJson }
-  console.log('newCartJson', newCartJson)
+  // const newCart = localStorage.getItem('cart') || '[]'
+  // const newCartJson = JSON.parse(newCart)
+  // const neworderData2 = { newCartJson }
+  // console.log('newCartJson', newCartJson)
 
-  const updateCartToLocalStorage1 = (item, isAdded = true) => {
-    console.log(item, isAdded)
-    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
-    console.log('index', currentCart)
-    // find if the product in the localstorage with its id
-    const index = currentCart.findIndex((v) => v.itemId === item.itemId)
-    console.log('index', index)
-    // found: index! == -1
-    if (index > -1) {
-      isAdded ? currentCart[index].amount++ : currentCart[index].amount--
-    }
-    localStorage.setItem('cart', JSON.stringify(currentCart))
-    // 設定資料
-    setMycart(currentCart)
-  }
+  // const updateCartToLocalStorage1 = (item, isAdded = true) => {
+  //   console.log(item, isAdded)
+  //   const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+  //   console.log('index', currentCart)
+  //   // find if the product in the localstorage with its id
+  //   const index = currentCart.findIndex((v) => v.itemId === item.itemId)
+  //   console.log('index', index)
+  //   // found: index! == -1
+  //   if (index > -1) {
+  //     isAdded ? currentCart[index].amount++ : currentCart[index].amount--
+  //   }
+  //   localStorage.setItem('cart', JSON.stringify(currentCart))
+  //   // 設定資料
+  //   setMycart(currentCart)
+  // }
 
   async function addtextToSever() {
     // 開啟載入指示
@@ -149,13 +149,13 @@ function Shoppingcart3(props) {
 
 
 
-    //直接在一段x秒關掉指示器
-    setTimeout(() => {
-      setDataLoading(false)
-    }, 500)
-     //把購物車清空
+  //   //直接在一段x秒關掉指示器
+  //   setTimeout(() => {
+  //     setDataLoading(false)
+  //   }, 500)
+  // //    //把購物車清空
  
-  }
+   }
   const loading = (
     <>
       <div className="d-flex justify-content-center">
@@ -176,12 +176,12 @@ function Shoppingcart3(props) {
           <img src={launch2} alt width={100} height={100} />
         </div>
         <div className="top1 mb-5 ">
-          <p2>購物明細</p2>
-          <p2>付款資料</p2>
-          <p3>訂單資訊</p3>
+          <p2 className="cartwhite">購物明細</p2>
+          <p2 className="cartwhite"> 付款資料</p2>
+          <p3 className="cartgray">訂單資訊</p3>
         </div>
         <div className="cart3title1 p-3">
-          <p4>付款資料</p4>
+          <p4 class="cartbold">付款資料</p4>
         </div>
         {/* 訂購資料 */}
         <div className="nobottom p-3  ">
@@ -363,15 +363,15 @@ function Shoppingcart3(props) {
         </div>
       </div>
 
-      <div className="button1 pb-4">
-        <button
+      <div className="buttoncart1 pb-4">
+        <button className="cartbtn"
           onClick={() => {
             props.history.push('/Shoppingcart2')
           }}
         >
           回上一步
         </button>
-        <button
+        <button className="cartbtn"
           onClick={() => {
             props.history.push('/Shoppingcart4')
             addtextToSever()
