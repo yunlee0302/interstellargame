@@ -1,5 +1,6 @@
 import React from 'react'
 import "./itemList.css"
+import { withRouter } from 'react-router-dom'
 // import Button from "../components/Button"
 import ItemCard from "../components/itemCards/ItemCard"
 import { Link } from 'react-router-dom'
@@ -175,4 +176,4 @@ const ItemList = () => {
   )
 }
 
-export default ItemList
+export default withRouter(ItemList)
