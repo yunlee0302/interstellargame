@@ -30,39 +30,39 @@ const ItemDetail7 = (props) => {
         <>
             <div className="itemDetail">
                 <div className="container">
-                    <div className="">
-                        <div className="itemDetail-card-body row">
-                            <div className="itemDetail-left text-center ">
-                                <div className="itemDetailA mb-1">
-                                    <img src={itemImage} alt="" />
-                                </div>
-                                <div className="container">
-                                    <div className="row ddd itemDetailB">
-                                        <div>
-                                            <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage1} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage2} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage1} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage2} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={rightImage} style={{ marginTop: '33px', paddingLeft: '5px' }} alt="" />
-                                        </div>
+
+                    <div className="itemDetail-card-body row">
+                        <div className="itemDetail-left text-center ">
+                            <div className="itemDetailA mb-1">
+                                <img src={itemImage} alt="" />
+                            </div>
+                            <div className="container">
+                                <div className="row ddd itemDetailB">
+                                    <div>
+                                        <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage1} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage2} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage1} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage2} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={rightImage} style={{ marginTop: '33px', paddingLeft: '5px' }} alt="" />
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="row">
+                        </div>
+                        {/* <div className="row">
                                 <div className="">
                                     <div className="">
                                         <div className="divimg" id="img1"><img src={itemImage} className="bigimg3 active" alt="" /></div>
@@ -82,37 +82,40 @@ const ItemDetail7 = (props) => {
                                     </div>
                                 </div>
                             </div> */}
-                            <div className="itemDetail-middle col-12 col-lg-6">
-                                <div className="d-flex">
-                                    <div className="info-title p-1">000007</div>
-                                </div>
-                                <div className=" d-flex">
-                                    <div className="info-title p-1" style={{ fontSize: '32px' }}>搶尾刀</div>
-                                </div>
-                                <div className="d-flex">
-                                    <div className="info-title p-1">★想來點睡前的輕鬆寧靜遊戲嗎？</div>
-                                </div>
-                                <div className="d-flex cardA">
-                                    <div className="card-text1 p-1">定價NT$490</div>
-                                </div>
-                                <div className="d-flex">
-                                    <div className="card-text2 p-1">特價NT$390</div>
-                                </div>
-                                <div className="d-flex cardB">
-                                    {/* <button className="btn1">-</button>
+                        <div className="itemDetail-middle col-12 col-lg-6">
+                            <div className="d-flex">
+                                <div className="info-title p-1">000007</div>
+                            </div>
+                            <div className=" d-flex">
+                                <div className="info-title p-1" style={{ fontSize: '32px' }}>搶尾刀</div>
+                            </div>
+                            <div className="d-flex">
+                                <div className="info-title p-1">★想來點睡前的輕鬆寧靜遊戲嗎？</div>
+                            </div>
+                            <div className="d-flex cardA">
+                                <div className="card-text1 p-1">定價NT$490</div>
+                            </div>
+                            <div className="d-flex">
+                                <div className="card-text2 p-1">特價NT$390</div>
+                            </div>
+                            <div className="d-flex cardB">
+                                {/* <button className="btn1">-</button>
                                     <input type="text" className="input px-0" />
                                     <button className="btn2">+</button> */}
-                                    <ul className="counter">
-                                        <li id="minus" className="btn11"><input type="button" onclick="minuser()" value="-" className="button11" /></li>
-                                        <li id="countnum" className="btn12">1</li>
-                                        <li id="plus" className="btn13"><input type="button" onclick="adder()" value="+" className="button13" /></li>
-                                    </ul>
-                                    <button className="join ml-2">加入購物車</button>
-                                </div>
+                                <ul className="counter1">
+                                    <li id="minus" className="btn11">
+                                        <input type="button" onclick="minuser()" value="-" className="button11" />
+                                    </li>
+                                    <li id="countnum1" className="btn12">1</li>
+                                    <li id="plus" className="btn13">
+                                        <input type="button" onclick="adder()" value="+" className="button13" />
+                                    </li>
+                                </ul>
+                                <button className="join ml-2">加入購物車</button>
                             </div>
-                            <div className="itemDetail-right">
-                                <img src={btnFavImage} alt="" />
-                            </div>
+                        </div>
+                        <div className="itemDetail-right">
+                            <img src={btnFavImage} alt="" />
                         </div>
                     </div>
                 </div>
@@ -127,7 +130,7 @@ const ItemDetail7 = (props) => {
                     </p>
 
                     <p>作者｜Leo Colvini & Dario di Toffoli<br />
-                    ★想來點睡前的輕鬆寧靜遊戲嗎？<br />
+                        ★想來點睡前的輕鬆寧靜遊戲嗎？<br />
                     </p>
                 </div>
             </div>
