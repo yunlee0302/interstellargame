@@ -31,7 +31,7 @@ const ItemCard = (props) => {
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
-      <div className="img-wrapper">
+      <div className="img-wrapperA">
         <img src={itemImage} alt="pricing-table" />
         {/* hover than show the button */}
         {Hover && (

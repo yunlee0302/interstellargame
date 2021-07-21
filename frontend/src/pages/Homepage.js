@@ -6,26 +6,13 @@ import './homepage.css'
 // import '../components/itemCard.css'
 import Button from '../components/Button'
 import ItemCard from '../components/ItemCard'
-import {
-  item1,
-  item2,
-  item3,
-  item4,
-  item5,
-  item6,
-  item7,
-  item8,
-  item9,
-  item10,
-  item11,
-  item12,
-} from '../components/itemData1'
+import { item9, item10, item11, item12 } from '../components/itemData1'
 
 import kv_earth from '../pages/image/svg/kv - earth.svg'
 import kv_astronaut from '../pages/image/svg/kv - astronaut.svg'
 import kv_moon from '../pages/image/svg/kv - moon.svg'
 import kv_Saturn from '../pages/image/svg/kv - Saturn.svg'
-import p1_shuttle from '../pages/image/png/p1-shuttle.png'
+// import p1_shuttle from '../pages/image/png/p1-shuttle.png'
 import p1_astronaut1 from '../pages/image/svg/p1 - astronaut1.svg'
 import p1_astronaut2 from '../pages/image/svg/p1 - astronaut2.svg'
 import about_store1_1 from '../pages/image/jpg/about_store1-1.jpg'
@@ -45,7 +32,7 @@ const Homepage = () => {
   let nowPage = 0
   useEffect(() => {
     $('.left-arrow').click(function () {
-      console.log('left-arrow')
+      // console.log('left-arrow')
       // >= 大於等於 / <= 小於等於
       if (nowPage <= 0) return
       nowPage--
@@ -53,7 +40,7 @@ const Homepage = () => {
       sic()
     })
     $('.right-arrow').click(function () {
-      console.log('right-arrow')
+      // console.log('right-arrow')
       // >= 大於等於 / <= 小於等於
       if (nowPage < 5) {
         nowPage++
@@ -95,7 +82,7 @@ const Homepage = () => {
     timerFunction()
     // ----------
     $('.si-carousel').mouseenter(function () {
-      console.log('hover')
+      // console.log('hover')
       clearInterval(timer)
     })
 
