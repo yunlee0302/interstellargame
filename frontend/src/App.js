@@ -34,9 +34,7 @@ const App = () => {
       <Navbar />
       <ScrollToTop>
       <Switch>
-        {/* <Homepage />
-        <About />
-        <MemberIndex /> */}
+        {/* <MemberIndex /> */}
         {/* Hannah */}
         <Route path="/login">
           <LoginIndex />
@@ -87,6 +85,12 @@ const App = () => {
         {/* <ItemIndex />
         <CartIndex />
         <MessageIndex/> */}
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/">
+          <Homepage />
+        </Route>
       </Switch>
       </ScrollToTop>
       <Footer />

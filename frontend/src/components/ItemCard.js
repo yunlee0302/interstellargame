@@ -27,7 +27,7 @@ const ItemCard = (props) => {
 
   return (
     <div
-      className="step-card"
+      className="item-card"
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
@@ -42,20 +42,20 @@ const ItemCard = (props) => {
           />
         )}
       </div>
-      <div className="step">
+      <div className="item">
         <span>{itemName}</span>
       </div>
-      <div className="item-group">
+      <div className="item-groupA">
         <div>
-          <span className="item-header">{OriginalPrice}</span>
+          <span className="item-headerA">{OriginalPrice}</span>
         </div>
         <div>
-          <span className="item-detail">{SpecialOffer}</span>
+          <span className="item-detailA">{SpecialOffer}</span>
         </div>
-        <div className="heart1-icon ">
+        <div className="heartA">
           <img src={heart1} alt="step" />
         </div>
-        <div className="cart-icon">
+        <div className="cartA">
           <img src={cart} alt="step" />
         </div>
       </div>

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import $ from 'jquery'
 
 import './homepage.css'
-import '../components/itemCard.css'
+// import '../components/itemCard.css'
 import Button from '../components/Button'
 import ItemCard from '../components/ItemCard'
 import {
@@ -181,7 +181,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="na-bg">
-              <img className="na-png-shuttle" src={p1_shuttle} alt="" />
+              {/* <img className="na-png-shuttle" src={p1_shuttle} alt="" /> */}
               <img
                 className="na-svg-astronaut1 a-downupAndrotate"
                 src={p1_astronaut1}
@@ -232,7 +232,6 @@ const Homepage = () => {
                   <img src={arrow_left} alt="" />
                 </div>
                 <div className="right-arrow">
-                  {' '}
                   <img src={arrow_right} alt="" />
                 </div>
               </div>
@@ -283,7 +282,7 @@ const Homepage = () => {
               />
             </div>
             <div className="b-step">
-              <div className="stepbox step1 a-downup">
+              <div className="stepbox stepOne a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
                   <p className="stepnum fontcolor-w">1</p>
@@ -291,7 +290,10 @@ const Homepage = () => {
                 <div className="steptext">
                   <div className="step-title">
                     <p className="content-title fontcolor-w">
-                      STEP 1　<span className="fontcolor-y">尋找夥伴</span>
+                      STEP 1　
+                      <span className="content-title fontcolor-y">
+                        尋找夥伴
+                      </span>
                     </p>
                   </div>
                   <div className="step-content">
@@ -301,7 +303,7 @@ const Homepage = () => {
                   </div>
                 </div>
               </div>
-              <div className="stepbox step2 a-downup">
+              <div className="stepbox stepTwo a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
                   <p className="stepnum fontcolor-w">2</p>
@@ -309,7 +311,10 @@ const Homepage = () => {
                 <div className="steptext">
                   <div className="step-title">
                     <p className="content-title fontcolor-w">
-                      STEP 2　<span className="fontcolor-y">預約艙房</span>
+                      STEP 2　
+                      <span className="content-title fontcolor-y">
+                        預約艙房
+                      </span>
                     </p>
                   </div>
                   <div className="step-content">
@@ -319,7 +324,7 @@ const Homepage = () => {
                   </div>
                 </div>
               </div>
-              <div className="stepbox step3 a-downup">
+              <div className="stepbox stepThree a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
                   <p className="stepnum fontcolor-w">3</p>
@@ -327,7 +332,10 @@ const Homepage = () => {
                 <div className="steptext">
                   <div className="step-title">
                     <p className="content-title fontcolor-w">
-                      STEP 3　<span className="fontcolor-y">完成付款</span>
+                      STEP 3　
+                      <span className="content-title fontcolor-y">
+                        完成付款
+                      </span>
                     </p>
                   </div>
                   <div className="step-content">
@@ -337,7 +345,7 @@ const Homepage = () => {
                   </div>
                 </div>
               </div>
-              <div className="stepbox step4 a-downup">
+              <div className="stepbox stepFour a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
                   <p className="stepnum fontcolor-w">4</p>
@@ -345,7 +353,10 @@ const Homepage = () => {
                 <div className="steptext">
                   <div className="step-title">
                     <p className="content-title fontcolor-w">
-                      STEP 4　<span className="fontcolor-y">探險開始</span>
+                      STEP 4　
+                      <span className="content-title fontcolor-y">
+                        探險開始
+                      </span>
                     </p>
                   </div>
                   <div className="step-content">
