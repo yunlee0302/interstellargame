@@ -15,6 +15,8 @@
 	width: 1195px;
 	height: 650px;
 	position: relative;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .bording-pass {
