@@ -114,7 +114,7 @@ function MemberIndex(props) {
   const display = (
     <>
       <div className="member mt-5">
-        <div className="container">
+        <div className="container m-container">
           <div className="member-card">
             <div className="member-card-title row">
               <p className="text-light member-card-title-p">ID CARD</p>
@@ -134,7 +134,7 @@ function MemberIndex(props) {
                 </div>
                 <div className="member-card-memberB">
                   <button
-                    className="btn my-1 member-left-btn"
+                    className="my-1 member-left-btn"
                     onClick={() => {
                       props.history.push('/member/memberPwdEdit/')
                     }}
@@ -142,7 +142,7 @@ function MemberIndex(props) {
                     修改密碼
                   </button>
                   <button
-                    className="btn my-3 member-left-btn"
+                    className="my-3 member-left-btn"
                     onClick={() => {
                       logoutToSever()
                     }}
@@ -194,7 +194,7 @@ function MemberIndex(props) {
               </div>
               <div className="member-right col-12 col-lg-3">
                 <button
-                  className="btn member-right-btn"
+                  className="member-right-btn"
                   onClick={() => {
                     props.history.push('/member/memberEdit/' + userId)
                   }}
@@ -206,7 +206,7 @@ function MemberIndex(props) {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container m-container">
         <div className="member-btn-group text-center row">
           <div
             className="col-6 col-lg-3"

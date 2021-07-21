@@ -1,5 +1,5 @@
 .m-container {
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.5px;
 }
@@ -97,11 +97,15 @@
 .member-left-btn {
   background-color: #b388fe;
   color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 .member-right-btn {
   background-color: #ffea01;
   color: #02021e;
+  border: none;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 991px) {
@@ -121,6 +125,7 @@
 
   .member-middle-info-text {
     overflow: visible;
+    font-size: 0.75rem;
   }
 }
 

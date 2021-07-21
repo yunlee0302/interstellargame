@@ -27,7 +27,8 @@
   max-width: 70%;
   margin: 0 auto;
 
-  .login-left-h2 {
+  .login-left-h2,
+  .login-right-h2 {
     font-size: 1rem;
     margin-bottom: 40px;
   }
@@ -106,7 +107,7 @@
   height: 45px;
   line-height: 30px;
   font-size: 1rem;
-  margin-top: 20%;
+  margin-top: 10%;
 
   .login-left-img {
     height: 20px;
