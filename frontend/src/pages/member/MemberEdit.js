@@ -179,7 +179,7 @@ function MemberEdit(props) {
         <input type="file" className="" id="avatar" name="avatar" />
       </form>
       <div className="container m-container">
-        <div className="m-edit row text-center ">
+        <div className="m-edit row text-center mb-5">
           <h1 className="text-light m-edit-h1">修改個人資訊</h1>
           {/* <button type="submit" className="btn m-edit-btn">
             <img src={googleLogin} alt="googleLogin" /> Google登入中
@@ -201,7 +201,9 @@ function MemberEdit(props) {
           </div>
           <div className="m-edit-form">
             <div className="input-box pb-4">
-              <label htmlFor="nickname">暱稱*</label>
+              <label htmlFor="nickname" className="m-edit-label">
+                暱稱*
+              </label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -237,7 +239,9 @@ function MemberEdit(props) {
               {/* <small id="name" className="form-text hidden m-edit-small" /> */}
             </div>
             <div className="input-box py-4">
-              <label htmlFor="gender">性別*</label>
+              <label htmlFor="gender" className="m-edit-label">
+                性別*
+              </label>
               <div className="input-frame">
                 <select
                   className="form-control transparent-input "
@@ -269,7 +273,9 @@ function MemberEdit(props) {
               <small id="gender" className="form-text hidden" />
             </div> */}
             <div className="input-box py-4">
-              <label htmlFor="email">E-mail*</label>
+              <label htmlFor="email" className="m-edit-label">
+                E-mail*
+              </label>
               <div className="input-frame">
                 <input
                   readOnly
@@ -283,7 +289,9 @@ function MemberEdit(props) {
               Email作為登入帳號無法變更 */}
             </div>
             <div className="input-box py-4">
-              <label htmlFor="phone">手機*</label>
+              <label htmlFor="phone" className="m-edit-label">
+                手機*
+              </label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -299,7 +307,9 @@ function MemberEdit(props) {
               {/* <small id="phone" className="form-text hidden m-edit-small" /> */}
             </div>
             <div className="input-box py-4">
-              <label htmlFor="address">地址*</label>
+              <label htmlFor="address" className="m-edit-label">
+                地址*
+              </label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -316,14 +326,14 @@ function MemberEdit(props) {
             </div>
 
             <button
-              className="btn btn-block m-edit-btn"
+              className="btn btn-block m-edit-btn-2"
               onClick={() => {
                 updateUserToSever()
               }}
             >
               儲存會員資料
             </button>
-            <Link className="btn btn-block m-edit-btn" to="/member">
+            <Link className="btn btn-block m-edit-btn-2" to="/member">
               回會員中心
             </Link>
           </div>

@@ -7,11 +7,11 @@
 .regis .regis-container {
   min-height: 700px;
   align-items: center;
-  background-image: url('../images/register-frame.png');
+  background-image: url('../images/login-frame.png');
   background-position: center top;
   background-size: 80%;
   background-repeat: no-repeat;
-  padding: 10% 0;
+  padding: 5% 0;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -27,7 +27,8 @@
   max-width: 70%;
   margin: 0 auto;
 
-  .regis-area-h2 {
+  .regis-area-h2,
+  .regis-right-h2 {
     font-size: 1rem;
     margin-bottom: 40px;
   }
@@ -64,7 +65,7 @@
   padding: 20px 0;
 }
 
-.login-right {
+.regis-right {
   margin: 0 auto;
   width: 80%;
 
@@ -106,6 +107,7 @@
   color: #fff;
   height: 45px;
   font-size: 1rem;
+  margin: 20px auto 30px;
 }
 
 .regis-left .regis-left-btn {

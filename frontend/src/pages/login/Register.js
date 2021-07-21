@@ -98,7 +98,7 @@ function Register(props) {
       <div className="regis">
         <div className="container regis-container">
           <div className="regis-area row">
-            <div className="regis-left col-12 col-lg-6 flex-column text-center">
+            {/* <div className="regis-left col-12 col-lg-6 flex-column text-center">
               <h2 className="text-light text-center regis-area-h2">快速註冊</h2>
               <div className="btn-box align-items-center">
                 <button type="submit" className="btn regis-left-btn">
@@ -110,9 +110,11 @@ function Register(props) {
                   Google帳號註冊
                 </button>
               </div>
-            </div>
+            </div> */}
             <div className="regis-right col-12 col-lg-6">
-              <h2 className="text-light text-center">一般註冊</h2>
+              <h2 className="text-light text-center regis-right-h2">
+                會員註冊
+              </h2>
               <div className="input-box pb-3">
                 <label htmlFor="email" className="regis-label">
                   E-mail*
@@ -190,14 +192,14 @@ function Register(props) {
                 </div> */}
               <button
                 type="submit"
-                className="btn btn-block mt-5 regis-right-btn"
+                className="btn btn-block regis-right-btn"
                 onClick={() => {
                   addUserToSever()
                 }}
               >
                 註冊
               </button>
-              <p className="text-light mt-3 text-center">
+              <p className="text-light mt-  3 text-center">
                 已經有會員了？
                 <Link to="/login" className="regis-right-link">
                   會員登入
@@ -211,7 +213,7 @@ function Register(props) {
   )
   return (
     <>
-      <h1 className="text-light text-center">會員註冊</h1>
+      {/* <h1 className="text-light text-center">會員註冊</h1> */}
 
       {display}
     </>

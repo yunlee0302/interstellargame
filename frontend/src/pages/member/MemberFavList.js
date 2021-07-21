@@ -41,49 +41,52 @@ function MemberFavList(props) {
   const favlistDisplay = (
     <>
       <div className="container m-container">
-        <table className="m-favlist-table">
-          <thead className="m-favlist-thead">
-            <tr>
-              <th scope="col" colSpan={3} className="m-favlist-th m-favlist-th">
-                商品
-              </th>
-              <th scope="col" className="m-favlist-th">
-                金額
-              </th>
-              <th scope="col" className="m-favlist-th">
-                移除最愛
-              </th>
-              <th scope="col" className="m-favlist-th">
-                商品詳細
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {favlist.length &&
-              favlist.map((favlist) => {
-                return (
-                  <tr className="m-favlist-tr">
-                    <td className="item-img m-favlist-td">
-                      <img
-                        src={favlist.itemImg}
-                        alt="商品圖"
-                        className="m-favlist-img"
-                      />
-                    </td>
-                    <td className="m-favlist-td">{favlist.itemName}</td>
-                    <td />
-                    <td className="m-favlist-td">{favlist.itemPrice}</td>
-                    <td className="m-favlist-td">
-                      <i className="far fa-trash-alt m-favlist-i" />
-                    </td>
-                    <td className="m-favlist-td">
-                      <div className="m-favlist-btn">查看商品</div>
-                    </td>
-                  </tr>
-                )
-              })}
-          </tbody>
-        </table>
+        <div className="m-favlist-table">
+          <table>
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                  colSpan={3}
+                  className="m-favlist-th m-favlist-th"
+                >
+                  商品
+                </th>
+                <th scope="col">金額</th>
+                <th scope="col">移除最愛</th>
+                <th scope="col">商品詳細</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {favlist.length &&
+                favlist.map((favlist) => {
+                  return (
+                    <tr>
+                      <td className="pl-3">
+                        <div className="m-favlist-img-box">
+                          <img
+                            src={favlist.itemImg}
+                            alt="商品圖"
+                            className="m-favlist-img"
+                          />
+                        </div>
+                      </td>
+                      <td>{favlist.itemName}</td>
+                      <td />
+                      <td>{favlist.itemPrice}</td>
+                      <td>
+                        <i className="far fa-trash-alt m-favlist-i" />
+                      </td>
+                      <td>
+                        <div className="m-favlist-btn">查看商品</div>
+                      </td>
+                    </tr>
+                  )
+                })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   )

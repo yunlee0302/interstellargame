@@ -11,7 +11,7 @@
   background-position: center top;
   background-size: 80%;
   background-repeat: no-repeat;
-  padding: 10% 0;
+  padding: 5% 0;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -19,6 +19,11 @@
     background-size: 70%;
     padding: 12% 0;
   }
+}
+
+.login-title {
+  font-size: 1rem;
+  margin: 30px auto 20px;
 }
 
 .login-area {
@@ -74,7 +79,7 @@
     font-size: 1rem;
     color: #fff;
     border: none !important;
-    padding-left: 30px;
+    padding-left: 8%;
     height: 100%;
     width: 100%;
   }
@@ -91,6 +96,15 @@
   border-radius: 5px;
   position: relative;
   height: 47px;
+
+  .login-input-i {
+    color: #b388fe;
+    padding: 13px 10px;
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
 }
 
 .login-right .login-right-btn {
@@ -98,6 +112,7 @@
   color: #fff;
   height: 45px;
   font-size: 1rem;
+  margin: 40px auto 30px;
 }
 
 .login-left .login-left-btn {

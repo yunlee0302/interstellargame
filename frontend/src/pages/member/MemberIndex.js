@@ -123,11 +123,13 @@ function MemberIndex(props) {
             <div className="member-card-body row">
               <div className="member-left col-12 col-lg-3 text-center ">
                 <div className="member-card-memberA">
-                  <img
-                    src={img ? img : memberImg}
-                    alt="memberImg"
-                    className="member-left-img"
-                  />
+                  <div className="member-left-img-frame">
+                    <img
+                      src={img ? img : memberImg}
+                      alt="memberImg"
+                      className="member-left-img"
+                    />
+                  </div>
                   <p className="member-left-p">
                     {nickname ? nickname : '未設定暱稱'}
                   </p>

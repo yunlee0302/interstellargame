@@ -70,8 +70,15 @@
 }
 
 .member-left {
-  .member-left-img {
+  .member-left-img-frame {
+    max-width: 120px;
+    max-height: 120px;
     border: 2px solid #ccc;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .member-left-img {
     width: 100%;
   }
 

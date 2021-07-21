@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import { withRouter, Redirect } from 'react-router-dom'
-import './styles/memberFavList.scss'
+import './styles/memberCoupon.scss'
 import fun00 from './images/fun00.png'
 import fun01 from './images/fun01.png'
 import fun02 from './images/fun02.png'
@@ -37,39 +37,35 @@ function MemberCoupon(props) {
     getCouponFromServer()
   }, [])
 
+  // 轉換日期格式
+  function convert_date(date_text) {
+    // date_text
+    const myDate = new Date(date_text)
+    const date_text_new = myDate.toISOString().substring(0, 10)
+    return `${date_text_new}`
+  }
+
   const couponDisplay = (
     <>
       <div className="container m-container">
         <table className="m-coupon-table">
-          <thead className="m-coupon-thead">
-            <tr className="m-coupon-tr">
-              <th scope="col" className="m-coupon-th">
-                優惠券名稱
-              </th>
-              <th scope="col" className="m-coupon-th">
-                優惠內容
-              </th>
-              <th scope="col" className="m-coupon-th">
-                獲得日期
-              </th>
-              <th scope="col" className="m-coupon-th">
-                使用狀況
-              </th>
+          <thead>
+            <tr>
+              <th scope="col">優惠券名稱</th>
+              <th scope="col">優惠內容</th>
+              <th scope="col">獲得日期</th>
+              <th scope="col">使用狀況</th>
             </tr>
           </thead>
           <tbody className="m-coupon-tbody">
             {coupon.length &&
               coupon.map((coupon) => {
                 return (
-                  <tr className="m-coupon-tr">
-                    <td className="m-coupon-td">{coupon.voucherName}</td>
-                    <td className="m-coupon-td">
-                      商城購物結帳金額-{coupon.voucherPrice}元
-                    </td>
-                    <td className="m-coupon-td">{coupon.created_at}</td>
-                    <td className="m-coupon-td">
-                      {(coupon.discountUse = 0 ? '未使用' : '已使用')}
-                    </td>
+                  <tr>
+                    <td>{coupon.voucherName}</td>
+                    <td>商城購物結帳金額-{coupon.voucherPrice}元</td>
+                    <td>{convert_date(coupon.created_at)}</td>
+                    <td>{(coupon.discountUse = 0 ? '未使用' : '已使用')}</td>
                   </tr>
                 )
               })}

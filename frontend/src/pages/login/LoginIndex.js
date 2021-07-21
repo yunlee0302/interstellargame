@@ -48,6 +48,7 @@ function LoginIndex(props) {
       // 改動react App母層變數以紀錄現在的用戶登入狀態
       // setCurrentUser(data.userId)
       localStorage.setItem('userId', JSON.stringify(data.userId))
+      localStorage.setItem('userImg', JSON.stringify(data.userImg))
       // console.log(
       //   'localStorge:',
       //   localStorage.getItem('userId', JSON.stringify(data.userId))
@@ -104,7 +105,7 @@ function LoginIndex(props) {
       <div className="login">
         <div className="container l-container">
           <div className="login-area row">
-            <div className="login-left col-12 col-lg-6 flex-column text-center">
+            {/* <div className="login-left col-12 col-lg-6 flex-column text-center">
               <h2 className="text-light text-center login-left-h2">快速登入</h2>
               <div className="btn-box align-items-center">
                 <button type="submit" className="btn login-left-btn">
@@ -116,16 +117,17 @@ function LoginIndex(props) {
                   Google登入
                 </button>
               </div>
-            </div>
+            </div> */}
             <div className="login-right col-12 col-lg-6">
               <h2 className="text-light text-center login-right-h2">
-                一般登入
+                會員登入
               </h2>
               <div className="input-box">
                 <label htmlFor="email" className="login-label">
                   E-mail
                 </label>
                 <div className="input-frame">
+                  <i className="far fa-envelope login-input-i " />
                   <input
                     type="email"
                     name="email"
@@ -145,7 +147,7 @@ function LoginIndex(props) {
                   密碼
                 </label>
                 <div className="input-frame">
-                  <i className="fas fa-unlock-alt" />
+                  <i className="fas fa-unlock-alt login-input-i" />
                   <input
                     type="text"
                     name="password"
@@ -163,7 +165,7 @@ function LoginIndex(props) {
               </div>
 
               <button
-                className="btn btn-block mt-3 login-right-btn"
+                className="btn btn-block login-right-btn"
                 onClick={() => {
                   loginToServer()
                 }}
@@ -190,7 +192,7 @@ function LoginIndex(props) {
 
   return (
     <>
-      <h1 className="text-light text-center">會員登入</h1>
+      {/* <h1 className="text-light text-center login-title">會員登入</h1> */}
       {display}
     </>
   )

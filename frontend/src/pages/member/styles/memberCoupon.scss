@@ -33,37 +33,40 @@
 
 .m-coupon-table {
   text-align: center;
-  margin: 50px 0;
+  margin: 50px auto;
 
-  .m-coupon-th {
+  th {
+    height: 60px;
     color: #02021e;
     border-top: 1px solid #ce93d7;
     border-bottom: 1px solid #ce93d7;
   }
 
-  .m-coupon-td {
+  td {
+    width: 250px;
+    height: 60px;
     border-top: 1px solid #ce93d7;
     border-bottom: 1px solid #ce93d7;
   }
 
-  .m-coupon-thead,
-  .m-coupon-tbody {
+  thead,
+  tbody {
     border-left: 1px solid #ce93d7;
     border-right: 1px solid #ce93d7;
   }
 
-  .m-coupon-thead {
-    .m-coupon-th {
+  thead {
+    th {
       border-bottom: none;
     }
 
-    .m-coupon-tr {
+    tr {
       background-color: #ce93d7;
       color: white;
     }
   }
 
-  .m-coupon-tbody .m-coupon-tr {
+  tbody tr {
     color: white;
     line-height: 30px;
   }
