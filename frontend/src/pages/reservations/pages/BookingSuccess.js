@@ -12,8 +12,11 @@ const BookingSuccess = ({ match }) => {
     axios
       .get(`http://localhost:8080/booking/success/${reservationId}`)
       .then((res) => {
-        console.log(res.data)
         setOrderData(res.data)
+        localStorage.removeItem('date')
+        localStorage.removeItem('location')
+        localStorage.removeItem('numberOfPeople')
+        localStorage.removeItem('time')
       })
       .catch((e) => {
         // todo: handle error message
@@ -29,13 +32,13 @@ const BookingSuccess = ({ match }) => {
       {/* todo: fix style */}
       <div className="booking-success-button-wrapper">
         <Button
-          link={'/'}
+          link={'/item-list'}
           buttonText={'去商城逛逛'}
           className="muted-purple-background"
           isDisabled={false}
         />
         <Button
-          link={`/users/booking/${reservationId}`}
+          link={`/member/booking/${reservationId}`}
           buttonText={'查看預約'}
           className={null}
           isDisabled={false}

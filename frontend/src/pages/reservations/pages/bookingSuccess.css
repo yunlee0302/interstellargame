@@ -1,6 +1,8 @@
 .booking-success-button-wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 50px auto;
+    width: 500px;
 }
 
 .muted-purple-background {
