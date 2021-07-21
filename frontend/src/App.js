@@ -7,25 +7,25 @@ import ScrollToTop from './components/ScrollToTop'
 import Homepage from './pages/Homepage'
 import About from './pages/About'
 import ReservationIndex from './pages/reservations/ReservationIndex'
-// import ItemIndex from './pages/items/ItemIndex'
-// import CartIndex from './pages/cart/CartIndex'
-// import MessageIndex from './pages/message/MessageIndex'
-//Hannah
+import ItemIndex from './pages/items/ItemIndex'
+import MessageIndex from './pages/message/MessageIndex'
+import GameIndex from './pages/game/GameIndex'
 import MemberIndex from './pages/member/MemberIndex'
 import MemberEdit from './pages/member/MemberEdit'
 import MemberFavList from './pages/member/MemberFavList'
 import MemberOrder from './pages/member/MemberOrder'
 import MemberCoupon from './pages/member/MemberCoupon'
 import MemberPwdEdit from './pages/member/MemberPwdEdit'
-import MemberPwdEditSuccess from './pages/member/MemberPwdEditSuccess'
 import LoginIndex from './pages/login/LoginIndex'
 import Register from './pages/login/Register'
 import ForgetPwd from './pages/login/ForgetPwd'
-import ForgetPwdMailSent from './pages/login/ForgetPwdMailSent'
 import Shoppingcart4 from './pages/Cart/Shoppingcart4'
 import Shoppingcart1 from './pages/Cart/Shoppingcart1'
 import Shoppingcart2 from './pages/Cart/Shoppingcart2'
 import Shoppingcart3 from './pages/Cart/Shoppingcart3'
+// import CartIndex from './pages/cart/CartIndex'
+//Hannah
+
 const App = () => {
   return (
     <Router>
@@ -42,12 +42,6 @@ const App = () => {
           </Route>
           <Route path="/forgetPwd">
             <ForgetPwd />
-          </Route>
-          <Route path="/forgetPwdMailSent">
-            <ForgetPwdMailSent />
-          </Route>
-          <Route path="/member/memberPwdEditSuccess">
-            <MemberPwdEditSuccess />
           </Route>
           <Route path="/member/memberPwdEdit">
             <MemberPwdEdit />
@@ -79,16 +73,26 @@ const App = () => {
           <Route path="/Shoppingcart4">
             <Shoppingcart4 />
           </Route>
-          <ReservationIndex />
-          {/* <ItemIndex />
-        <CartIndex />
-        <MessageIndex/> */}
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/">
+          <Route path="/Homepage">
             <Homepage />
           </Route>
+          <Router path="/MessageIndex">
+            <MessageIndex />
+          </Router>
+          <Router path="/Game">
+            <GameIndex />
+          </Router>
+          <ReservationIndex />
+          <ItemIndex />
+          {/* <Route path="/booking/steps">
+            <ReservationIndex />
+          </Route> */}
+          {/* <ItemIndex />
+        <CartIndex />
+        <MessageIndex/> */}
         </Switch>
       </ScrollToTop>
       <Footer />
