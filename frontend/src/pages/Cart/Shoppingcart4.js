@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './Shoppingcart4.css'
-import itemphoto from './img/item1.png'
+import itemphoto from './img/item拷貝.png'
+import itemphoto2 from './img/數字急轉彎拷貝.jpg'
+import itemphoto3 from './img/504拷貝.jpg'
 import launch from './img/launch.svg'
 import pinkline from './img/pinkline.svg'
 import axios from '../Cart/components/axios'
@@ -89,14 +91,13 @@ export default class Shoppingcart4 extends React.Component {
               </div>
             </div>
             <div className="cart4title1 ">
-              <div className="cart4title2 ">
-                <div className="m-4">訂單編號：{data.orderId}</div>
-                <div className=" frame  pl-4 pt-4 ">
-             
-                  <p className="cartp"> 收件人：{data.orderName}</p>
+              <div className="cart4title2 cartp ">
+                <div className="m-4 cartp">訂單編號：{data.orderId}</div>
+                <div className=" frame  pl-4 pt-4  mb-3">
+                  <p> 收件人：{data.orderName}</p>
                   <br></br>
 
-                  <p > 電話：{data.orderMobile}</p>
+                  <p> 電話：{data.orderMobile}</p>
                   <br></br>
 
                   <p> mail：{data.orderMail}</p>
@@ -110,29 +111,21 @@ export default class Shoppingcart4 extends React.Component {
 
                   <p> 付款方式：{data.paymentTypeId}</p>
                   <br></br>
-                
                 </div>
-                <div className="m-3 ">
-                  <br></br> <p>共2項商品</p>
+                <div>
+                  <br></br> <p className="cartp">共3項商品</p>
+                  <br></br>
                 </div>
               </div>
             </div>
-            <table className="cart4title3  ">
+            <table className="cart4title3 cartp2  ">
               <tbody>
-                <tr className="cart4th ">
-                  <th className="cart4th " width="120px" />
-                  <th className="cart4th " width="200px">
-                    商品名稱
-                  </th>
-                  <th className="cart4th " width="200px">
-                    商品單價
-                  </th>
-                  <th className="cart4th " width="180px">
-                    商品數量
-                  </th>
-                  <th className="cart4th " width="200px">
-                    金額小計
-                  </th>
+                <tr className="cart4th  ">
+                  <th width="120px" />
+                  <th width="200px">商品名稱</th>
+                  <th width="200px">商品單價</th>
+                  <th width="180px">商品數量</th>
+                  <th width="200px">金額小計</th>
                 </tr>
 
                 <tr>
@@ -147,17 +140,17 @@ export default class Shoppingcart4 extends React.Component {
                     />
                   </td>
 
-                  <td className="time">
-                    <p>大冒險超好玩</p>
+                  <td className="time ">
+                    <p>目擊者之夜</p>
                   </td>
                   <td className="time">
-                    <p>NT$500</p>
+                    <p>NT$390</p>
                   </td>
                   <td className="time">
-                    <p>50</p>
+                    <p>2</p>
                   </td>
                   <td className="time">
-                    <p>NT$500</p>
+                    <p>NT$780</p>
                   </td>
                 </tr>
                 <tr>
@@ -165,43 +158,52 @@ export default class Shoppingcart4 extends React.Component {
                     {' '}
                     <img
                       className="itemphoto"
-                      src={itemphoto}
+                      src={itemphoto2}
                       alt=""
                       width={100}
                       height={100}
                     />
                   </td>
 
-                  <td className="time">
-                    <p>大冒險超好玩</p>
+                  <td className="time">數字急轉彎</td>
+                  <td className="time">NT390</td>
+                  <td className="time">2</td>
+                  <td className="time">NT$780</td>
+                </tr>
+                <tr>
+                  <td height="150px" className="time">
+                    {' '}
+                    <img
+                      className="itemphoto"
+                      src={itemphoto3}
+                      alt=""
+                      width={100}
+                      height={100}
+                    />
                   </td>
-                  <td className="time">
-                    <p>NT$500</p>
-                  </td>
-                  <td className="time">
-                    <p>50</p>
-                  </td>
-                  <td className="time">
-                    <p>NT$500</p>
-                  </td>
+
+                  <td className="time">504</td>
+                  <td className="time">NT$2650</td>
+                  <td className="time">1</td>
+                  <td className="time">NT$2650</td>
                 </tr>
               </tbody>
             </table>
             <div className="Shoppingcart4end  p-3 mb-5">
-              <div className=" Shoppingcart4end1 pl-2 pt-5">
-                <p>金額總計: NT$7000</p>
-                <br />
+              <div className=" Shoppingcart4end1 pl-2 pt-5 cartp3">
+                <p>金額總計: NT$4210</p>
                 <p>運費金額: NT$60</p>
-                <br />
                 <p>優惠券折抵: -NT${data.voucherId}</p>
-                <br />
+                <br />{' '}
                 <div className="red">
-                  <p>訂單金額: NT$700</p>
+                  <p>訂單金額: NT$4220</p>
                 </div>
               </div>
             </div>
             <div className=" buttoncart1 pb-4">
-              <button className="cartbtn" onClick={() => {}}>回首頁</button>
+              <a href="/homepage">
+                <button className="btn homeP-btn items">回首頁</button>
+              </a>
             </div>
           </div>
         ) : (

@@ -152,16 +152,16 @@ function Shoppingcart2(props) {
         </div>
       </div>
       <div className="cart1title1 p-3 mt-5">
-        <p4 class="cartbold">購物明細</p4>
+        <p4 class="cartbold ">購物明細</p4>
       </div>
     
-      <table className="cart1title2 tablecart">
+      <table className="cart1title2 tablecart" >
         <tbody>
           <tr>
-            <th className="thcart" width="100px "></th>
-            <th className="thcart" width="150px">商品名稱</th>
-            <th className="thcart" width="250px">商品單價</th>
-            <th className="thcart" width="200px">商品數量</th>
+          <th  className="thcart " width="150px "></th>
+            <th  className="thcart " width="200x">商品名稱</th>
+            <th className="thcart " width="200px">商品單價</th>
+            <th className="thcart" width="220px">商品數量</th>
             <th className="thcart" width="200px">金額小計</th>
             <th className="thcart" width="100px" />
           </tr>
@@ -190,8 +190,8 @@ function Shoppingcart2(props) {
                   />
                 </td>  */}
                 <td className="tdcart" height="130px">{item.name}</td>
-                <td className="tdcart">{item.price}</td>
-                <td className="tdcart">
+                <td className="tdcart2">{item.price}</td>
+                <td className="tdcart1">
                 
                   <div className="counter2  ">
                     <li  className="ccc" id="minus">
@@ -230,7 +230,7 @@ function Shoppingcart2(props) {
                     </li>
                   </div>
                 </td>
-                <td className="tdcart"> NT${item.amount * item.price}</td>
+                <td className="tdcart2"> NT${item.amount * item.price}</td>
                 <td className="tdcart">
                   <i
                     className=" far fa-trash-alt"
@@ -246,16 +246,16 @@ function Shoppingcart2(props) {
         </tbody>
       </table>
       <div className="end  p-5 mb-5">
-        <p>訂單總金額: NT${sum(mycartDisplay)}</p>
+        <p className="cartwhite">訂單總金額: NT${sum(mycartDisplay)}</p>
       </div>
 
       <div className="buttoncart1 pb-4">
-        <button  className="cartbtn "
+        <button  className="btn homeP-btn items"
           onClick={() => {
             props.history.push('/Shoppingcart3')
           }}
         >
-          前往結帳
+         下一步
         </button>
       </div>
     </>
