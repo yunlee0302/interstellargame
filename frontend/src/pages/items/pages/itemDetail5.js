@@ -1,6 +1,7 @@
 import React from 'react'
 // import "../assets/css/bootstrap.min.css"
 import "./itemDetail5.css"
+import { withRouter } from 'react-router-dom'
 import itemImage from '../img/妙廚上菜.jpg'
 import itemImage1 from '../img/妙廚上菜2.jpg'
 import itemImage2 from '../img/妙廚上菜3.jpg'
@@ -22,7 +23,7 @@ const itemStyle = {
     border: '0px'
 }
 
-const ItemDetail = (props) => {
+const ItemDetail5 = (props) => {
     const {
     } = props
     return (
@@ -154,4 +155,4 @@ const ItemDetail = (props) => {
     )
 }
 
-export default ItemDetail
+export default withRouter(ItemDetail5)

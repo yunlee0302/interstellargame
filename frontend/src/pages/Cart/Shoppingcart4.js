@@ -79,23 +79,24 @@ export default class Shoppingcart4 extends React.Component {
               />
             </div>
             <div className="cart4top mb-5 mr-5">
-              <p2>購物明細</p2>
-              <p2>付款資料</p2>
-              <p2>訂單資訊</p2>
+              <p2 className="cartwhite">購物明細</p2>
+              <p2 className="cartwhite">付款資料</p2>
+              <p2 className="cartwhite">訂單資訊</p2>
             </div>
             <div className="  cart4order1    p-3">
               <div className="cart4ordertitle ">
-                <p4>訂單資訊</p4>
+                <p4 class="cartbold">訂單資訊</p4>
               </div>
             </div>
             <div className="cart4title1 ">
               <div className="cart4title2 ">
                 <div className="m-4">訂單編號：{data.orderId}</div>
-                <div className=" frame pl-4 pt-4 ">
-                  <p> 收件人：{data.orderName}</p>
+                <div className=" frame  pl-4 pt-4 ">
+             
+                  <p className="cartp"> 收件人：{data.orderName}</p>
                   <br></br>
 
-                  <p> 電話：{data.orderMobile}</p>
+                  <p > 電話：{data.orderMobile}</p>
                   <br></br>
 
                   <p> mail：{data.orderMail}</p>
@@ -109,6 +110,7 @@ export default class Shoppingcart4 extends React.Component {
 
                   <p> 付款方式：{data.paymentTypeId}</p>
                   <br></br>
+                
                 </div>
                 <div className="m-3 ">
                   <br></br> <p>共2項商品</p>
@@ -198,8 +200,8 @@ export default class Shoppingcart4 extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="button1 pb-4">
-              <button onClick={() => {}}>回首頁</button>
+            <div className=" buttoncart1 pb-4">
+              <button className="cartbtn" onClick={() => {}}>回首頁</button>
             </div>
           </div>
         ) : (

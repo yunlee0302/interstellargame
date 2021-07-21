@@ -1,5 +1,6 @@
 // import "../assets/css/bootstrap.min.css"
 import './itemDetail.css'
+import { withRouter } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import itemImage from '../img/item.png'
 import itemImage1 from '../img/目擊者之夜1.jpg'
@@ -282,4 +283,4 @@ const ItemDetail = (props) => {
     </>
   )
 }
-export default ItemDetail
+export default withRouter(ItemDetail)

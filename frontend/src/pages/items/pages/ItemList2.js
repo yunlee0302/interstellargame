@@ -1,6 +1,7 @@
 import React from 'react'
 import "./itemList2.css"
 // import Button from "../components/Button"
+import { withRouter } from 'react-router-dom'
 import ItemCard from "../components/itemCards/ItemCard"
 import { Link } from 'react-router-dom'
 // import { item1, item2, item3, item4, item5, item6, item7, item8 } from "../itemData"
@@ -22,7 +23,7 @@ import Carousel3 from "../img/Carousel3.png"
 import Carousel4 from "../img/Carousel4.png"
 import Carousel5 from "../img/Carousel5.png"
 
-const ItemList = () => {
+const ItemList2 = () => {
   return (
     <>
       <div className="">
@@ -175,4 +176,4 @@ const ItemList = () => {
   )
 }
 
-export default ItemList
+export default withRouter(ItemList2)
