@@ -37,18 +37,22 @@ const ItemCard = (props) => {
       <div className="item-Name">
         <span>{itemName}</span>
       </div>
-      <div className="item-group">
+      <div className="item-group row">
         <div>
-          <span className="item-header">{OriginalPrice}</span>
+          <div>
+            <span className="item-header">{OriginalPrice}</span>
+          </div>
+          <div>
+            <span className="item-detail">{SpecialOffer}</span>
+          </div>
         </div>
         <div>
-          <span className="item-detail">{SpecialOffer}</span>
-        </div>
-        <div className="heart1-icon ">
-          <img src={heart1} alt="item" />
-        </div>
-        <div className="cart-icon">
-          <img src={cart} alt="item" />
+          <div className="heart1-icon ">
+            <img src={heart1} alt="item" />
+          </div>
+          <div className="cart-icon">
+            <img src={cart} alt="item" />
+          </div>
         </div>
       </div>
     </div>

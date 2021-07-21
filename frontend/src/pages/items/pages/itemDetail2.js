@@ -34,93 +34,92 @@ const ItemDetail2 = (props) => {
     const [Mycart, setMycart] = useState([])
     const [show, setShow] = useState(false)
     const [productName, setProductName] = useState('')
-  
+
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
-  
+
     const updateCartToLocalStorage = (item) => {
-      const currentCart = JSON.parse(localStorage.getItem('cart')) || []
-  
-      // find if the product in the localstorage with its id
-      const index = currentCart.findIndex((v) => v.itemId === item.itemId)
-      console.log(currentCart)
-      // found: index! == -1id\
-      if (index > -1) {
-        //currentCart[index].amount++
-        setProductName('已加入過此商品')
+        const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+
+        // find if the product in the localstorage with its id
+        const index = currentCart.findIndex((v) => v.itemId === item.itemId)
+        console.log(currentCart)
+        // found: index! == -1id\
+        if (index > -1) {
+            //currentCart[index].amount++
+            setProductName('已加入過此商品')
+            handleShow()
+            return
+        } else {
+            currentCart.push(item)
+        }
+
+        localStorage.setItem('cart', JSON.stringify(currentCart))
+
+        // 設定資料
+        setMycart(currentCart)
+        setProductName('產品：' + item.name + '已成功加入購物車')
         handleShow()
-        return
-      } else {
-        currentCart.push(item)
-      }
-  
-      localStorage.setItem('cart', JSON.stringify(currentCart))
-  
-      // 設定資料
-      setMycart(currentCart)
-      setProductName('產品：' + item.name + '已成功加入購物車')
-      handleShow()
     }
     const messageModal = (
         <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{productName} </Modal.Body>
-        <Modal.Footer>
-          <Button   className="button55" onClick={() => {
-              props.history.push('/item-list')
-            }}>
-            繼續購物
-          </Button>
-          <Button  className="button66"
-            variant="primary"
-            onClick={() => {
-              props.history.push('/Shoppingcart1')
-            }}
-          >
-            前往結帳
-          </Button>
-        </Modal.Footer>
-      </Modal>
+            <Modal.Header closeButton>
+                <Modal.Title></Modal.Title>
+            </Modal.Header>
+            <Modal.Body>{productName} </Modal.Body>
+            <Modal.Footer>
+                <Button className="button55" onClick={() => {
+                    props.history.push('/item-list')
+                }}>
+                    繼續購物
+                </Button>
+                <Button className="button66"
+                    variant="primary"
+                    onClick={() => {
+                        props.history.push('/Shoppingcart1')
+                    }}
+                >
+                    前往結帳
+                </Button>
+            </Modal.Footer>
+        </Modal>
     )
     const display = (
         <>
             <div className="itemDetail">
                 <div className="container">
-                    <div className="">
-                        <div className="itemDetail-card-body row">
-                            <div className="itemDetail-left text-center ">
-                               <div className="itemDetailA mb-1">
-                                    <img src={itemImage} alt="" />
-                                </div>
-                                <div className="container">
-                                    <div className="row ddd itemDetailB">
-                                        <div>
-                                            <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
-                                        </div>
-                                        <div>
+                    <div className="itemDetail-card-body row">
+                        <div className="itemDetail-left text-center ">
+                            <div className="itemDetailA mb-1">
+                                <img src={itemImage} alt="" />
+                            </div>
+                            <div className="container">
+                                <div className="row ddd itemDetailB">
+                                    <div>
+                                        <img src={leftImage} style={{ marginTop: '33px', paddingRight: '5px' }} alt="" />
+                                    </div>
+                                    <div>
                                         <img src={itemImage} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage1} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage2} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage1} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={itemImage2} style={midImage} alt="" />
-                                        </div>
-                                        <div>
-                                            <img src={rightImage} style={{ marginTop: '33px', paddingLeft: '5px' }} alt="" />
-                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src={itemImage1} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage2} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage1} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={itemImage2} style={midImage} alt="" />
+                                    </div>
+                                    <div>
+                                        <img src={rightImage} style={{ marginTop: '33px', paddingLeft: '5px' }} alt="" />
                                     </div>
                                 </div>
                             </div>
-                          {/* <div className="row">
+                        </div>
+                        {/* <div className="row">
                                 <div className="">
                                     <div className="">
                                         <div className="divimg" id="img1"><img src={itemImage} className="bigimg3 active" alt="" /></div>
@@ -140,7 +139,7 @@ const ItemDetail2 = (props) => {
                                     </div>
                                 </div>
                             </div> */}
-                            {/* <div id="tab-demo">
+                        {/* <div id="tab-demo">
                                 <ul class="tab-title">
                                     <li><a href="#tab01">tab01</a></li>
                                     <li><a href="#tab02">tab02</a></li>
@@ -157,58 +156,61 @@ const ItemDetail2 = (props) => {
                                 </div>
                             </div> */}
 
-                            <div className="itemDetail-middle col-12 col-lg-6">
-                                <div className="d-flex">
-                                    <div className="info-title p-1">000002</div>
-                                </div>
-                                <div className=" d-flex">
-                                    <div className="info-title p-1" style={{ fontSize: '32px' }}>13道線索</div>
-                                </div>
-                                <div className="d-flex">
-                                    <div className="info-title p-1">★從13道線索中找出蛛絲馬跡</div>
-                                </div>
-                                <div className="d-flex cardA">
-                                    <div className="card-text1 p-1">定價NT$1090</div>
-                                </div>
-                                <div className="d-flex">
-                                    <div className="card-text2 p-1">特價NT$990</div>
-                                </div>
-                            
-                                <div className="d-flex cardB">
+                        <div className="itemDetail-middle col-12 col-lg-6">
+                            <div className="d-flex">
+                                <div className="info-title p-1">000002</div>
+                            </div>
+                            <div className=" d-flex">
+                                <div className="info-title p-1" style={{ fontSize: '32px' }}>13道線索</div>
+                            </div>
+                            <div className="d-flex">
+                                <div className="info-title p-1">★從13道線索中找出蛛絲馬跡</div>
+                            </div>
+                            <div className="d-flex cardA">
+                                <div className="card-text1 p-1">定價NT$1090</div>
+                            </div>
+                            <div className="d-flex">
+                                <div className="card-text2 p-1">特價NT$990</div>
+                            </div>
 
-                                <ul className="counter">
-                                        <li id="minus" className="btn11"><input type="button" onclick="minuser()" value="-" className="button11" /></li>
-                                        <li id="countnum" className="btn12">1</li>
-                                        <li id="plus" className="btn13"><input type="button" onclick="adder()" value="+" className="button13" /></li>
-                                    </ul>
-                                 
-                                    <button
-                    type="button"
-                  
-                    onClick={() => {
-                      updateCartToLocalStorage({
-                        itemId: 101,
-                        name: '13道線索',
-                        amount: 1,
-                        price: 990,
-                     
-                      })
-                    }}
-                  >
-                    加入購物車
-                  </button>
-                                </div>
+                            <div className="d-flex cardB">
+
+                                <ul className="counter1">
+                                    <li id="minus" className="btn11">
+                                        <input type="button" onclick="minuser()" value="-" className="button11" />
+                                    </li>
+                                    <li id="countnum1" className="btn12">1</li>
+                                    <li id="plus" className="btn13">
+                                        <input type="button" onclick="adder()" value="+" className="button13" />
+                                    </li>
+                                </ul>
+
+                                <button
+                                    type="button"
+                                    className="join"
+                                    onClick={() => {
+                                        updateCartToLocalStorage({
+                                            itemId: 101,
+                                            name: '13道線索',
+                                            amount: 1,
+                                            price: 990,
+
+                                        })
+                                    }}
+                                >
+                                    加入購物車
+                                </button>
                             </div>
-                            <div className="itemDetail-right">
-                                <img src={btnFavImage} alt="" />
-                            </div>
+                        </div>
+                        <div className="itemDetail-right">
+                            <img src={btnFavImage} alt="" />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="row itemcontent">
-                <p>數起兇殘的犯罪案件震驚了1899年的倫敦，<br />
+                    <p>數起兇殘的犯罪案件震驚了1899年的倫敦，<br />
                         謎樣的案情掩蓋了真相，蘇格蘭警場在黑暗中摸索，號召一群優秀的偵探前來協助破案。<br />
                         每位偵探必須利用敏銳的直覺，從13道線索中找出蛛絲馬跡，負責解開自己的謎題，比其他人更快偵破自己的案件！
                     </p>
@@ -221,7 +223,7 @@ const ItemDetail2 = (props) => {
                     </p>
                 </div>
             </div>
-          
+
             <div className="container">
                 <div className="">
                     <div className="thumbnail text-center">
@@ -242,12 +244,12 @@ const ItemDetail2 = (props) => {
             </div>
         </>
     )
-return (
-    <>
-      {messageModal}
-      {display}
-    </>
-  )
+    return (
+        <>
+            {messageModal}
+            {display}
+        </>
+    )
 }
 
 

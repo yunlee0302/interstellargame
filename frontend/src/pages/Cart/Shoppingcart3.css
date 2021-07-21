@@ -15,10 +15,7 @@ body {
   margin: auto;
 }
 
-.top1{
-margin-left: 80px;
 
-} 
 /* p {
   font-size: 20px;
   margin: auto;
@@ -136,4 +133,10 @@ margin-left: 120px;
       color: white;
       text-align: left;
       width: 100%;
+  }
+
+  .cartwhite2{
+    font-size: 20px;
+ 
+    color:white;
   }

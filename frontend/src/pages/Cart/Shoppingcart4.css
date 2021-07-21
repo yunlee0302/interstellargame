@@ -57,7 +57,7 @@ p2 {
   
 
 
-.icon333 {
+.icon {
   position: absolute;
   margin-left:920px;
 }
@@ -113,7 +113,7 @@ border-left: none;
 .frame{
   border:rgb(20, 19, 19) 1px solid;
   width:630px;
-  height:390px;
+  height:420px;
 
   
 }
@@ -146,6 +146,7 @@ margin-left:520px;
 }
 .red{
 color: red;
+font-size:22px;
 }
 
 
@@ -163,13 +164,25 @@ border-top:none;
 }
 .cart4th { 
   background-color:#e2c0e7;
-  padding:10px;
- 
+  padding:13px;
+ height:100px;
   color:rgb(12, 9, 9);
   border:none;
   } 
 
   .cartp{
  font-size:18px;
+ align-items: center;
 
   }
+
+     .cartp2{
+      font-size:20px;
+      align-items: center;
+     
+       }
+       .cartp3{
+        font-size:20px;
+        align-items: center;
+       
+         }

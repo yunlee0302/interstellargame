@@ -167,7 +167,7 @@ function Shoppingcart3(props) {
   )
   const display = (
     <>
-      <div className="container">
+      <div className="container ">
         <div className="top m-5">
           <img src={launch} alt width={100} height={100} />
           <img src={pinkline} alt width={200} height={100} />
@@ -189,11 +189,11 @@ function Shoppingcart3(props) {
             <img src={pay1} alt width={200} height={100} />
           </div>
         </div>
-        <div className="title3 pb-4">
+        <div className="title3 pb-4 cartwhite2">
           <div className=" title4 " />
           <div className="edit-form">
-            <div className="input-box pb-4">
-              <label htmlFor="user ">姓名</label>
+            <div className="input-box pb-4 p2 ">
+              <label  htmlFor="user ">姓名</label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -207,7 +207,7 @@ function Shoppingcart3(props) {
                 />
               </div>
               <br />
-              <label htmlFor="user">電話</label>
+              <label  htmlFor="user">電話</label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -221,7 +221,7 @@ function Shoppingcart3(props) {
                 />
               </div>
               <br />
-              <label htmlFor="user">mail</label>
+              <label   htmlFor="user">mail</label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -235,7 +235,7 @@ function Shoppingcart3(props) {
                 />
               </div>
               <br />
-              <label htmlFor="user">地址</label>
+              <label     htmlFor="user">地址</label>
               <div className="input-frame">
                 <input
                   type="text"
@@ -259,8 +259,8 @@ function Shoppingcart3(props) {
           </div>
         </div>
         <div className="nobottom p-3  ">
-          <div className="cart3title2 cart3frame  pl-3 pt-3 ">
-            配送方式：
+          <div className="cart3title2 cart3frame  pl-3 pt-3 cartwhite2 ">
+          <p >  配送方式：</p>
             <br />
             <br />
             <div className="select ">
@@ -292,12 +292,12 @@ function Shoppingcart3(props) {
           </div>
         </div>
         <div className="title3 p-3 pb-5 ">
-          <div className="cart3title2 cart3frame  pl-3 pt-3 ">
-            付款方式：
+          <div className="cart3title2 cart3frame  pl-3 pt-3 cartwhite2 ">
+           <p> 付款方式：</p>
             <br />
             <br />
             <div className="select ">
-              <input
+              <input 
                 value={paymentTypeId}
                 type="radio"
                 value="信用卡"
@@ -364,14 +364,14 @@ function Shoppingcart3(props) {
       </div>
 
       <div className="buttoncart1 pb-4">
-        <button className="cartbtn"
+        <button  className="btn homeP-btn booking"
           onClick={() => {
             props.history.push('/Shoppingcart2')
           }}
         >
           回上一步
         </button>
-        <button className="cartbtn"
+        <button className="btn homeP-btn items"
           onClick={() => {
             props.history.push('/Shoppingcart4')
             addtextToSever()

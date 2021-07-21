@@ -16,17 +16,17 @@ import ItemDetail8 from './pages/itemDetail8'
 const ItemIndex = () => {
   return (
     <>
-      <Route path="/item-list" exact component={ItemList} />
-      <Route path="/item-list2" exact component={ItemList2} />
-      <Route path="/item-list3" exact component={ItemList3} />
-      <Route path="/item-detail" exact component={ItemDetail} />
-      <Route path="/item-detail2" exact component={ItemDetail2} />
-      <Route path="/item-detail3" exact component={ItemDetail3} />
-      <Route path="/item-detail4" exact component={ItemDetail4} />
-      <Route path="/item-detail5" exact component={ItemDetail5} />
-      <Route path="/item-detail6" exact component={ItemDetail6} />
-      <Route path="/item-detail7" exact component={ItemDetail7} />
-      <Route path="/item-detail8" exact component={ItemDetail8} />
+      <Route path="/item-list" component={ItemList} />
+      <Route path="/item-list2" component={ItemList2} />
+      <Route path="/item-list3" component={ItemList3} />
+      <Route path="/item-detail" component={ItemDetail} />
+      <Route path="/item-detail2" component={ItemDetail2} />
+      <Route path="/item-detail3" component={ItemDetail3} />
+      <Route path="/item-detail4" component={ItemDetail4} />
+      <Route path="/item-detail5" component={ItemDetail5} />
+      <Route path="/item-detail6" component={ItemDetail6} />
+      <Route path="/item-detail7" component={ItemDetail7} />
+      <Route path="/item-detail8" component={ItemDetail8} />
     </>
   )
 }
