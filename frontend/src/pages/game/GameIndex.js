@@ -6,6 +6,7 @@ import './Game.scss'
 import SceneMajor from './components/SceneMajor'
 import Scene1 from './components/Scene1'
 import Scene2 from './components/Scene2'
+import { withRouter } from 'react-router-dom'
 
 const config = {
   parent: 'gameArea',
@@ -41,4 +42,4 @@ function GameIndex() {
     </>
   )
 }
-export default GameIndex
+export default withRouter(GameIndex)
