@@ -4,19 +4,11 @@ import heart1 from '../..//img/heart1.png'
 import cart from '../..//img/cart.png'
 
 const ItemCard = (props) => {
-  //props: step (str), stepIcon(img, src), Hover(component), stepImage(img,src), stepHeader(str), stepDetail(str)
   const {
     itemName,
-    heart1Icon,
-    heartIcon,
-    Hover,
-    link,
-    buttonText,
     itemImage,
     OriginalPrice,
     SpecialOffer,
-    stepGroup,
-    cartIcon,
   } = props.step
 
   //for components' hover state
@@ -27,22 +19,22 @@ const ItemCard = (props) => {
 
   return (
     <div
-      className="step-card"
+      className="item-card"
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
-      <div className="img-wrapper">
+      <div className="item-wrapper">
         <img src={itemImage} alt="pricing-table" />
         {/* hover than show the button */}
-        {Hover && (
+        {/* {Hover && (
           <Hover
             link={link}
             buttonText={buttonText}
             className={"card-button " + (hover ? "button-show" : "")}
           />
-        )}
+        )} */}
       </div>
-      <div className="step">
+      <div className="item-Name">
         <span>{itemName}</span>
       </div>
       <div className="item-group">
@@ -53,10 +45,10 @@ const ItemCard = (props) => {
           <span className="item-detail">{SpecialOffer}</span>
         </div>
         <div className="heart1-icon ">
-          <img src={heart1} alt="step" />
+          <img src={heart1} alt="item" />
         </div>
         <div className="cart-icon">
-          <img src={cart} alt="step" />
+          <img src={cart} alt="item" />
         </div>
       </div>
     </div>
