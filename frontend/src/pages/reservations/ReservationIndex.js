@@ -5,7 +5,7 @@ import BookingStep from './pages/BookingStep'
 import BookingProcess from './pages/BookingProcess'
 import BookingConfirm from './pages/BookingConfirm'
 import BookingSuccess from './pages/BookingSuccess'
-import MemberBooking from './pages/MemberBooking'
+// import MemberBooking from './pages/MemberBooking'
 
 const reservationIndex = () => {
   return (
@@ -15,7 +15,7 @@ const reservationIndex = () => {
       <Route path="/booking" exact component={BookingProcess} />
       <Route path="/booking/confirm" exact component={BookingConfirm} />
       <Route path="/booking/success/:id" component={BookingSuccess} />
-      <Route path="/member/booking/:id" component={MemberBooking} />
+      {/* <Route path="/member/booking/:id" component={MemberBooking} /> */}
     </>
   )
 }
