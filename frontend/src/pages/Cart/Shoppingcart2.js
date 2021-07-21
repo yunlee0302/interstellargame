@@ -62,6 +62,7 @@ function Shoppingcart2(props) {
         newMycartDisplay = [...newMycartDisplay, newItem]
       }
     }
+console.log("商品有多少", mycart.length)
 
     console.log(newMycartDisplay)
     setMycartDisplay(newMycartDisplay)
@@ -96,6 +97,17 @@ function Shoppingcart2(props) {
     }
     return total
   }
+
+  //計算購物車商品數量函式
+  const itemsum = (items) => {
+    let total = 0
+    for (let i = 0; i < items.length; i++) {
+      total += items[i].amount 
+    }
+    return total
+  }
+
+
   // 刪除單一項目
   const updateCartRemove = (index) => {
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []

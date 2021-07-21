@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import $ from 'jquery'
 
 import './navbar.css'
@@ -10,7 +10,79 @@ import icon_shop from '../pages/image/svg/icon-shop.svg'
 const Navbar = () => {
   const userId = JSON.parse(localStorage.getItem('userId'))
   // const userId = 220
+  const [mycart, setMycart] = useState([])
+  const [dataLoading, setDataLoading] = useState(false)
+  const [mycartDisplay, setMycartDisplay] = useState([])
+  function getCartFromLocalStorage() {
+    // 開啟載入的指示圖示
+    setDataLoading(true)
 
+    const newCart = localStorage.getItem('cart') || '[]'
+
+    console.log(JSON.parse(newCart))
+
+    setMycart(JSON.parse(newCart))
+  }
+
+  useEffect(() => {
+    getCartFromLocalStorage()
+  }, [])
+
+  // 每次mycart資料有改變，1秒後關閉載入指示
+  // componentDidUpdate
+  useEffect(() => {
+    setTimeout(() => setDataLoading(false), 1000)
+
+    // mycartDisplay運算
+    let newMycartDisplay = []
+
+    //尋找mycartDisplay
+    for (let i = 0; i < mycart.length; i++) {
+      //尋找mycartDisplay中有沒有此mycart[i].id
+      //有找到會返回陣列成員的索引值
+      //沒找到會返回-1
+      const index = newMycartDisplay.findIndex(
+        (value) => value.itemId === mycart[i].itemId
+      )
+      //有的話就數量+1
+      if (index !== -1) {
+        //每次只有加1個數量
+        //newMycartDisplay[index].amount++
+        //假設是加數量的
+        newMycartDisplay[index].amount += mycart[i].amount
+      } else {
+        //沒有的話就把項目加入，數量為1
+        const newItem = { ...mycart[i] }
+        newMycartDisplay = [...newMycartDisplay, newItem]
+      }
+    }
+console.log("商品有多少", mycart.length)
+
+    console.log(newMycartDisplay)
+    setMycartDisplay(newMycartDisplay)
+  }, [mycart])
+
+  // 更新購物車中的商品數量
+  const updateCartToLocalStorage = (item, isAdded = true) => {
+    console.log(item, isAdded)
+    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+
+    // find if the product in the localstorage with its id
+    const index = currentCart.findIndex((v) => v.itemId === item.itemId)
+
+    console.log('index', index)
+    // found: index! == -1
+    if (index > -1) {
+      isAdded ? currentCart[index].amount++ : currentCart[index].amount--
+    }
+
+    localStorage.setItem('cart', JSON.stringify(currentCart))
+
+    
+    // 設定資料
+    setMycart(currentCart)
+  }
+ 
   useEffect(() => {
     $('.nav-ul')
       .click(function () {
@@ -63,7 +135,7 @@ const Navbar = () => {
             <div className="shopping-cart">
               <a href="/Shoppingcart1">
                 <img src={icon_shop} alt="" />
-                <span className="shopping-count">0</span>
+                <span className="shopping-count">{mycart.length}</span>
               </a>
             </div>
             <div className="button-control">
