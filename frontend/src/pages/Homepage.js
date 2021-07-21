@@ -102,24 +102,32 @@ const Homepage = () => {
         <div className="h-container">
           <div className="kv">
             <div className="kv-slogan fontcolor-w">
-              <p className="kv-slogan-t">地球的生活太枯燥乏味？</p>
-              <p className="kv-slogan-t">遨遊星際桌遊盡情享受未知的旅程吧！</p>
-              <p className="bigslogan">準備好來場太空冒險了嗎？</p>
+              <p className="kv-slogan-t homeP-fontWeight">
+                地球的生活太枯燥乏味？
+              </p>
+              <p className="kv-slogan-t homeP-fontWeight">
+                遨遊星際桌遊盡情享受未知的旅程吧！
+              </p>
+              <p className="bigslogan homeP-fontWeight">
+                準備好來場太空冒險了嗎？
+              </p>
             </div>
             <div className="kv-btn">
               <Button
-                className="btn booking"
+                className="btn homeP-btn booking"
                 link="/booking/steps"
                 buttonText="立即預約"
               />
               <Button
-                className="btn items"
+                className="btn homeP-btn items"
                 link="/item-list"
                 buttonText="購買遊戲"
               />
             </div>
             <div className="kv-scrolldown a-downup">
-              <span className="fontcolor-w scrolldown">Scroll Down</span>
+              <span className="fontcolor-w scrolldown homeP-fontWeight">
+                Scroll Down
+              </span>
               <div className="triangle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,20 +158,20 @@ const Homepage = () => {
           </div>
           <div className="new-arrival">
             <div className="na-title title fontcolor-w">
-              <p className="blcok-header">NEW ARRIVAL</p>
-              <p className="blcok-slogan">最新最熱的桌遊！</p>
+              <p className="blcok-header homeP-fontWeight">NEW ARRIVAL</p>
+              <p className="blcok-slogan homeP-fontWeight">最新最熱的桌遊！</p>
             </div>
             <div className="na-carousel step-a">
-              <div className="pic">
+              <div className="na-itemCards">
                 <ItemCard step={item9} />
               </div>
-              <div className="pic">
+              <div className="na-itemCards">
                 <ItemCard step={item10} />
               </div>
-              <div className="pic">
+              <div className="na-itemCards">
                 <ItemCard step={item11} />
               </div>
-              <div className="pic">
+              <div className="na-itemCards">
                 <ItemCard step={item12} />
               </div>
             </div>
@@ -183,11 +191,15 @@ const Homepage = () => {
           </div>
           <div className="store-introdution">
             <div className="si-title title fontcolor-w">
-              <p className="blcok-header">STORE INTRODUCTION</p>
-              <p className="blcok-slogan">舒適安心的遊戲環境！</p>
+              <p className="blcok-header homeP-fontWeight">
+                STORE INTRODUCTION
+              </p>
+              <p className="blcok-slogan homeP-fontWeight">
+                舒適安心的遊戲環境！
+              </p>
             </div>
             <div className="si-text fontcolor-w">
-              <p>
+              <p className="homeP-fontWeight">
                 提供安心、安全以及輕鬆、舒適的環境，創造快樂回憶的神隊友，店內收藏近千款桌遊，親切的服務與詳細的遊戲介紹，讓玩家盡情享受遊戲的樂趣！
               </p>
             </div>
@@ -224,21 +236,29 @@ const Homepage = () => {
               </div>
               <div className="information-card">
                 <div className="ic ic-1">
-                  <p className="ic-1 ic-title">台北大安店</p>
+                  <p className="ic-1 ic-title homeP-fontWeight">台北大安店</p>
                   <div className="ic-content">
-                    <p>場地類型| 10人精緻包廂</p>
-                    <p>22:00 開放預訂時間 週一至週日10:00</p>
-                    <p>店家地址 |台北市大安區通化街28巷2號</p>
-                    <p>場地費用 | 50 / 人</p>
+                    <p className=" homeP-fontWeight">場地類型| 10人精緻包廂</p>
+                    <p className=" homeP-fontWeight">
+                      22:00 開放預訂時間 週一至週日10:00
+                    </p>
+                    <p className=" homeP-fontWeight">
+                      店家地址 |台北市大安區通化街28巷2號
+                    </p>
+                    <p className=" homeP-fontWeight">場地費用 | 50 / 人</p>
                   </div>
                 </div>
                 <div className="ic ic-2">
-                  <span className="ic-title">台北松山店</span>
+                  <span className="ic-title homeP-fontWeight">台北松山店</span>
                   <div className="ic-content">
-                    <p>場地類型| 10人精緻包廂</p>
-                    <p>22:00 開放預訂時間 週一至週日10:00</p>
-                    <p>店家地址 |台北市松山區八德路三段12巷11號</p>
-                    <p>場地費用 | 50 / 人</p>
+                    <p className=" homeP-fontWeight">場地類型| 10人精緻包廂</p>
+                    <p className=" homeP-fontWeight">
+                      22:00 開放預訂時間 週一至週日10:00
+                    </p>
+                    <p className=" homeP-fontWeight">
+                      店家地址 |台北市松山區八德路三段12巷11號
+                    </p>
+                    <p className=" homeP-fontWeight">場地費用 | 50 / 人</p>
                   </div>
                 </div>
               </div>
@@ -257,13 +277,15 @@ const Homepage = () => {
             </div>
           </div>
           <div className="reservations">
-            <div className="b-title title fontcolor-w">
-              <p className="blcok-header">BOOKING</p>
-              <p className="blcok-slogan">預約你的桌遊冒險！</p>
+            <div className="b-title na-title fontcolor-w">
+              <p className="blcok-header homeP-fontWeight">BOOKING</p>
+              <p className="blcok-slogan homeP-fontWeight">
+                預約你的桌遊冒險！
+              </p>
             </div>
             <div className="b-btn">
               <Button
-                className="btn booking"
+                className="btn homeP-btn booking"
                 link="/booking/steps"
                 buttonText="立即預約"
               />
@@ -272,19 +294,19 @@ const Homepage = () => {
               <div className="stepbox stepOne a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
-                  <p className="stepnum fontcolor-w">1</p>
+                  <p className="stepnum fontcolor-w homeP-fontWeight">1</p>
                 </div>
                 <div className="steptext">
                   <div className="step-title">
-                    <p className="content-title fontcolor-w">
+                    <p className="content-title fontcolor-w homeP-fontWeight">
                       STEP 1　
-                      <span className="content-title fontcolor-y">
+                      <span className="content-title fontcolor-y homeP-fontWeight">
                         尋找夥伴
                       </span>
                     </p>
                   </div>
                   <div className="step-content">
-                    <p className="content fontcolor-w">
+                    <p className="content fontcolor-w homeP-fontWeight">
                       尋找身邊想一起探索桌遊宇宙的太空人夥伴，建議3人以上成行。
                     </p>
                   </div>
@@ -293,19 +315,19 @@ const Homepage = () => {
               <div className="stepbox stepTwo a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
-                  <p className="stepnum fontcolor-w">2</p>
+                  <p className="stepnum fontcolor-w homeP-fontWeight">2</p>
                 </div>
                 <div className="steptext">
                   <div className="step-title">
-                    <p className="content-title fontcolor-w">
+                    <p className="content-title fontcolor-w homeP-fontWeight">
                       STEP 2　
-                      <span className="content-title fontcolor-y">
+                      <span className="content-title fontcolor-y homeP-fontWeight">
                         預約艙房
                       </span>
                     </p>
                   </div>
                   <div className="step-content">
-                    <p className="content fontcolor-w">
+                    <p className="content fontcolor-w homeP-fontWeight">
                       我們有舒適寬敞的分店供您選擇，來看一下離你最近的分店！
                     </p>
                   </div>
@@ -314,19 +336,19 @@ const Homepage = () => {
               <div className="stepbox stepThree a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
-                  <p className="stepnum fontcolor-w">3</p>
+                  <p className="stepnum fontcolor-w homeP-fontWeight">3</p>
                 </div>
                 <div className="steptext">
                   <div className="step-title">
-                    <p className="content-title fontcolor-w">
+                    <p className="content-title fontcolor-w homeP-fontWeight">
                       STEP 3　
-                      <span className="content-title fontcolor-y">
+                      <span className="content-title fontcolor-y homeP-fontWeight">
                         完成付款
                       </span>
                     </p>
                   </div>
                   <div className="step-content">
-                    <p className="content fontcolor-w">
+                    <p className="content fontcolor-w homeP-fontWeight">
                       確認您的預約內容無誤，會開放付款功能，請您完成線上付款。
                     </p>
                   </div>
@@ -335,19 +357,19 @@ const Homepage = () => {
               <div className="stepbox stepFour a-downup">
                 <div className="stepnumber">
                   <img className="stepicon" src={icon_step} alt="" />
-                  <p className="stepnum fontcolor-w">4</p>
+                  <p className="stepnum fontcolor-w homeP-fontWeight">4</p>
                 </div>
                 <div className="steptext">
                   <div className="step-title">
-                    <p className="content-title fontcolor-w">
+                    <p className="content-title fontcolor-w homeP-fontWeight">
                       STEP 4　
-                      <span className="content-title fontcolor-y">
+                      <span className="content-title fontcolor-y homeP-fontWeight">
                         探險開始
                       </span>
                     </p>
                   </div>
                   <div className="step-content">
-                    <p className="content fontcolor-w">
+                    <p className="content fontcolor-w homeP-fontWeight">
                       付款完成後，請依照時間抵達預約探險的太空艙，開始您的探險。
                     </p>
                   </div>

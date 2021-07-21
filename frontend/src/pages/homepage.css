@@ -57,26 +57,11 @@
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
-.btn {
-  width: 175px;
-  height: 55px;
+.homeP-fontWeight {
+  font-weight: bold;
+}
+.homeP-btn {
   margin: 20px;
-}
-.btn-booking {
-  background-color: #33a4fb;
-}
-.btn-shop {
-  background-color: #9c64a5;
-}
-.btn-booking:hover {
-  background-color: transparent;
-  border: 3px solid #33a4fb;
-  color: white;
-}
-.btn-shop:hover {
-  background-color: transparent;
-  border: 3px solid #9c64a5;
-  color: white;
 }
 /* --- animation --- */
 .a-downup {
@@ -141,7 +126,7 @@
 .new-arrival {
   position: relative;
 }
-.title {
+.na-title {
   margin-top: 180px;
 }
 .blcok-header {
@@ -161,8 +146,9 @@
   margin-top: 100px;
   justify-content: space-between;
 }
-.pic:hover {
+.na-itemCards:hover {
   transform: scale(1.1, 1.1);
+  transition: .5s;
 }
 .na-svg-astronaut1 {
   width: 210px;

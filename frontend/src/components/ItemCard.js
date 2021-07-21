@@ -27,7 +27,7 @@ const ItemCard = (props) => {
 
   return (
     <div
-      className="item-card"
+      className="na-itemCard"
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
@@ -42,7 +42,7 @@ const ItemCard = (props) => {
           />
         )}
       </div>
-      <div className="item">
+      <div className="na-itemName">
         <span>{itemName}</span>
       </div>
       <div className="item-groupA">
