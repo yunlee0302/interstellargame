@@ -7,51 +7,19 @@ import './Shoppingcart2.css'
 import grayline from './img/grayline.svg'
 import launch from './img/launch.svg'
 import launch2 from './img/launch2.svg'
-
-function Shoppingcart1(props) {
-  const [clickpopup, setclickpopup] = useState(false)
+function Shoppingcart2(props) {
   console.log(props)
   const [ItemOne, setItemOne] = useState(1)
   const [ItemTwo, setItemTwo] = useState(1)
   const [ItemThree, setItemThree] = useState(1)
   const {} = props
-  const [show, setshow] = useState(1)
-  const [handclose, sethandclose] = useState(1)
-
   const currentCart = JSON.parse(localStorage.getItem('cart')) || ''
   // 代表每個產品的單價
   const [mycart, setMycart] = useState([])
   const [dataLoading, setDataLoading] = useState(false)
   const [mycartDisplay, setMycartDisplay] = useState([])
   const { updateCartNum } = props
-  const messageModal = (
-    <Modal show={show} onHide={handclose} backdrop="static" keyboard={false}>
-      <Modal.Header closeButton>
-        <Modal.Title></Modal.Title>
-      </Modal.Header>
-      <Modal.Body>“購物車是空的”</Modal.Body>
-      <Modal.Footer>
-        <Button
-          className="button55"
-          onClick={() => {
-            props.history.push('/item-list')
-          }}
-        >
-          繼續購物
-        </Button>
-        <Button
-          className="button66"
-          variant="primary"
-          onClick={() => {
-            props.history.push('/Shoppingcart1')
-          }}
-        >
-          前往結帳
-        </Button>
-      </Modal.Footer>
-    </Modal>)
   function getCartFromLocalStorage() {
-
     // 開啟載入的指示圖示
     setDataLoading(true)
 
@@ -152,14 +120,7 @@ function Shoppingcart1(props) {
     }
     // updateCartNum()
   }
-  if (
-    !localStorage.getItem('cart') ||
-    JSON.parse(localStorage.getItem('cart')).length === 0
-  ) {
-  
-    
-  }
-  
+
   // 計算總價
   const loading = (
     <>
@@ -175,9 +136,23 @@ function Shoppingcart1(props) {
 
   return (
     <>
-   
+    <div className="container">
+        <div className="top m-5">
+          <img src={launch} alt width={100} height={100} />
+
+          <img src={grayline} alt width={200} height={100} />
+          <img src={launch2} alt width={100} height={100} />
+          <img src={grayline} alt width={200} height={100} />
+          <img src={launch2} alt width={100} height={100} />
+        </div>
+        <div className="top1 mb-4 ">
+          <p2>購物明細</p2>
+          <p3>付款資料</p3>
+          <p3>訂單資訊</p3>
+        </div>
+      </div>
       <div className="cart1title1 p-3 mt-5">
-        <p4>購物車</p4>
+        <p4>購物明細</p4>
       </div>
     
       <table className="cart1title2">
@@ -277,7 +252,7 @@ function Shoppingcart1(props) {
       <div className="button1 pb-4">
         <button
           onClick={() => {
-            props.history.push('/Shoppingcart2')
+            props.history.push('/Shoppingcart3')
           }}
         >
           前往結帳
@@ -287,4 +262,4 @@ function Shoppingcart1(props) {
   )
 }
 
-export default withRouter(Shoppingcart1)
+export default withRouter(Shoppingcart2)

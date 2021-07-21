@@ -153,6 +153,8 @@ function Shoppingcart3(props) {
     setTimeout(() => {
       setDataLoading(false)
     }, 500)
+     //把購物車清空
+ 
   }
   const loading = (
     <>
@@ -179,7 +181,7 @@ function Shoppingcart3(props) {
           <p3>訂單資訊</p3>
         </div>
         <div className="cart3title1 p-3">
-          <p>付款資料</p>
+          <p4>付款資料</p4>
         </div>
         {/* 訂購資料 */}
         <div className="nobottom p-3  ">
@@ -373,6 +375,7 @@ function Shoppingcart3(props) {
           onClick={() => {
             props.history.push('/Shoppingcart4')
             addtextToSever()
+            localStorage.removeItem('cart')
           }}
         >
           送出訂單
