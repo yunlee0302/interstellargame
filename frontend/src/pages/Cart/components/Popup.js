@@ -1,29 +1,51 @@
 import React from 'react'
 import './Popup.css'
+import visacard from '../img/visacard.jpeg'
 function Popup(props) {
   return props.trigger ? (
     <div className="popup">
-      <div className=" popup-inner">
-        <h1></h1><br></br>
-        <p>信用卡號</p>
-        <input></input>
-      
-        <p>有效年月</p>
-    
-        <input></input>
-        <br></br>
-        <p>檢核碼</p>
-       
-        <input></input>
-        <br></br>
-      
+      <div className=" popup-inner ">
+        <img src={visacard} alt width={300} height={180} />
 
-        <div className="close-btn" onClick={() => props.setTrigger()}>
-          <i class="far fa-times-circle"></i>
+        <div className="row cardinner mt-3">
+          <p>信用卡號 </p>
+          <input
+            type="text"
+            className="form-control transparent-input "
+          ></input>
         </div>
 
-        <button className="btn homeP-btn items" onClick={() => props.setTrigger()}>確認送出</button>
+        <div className="row cardinner">
+          <p>有效年月 </p>
+          <input
+            type="text"
+            className="form-control transparent-input "
+          ></input>
+        </div>
 
+        <div className="row cardinner">
+          <p>檢核碼</p>
+          <input
+            type="text"
+            className="form-control transparent-input "
+          ></input>
+        </div>
+        <br></br>
+    <div className="row ">
+        <button
+          className="btn homeP-btn items"
+          onClick={() => props.setTrigger()}
+        >
+          確認送出
+        </button>
+       
+        <button  className="close-btn
+        btn homeP-btn booking"
+          onClick={() => props.setTrigger()}
+        >
+         返回
+        </button>
+        </div>
         {props.children}
       </div>
     </div>
