@@ -42,7 +42,7 @@ export default class Shoppingcart4 extends React.Component {
     return (
       <div>
         {data ? (
-          <div>
+          <div className="orderpage">
             <div className="cart4top m-5">
               <img
                 className="launch"
