@@ -289,6 +289,7 @@ function Shoppingcart1(props) {
             className="btn homeP-btn items"
           onClick={() => {
             props.history.push('/Shoppingcart2')
+            
           }}
         >
           前往結帳

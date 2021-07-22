@@ -62,7 +62,7 @@ function Shoppingcart2(props) {
         newMycartDisplay = [...newMycartDisplay, newItem]
       }
     }
-console.log("商品有多少", mycart.length)
+    console.log('商品有多少', mycart.length)
 
     console.log(newMycartDisplay)
     setMycartDisplay(newMycartDisplay)
@@ -84,7 +84,6 @@ console.log("商品有多少", mycart.length)
 
     localStorage.setItem('cart', JSON.stringify(currentCart))
 
-    
     // 設定資料
     setMycart(currentCart)
   }
@@ -102,11 +101,17 @@ console.log("商品有多少", mycart.length)
   const itemsum = (items) => {
     let total = 0
     for (let i = 0; i < items.length; i++) {
-      total += items[i].amount 
+      total += items[i].amount
     }
     return total
   }
-
+  
+//如果沒登入就結帳要跳到登入頁
+  const userId = localStorage.getItem('userId')
+  if (!userId) {
+    props.history.push('/login')
+  } else {
+  }
 
   // 刪除單一項目
   const updateCartRemove = (index) => {
@@ -148,7 +153,7 @@ console.log("商品有多少", mycart.length)
 
   return (
     <>
-    <div className="container">
+      <div className="container">
         <div className="top m-5">
           <img src={launch} alt width={100} height={100} />
 
@@ -166,22 +171,30 @@ console.log("商品有多少", mycart.length)
       <div className="cart1title1 p-3 mt-5">
         <p4 class="cartbold ">購物明細</p4>
       </div>
-    
-      <table className="cart1title2 tablecart" >
+
+      <table className="cart1title2 tablecart">
         <tbody>
           <tr>
-          <th  className="thcart " width="150px "></th>
-            <th  className="thcart " width="200x">商品名稱</th>
-            <th className="thcart " width="200px">商品單價</th>
-            <th className="thcart" width="220px">商品數量</th>
-            <th className="thcart" width="200px">金額小計</th>
+            <th className="thcart " width="150px "></th>
+            <th className="thcart " width="200x">
+              商品名稱
+            </th>
+            <th className="thcart " width="200px">
+              商品單價
+            </th>
+            <th className="thcart" width="220px">
+              商品數量
+            </th>
+            <th className="thcart" width="200px">
+              金額小計
+            </th>
             <th className="thcart" width="100px" />
           </tr>
           {mycart.map((item, index) => {
             return (
               <tr key={item.itemId}>
-           
-                <td className="tdcart"
+                <td
+                  className="tdcart"
                   id={item.itemId}
                   onClick={() => {
                     const cartList = [...mycart]
@@ -201,12 +214,13 @@ console.log("商品有多少", mycart.length)
                     height={100}
                   />
                 </td>  */}
-                <td className="tdcart" height="130px">{item.name}</td>
+                <td className="tdcart" height="130px">
+                  {item.name}
+                </td>
                 <td className="tdcart2">{item.price}</td>
                 <td className="tdcart1">
-                
                   <div className="counter2  ">
-                    <li  className="ccc" id="minus">
+                    <li className="ccc" id="minus">
                       <a
                         href="#/"
                         onClick={() => {
@@ -215,7 +229,6 @@ console.log("商品有多少", mycart.length)
                           updateCartToLocalStorage(item, false)
                         }}
                       >
-
                         <input
                           type="button"
                           onclick="minuser()"
@@ -224,7 +237,7 @@ console.log("商品有多少", mycart.length)
                       </a>
                     </li>
 
-                    <li  id="countnum2"> {item.amount}</li>
+                    <li id="countnum2"> {item.amount}</li>
 
                     <li id="plus">
                       <a
@@ -254,7 +267,6 @@ console.log("商品有多少", mycart.length)
               </tr>
             )
           })}
-        
         </tbody>
       </table>
       <div className="end  p-5 mb-5">
@@ -262,12 +274,13 @@ console.log("商品有多少", mycart.length)
       </div>
 
       <div className="buttoncart1 pb-4">
-        <button  className="btn homeP-btn items"
+        <button
+          className="btn homeP-btn items"
           onClick={() => {
             props.history.push('/Shoppingcart3')
           }}
         >
-         下一步
+          下一步
         </button>
       </div>
     </>
