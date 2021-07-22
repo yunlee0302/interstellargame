@@ -138,7 +138,7 @@ const ItemDetail8 = (props) => {
                     <div className="thumbnail text-center">
                         <img src={titleBoxImage} alt="" />
                         <div className="caption">
-                            <p className="">相似商品</p>
+                            <p className="">其他商品</p>
                         </div>
                     </div>
                 </div>

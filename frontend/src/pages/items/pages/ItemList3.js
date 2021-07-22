@@ -51,6 +51,7 @@ const ItemList3 = () => {
             <li data-target="#carouselSlides" data-slide-to="1" className=""></li>
             <li data-target="#carouselSlides" data-slide-to="2" className=""></li>
             <li data-target="#carouselSlides" data-slide-to="3" className=""></li>
+            <li data-target="#carouselSlides" data-slide-to="4" className=""></li>
           </ol>
           {/* <!--Carousel control 開始--> */}
           <a className="carousel-control-prev" href="#carouselSlides" data-slide="prev">
