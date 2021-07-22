@@ -112,7 +112,7 @@ margin-left: 120px;
   .edit-form input.transparent-input,
   .edit-form select.transparent-input {
       background-color: #02021E !important;
-      font-size: 1.4rem;
+      font-size: 1rem;
       color: #fff;
       border: none !important;
       height: 100%;

@@ -355,7 +355,7 @@ function Shoppingcart3(props) {
                 >
                   <option value="">請選擇一張優惠券</option>
                   <option value="50">50元優惠券</option>
-                  <option value="100">100元優惠券</option>
+                
                 </select>
               </div>
             </div>
