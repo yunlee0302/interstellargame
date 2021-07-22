@@ -82,5 +82,34 @@
   left: 45px;
 }
 .button-control {
+  position: relative;
   margin-left: 80px;
+}
+.btn-memberIcon {
+  height: 50px;
+  width: 50px;
+  border: 5px solid white;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.btn-memberDropdown {
+  width: 40px;
+  background-color: transparent;
+  color: white;
+  border: 0;
+}
+.btn-memberDropdown::after {
+  width: 12px;
+}
+.member-dropdoenMenu {
+  position: absolute;
+  top: 55px;
+  left: -70px;
+  background-color: #02021e;
+  border-radius: 0 0 10px 10px;
+}
+.memberMenu-link {
+  color: white;
+  text-align: center;
+  padding: 15px;
 }

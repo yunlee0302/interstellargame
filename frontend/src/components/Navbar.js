@@ -6,10 +6,16 @@ import Button from './Button'
 
 import logo from '../pages/image/svg/logo.svg'
 import icon_shop from '../pages/image/svg/icon-shop.svg'
+import memberPreset from '../pages/image/svg/memberPreset.svg'
+
+// import memberPreset from '../pages/image/jpg/test01.jpg'
+
 
 const Navbar = () => {
   const userId = JSON.parse(localStorage.getItem('userId'))
+  const userImg = JSON.parse(localStorage.getItem('userImg'))
   // const userId = 220
+
   const [mycart, setMycart] = useState([])
   const [dataLoading, setDataLoading] = useState(false)
   const [mycartDisplay, setMycartDisplay] = useState([])
@@ -140,11 +146,58 @@ console.log("商品有多少", mycart.length)
             </div>
             <div className="button-control">
               {userId ? (
-                <Button
-                  className="btn2 memberCenter"
-                  link="/member"
-                  buttonText="會員中心"
-                />
+                <>
+                  <a href="/member">
+                    <img
+                      className="btn-memberIcon"
+                      src={userImg ? userImg : memberPreset}
+                      alt=""
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    class="dropdown-toggle dropdown-toggle-split btn-memberDropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div className="dropdown-menu member-dropdoenMenu">
+                    <a className="dropdown-item memberMenu-link" href="/member">
+                      會員中心
+                    </a>
+                    <a
+                      className="dropdown-item memberMenu-link"
+                      href="/member/memberOrder"
+                    >
+                      我的訂單
+                    </a>
+                    <a
+                      className="dropdown-item memberMenu-link"
+                      href="/member/memberReservation"
+                    >
+                      我的預約
+                    </a>
+                    <a
+                      className="dropdown-item memberMenu-link"
+                      href="/member/memberFavList"
+                    >
+                      我的最愛
+                    </a>
+                    <a
+                      className="dropdown-item memberMenu-link"
+                      href="/member/memberCoupon"
+                    >
+                      我的優惠券
+                    </a>
+                  </div>
+                  {/* <Button
+                    className="btn2 memberCenter"
+                    link="/member"
+                    buttonText="會員中心"
+                  /> */}
+                </>
               ) : (
                 <Button
                   className="btn2 login-registered"
