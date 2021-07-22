@@ -148,7 +148,7 @@
 }
 .na-itemCards:hover {
   transform: scale(1.1, 1.1);
-  transition: .5s;
+  transition: 0.5s;
 }
 .na-svg-astronaut1 {
   width: 210px;
