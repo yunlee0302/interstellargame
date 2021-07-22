@@ -135,7 +135,7 @@ console.log("商品有多少", mycart.length)
             <div className="shopping-cart">
               <a href="/Shoppingcart1">
                 <img src={icon_shop} alt="" />
-                <span className="shopping-count">{mycart.length}</span>
+                {/* <span className="shopping-count">{mycart.length}</span> */}
               </a>
             </div>
             <div className="button-control">
