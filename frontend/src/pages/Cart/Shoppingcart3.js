@@ -355,6 +355,7 @@ function Shoppingcart3(props) {
                 >
                   <option value="">請選擇一張優惠券</option>
                   <option value="50">50元優惠券</option>
+                  <option value="100">100元優惠券</option>
                 
                 </select>
               </div>
@@ -375,7 +376,7 @@ function Shoppingcart3(props) {
           onClick={() => {
             props.history.push('/Shoppingcart4')
             addtextToSever()
-            localStorage.removeItem('cart')
+           
           }}
         >
           送出訂單

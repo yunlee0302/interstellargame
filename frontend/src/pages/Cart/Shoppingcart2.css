@@ -93,6 +93,15 @@ body {
  
 
   } 
+  .thcart1 { 
+    background-color:#1f1055;
+    padding:20px;
+    border: #1f1055 3px solid ;
+    color:#fff;
+    font-size: 20px;
+   
+  
+    } 
   .tdcart { 
   border: #CE93D7 3px solid;
   border-right: none;

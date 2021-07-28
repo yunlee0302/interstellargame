@@ -67,7 +67,7 @@ function Shoppingcart2(props) {
     console.log(newMycartDisplay)
     setMycartDisplay(newMycartDisplay)
   }, [mycart])
-
+  console.log(mycartDisplay)
   // 更新購物車中的商品數量
   const updateCartToLocalStorage = (item, isAdded = true) => {
     console.log(item, isAdded)
@@ -110,9 +110,7 @@ function Shoppingcart2(props) {
   const userId = localStorage.getItem('userId')
   if (!userId) {
     props.history.push('/login')
-  } else {
-  }
-
+  } 
   // 刪除單一項目
   const updateCartRemove = (index) => {
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []
@@ -127,7 +125,7 @@ function Shoppingcart2(props) {
     console.log(a)
 
     localStorage.setItem('cart', JSON.stringify(a))
-
+  
     // 設定資料
     setMycart(a)
     // 更新購物車數量
@@ -185,10 +183,10 @@ function Shoppingcart2(props) {
             <th className="thcart" width="220px">
               商品數量
             </th>
-            <th className="thcart" width="200px">
+            <th className="thcart1" width="220px">
               金額小計
             </th>
-            <th className="thcart" width="100px" />
+         
           </tr>
           {mycart.map((item, index) => {
             return (
@@ -218,52 +216,11 @@ function Shoppingcart2(props) {
                   {item.name}
                 </td>
                 <td className="tdcart2">{item.price}</td>
-                <td className="tdcart1">
-                  <div className="counter2  ">
-                    <li className="ccc" id="minus">
-                      <a
-                        href="#/"
-                        onClick={() => {
-                          // 限制數量為最少要買1件
-                          if (item.amount === 1) return
-                          updateCartToLocalStorage(item, false)
-                        }}
-                      >
-                        <input
-                          type="button"
-                          onclick="minuser()"
-                          defaultValue="-"
-                        />
-                      </a>
-                    </li>
-
-                    <li id="countnum2"> {item.amount}</li>
-
-                    <li id="plus">
-                      <a
-                        href="#/"
-                        onClick={() => {
-                          updateCartToLocalStorage(item, true)
-                        }}
-                      >
-                        <input
-                          type="button"
-                          onclick="adder()"
-                          defaultValue="+"
-                        />
-                      </a>
-                    </li>
-                  </div>
+                <td className="tdcart2">
+                   {item.amount}
                 </td>
                 <td className="tdcart2"> NT${item.amount * item.price}</td>
-                <td className="tdcart">
-                  <i
-                    className=" far fa-trash-alt"
-                    onClick={() => {
-                      updateCartRemove(index)
-                    }}
-                  />
-                </td>
+              
               </tr>
             )
           })}
@@ -274,6 +231,14 @@ function Shoppingcart2(props) {
       </div>
 
       <div className="buttoncart1 pb-4">
+      <button
+          className="btn homeP-btn booking"
+          onClick={() => {
+            props.history.push('/Shoppingcart1')
+          }}
+        >
+        回購物車
+        </button>
         <button
           className="btn homeP-btn items"
           onClick={() => {

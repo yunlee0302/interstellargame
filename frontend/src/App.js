@@ -85,7 +85,7 @@ const App = () => {
           <Router path="/Game">
             <GameIndex />
           </Router>
-          <ReservationIndex />
+          {/* <ReservationIndex /> */}
           <ItemIndex />
           {/* <Route path="/booking/steps">
             <ReservationIndex />
