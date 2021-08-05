@@ -39,7 +39,7 @@ const ItemDetail2 = (props) => {
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
 
-    const updateCartToLocalStorage = (item) => {
+        const updateCartToLocalStorage = (item) => {
         const currentCart = JSON.parse(localStorage.getItem('cart')) || []
 
         // find if the product in the localstorage with its id

@@ -19,9 +19,7 @@ function Shoppingcart3(props) {
   const [orderMail, setorderMail] = useState('')
   const [orderAddress, setorderAddress] = useState('')
   const [voucherId, setvoucherId] = useState('')
-  const [mycart, setMycart] = useState([])
-  const { updateCartNum } = props
-  const [mycartDisplay, setMycartDisplay] = useState([])
+
   // function getCartFromLocalStorage() {
   //   // 開啟載入的指示圖示
   //   setDataLoading(true)

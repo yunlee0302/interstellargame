@@ -33,7 +33,7 @@ function Popup(props) {
         <br></br>
     <div className="row ">
         <button
-          className="btn homeP-btn items"
+          className="btn homeP-btn items close-btn "
           onClick={() => props.setTrigger()}
         >
           確認送出

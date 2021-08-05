@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { Modal, Button } from 'react-bootstrap'
 import './Shoppingcart1.css'
 import { withRouter } from 'react-router-dom'
-import itemphoto from './img/item1.png'
 import './Shoppingcart2.css'
 import grayline from './img/grayline.svg'
 import launch from './img/launch.svg'
 import launch2 from './img/launch2.svg'
 function Shoppingcart2(props) {
   console.log(props)
-  const [ItemOne, setItemOne] = useState(1)
-  const [ItemTwo, setItemTwo] = useState(1)
-  const [ItemThree, setItemThree] = useState(1)
-  const {} = props
-  const currentCart = JSON.parse(localStorage.getItem('cart')) || ''
-  // 代表每個產品的單價
   const [mycart, setMycart] = useState([])
   const [dataLoading, setDataLoading] = useState(false)
   const [mycartDisplay, setMycartDisplay] = useState([])
-  const { updateCartNum } = props
+
   function getCartFromLocalStorage() {
     // 開啟載入的指示圖示
     setDataLoading(true)
@@ -105,12 +97,12 @@ function Shoppingcart2(props) {
     }
     return total
   }
-  
-//如果沒登入就結帳要跳到登入頁
+
+  //如果沒登入就結帳要跳到登入頁
   const userId = localStorage.getItem('userId')
   if (!userId) {
     props.history.push('/login')
-  } 
+  }
   // 刪除單一項目
   const updateCartRemove = (index) => {
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []
@@ -125,7 +117,7 @@ function Shoppingcart2(props) {
     console.log(a)
 
     localStorage.setItem('cart', JSON.stringify(a))
-  
+
     // 設定資料
     setMycart(a)
     // 更新購物車數量
@@ -186,7 +178,6 @@ function Shoppingcart2(props) {
             <th className="thcart1" width="220px">
               金額小計
             </th>
-         
           </tr>
           {mycart.map((item, index) => {
             return (
@@ -216,11 +207,8 @@ function Shoppingcart2(props) {
                   {item.name}
                 </td>
                 <td className="tdcart2">{item.price}</td>
-                <td className="tdcart2">
-                   {item.amount}
-                </td>
+                <td className="tdcart2">{item.amount}</td>
                 <td className="tdcart2"> NT${item.amount * item.price}</td>
-              
               </tr>
             )
           })}
@@ -231,13 +219,13 @@ function Shoppingcart2(props) {
       </div>
 
       <div className="buttoncart1 pb-4">
-      <button
+        <button
           className="btn homeP-btn booking"
           onClick={() => {
             props.history.push('/Shoppingcart1')
           }}
         >
-        回購物車
+          回購物車
         </button>
         <button
           className="btn homeP-btn items"

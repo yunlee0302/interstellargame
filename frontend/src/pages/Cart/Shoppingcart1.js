@@ -1,57 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Modal, Button } from 'react-bootstrap'
 import './Shoppingcart1.css'
 import { withRouter } from 'react-router-dom'
-import itemphoto from './img/item1.png'
-import './Shoppingcart2.css'
-import grayline from './img/grayline.svg'
-import launch from './img/launch.svg'
-import launch2 from './img/launch2.svg'
 
 function Shoppingcart1(props) {
-  const [clickpopup, setclickpopup] = useState(false)
   console.log(props)
-  const [ItemOne, setItemOne] = useState(1)
-  const [ItemTwo, setItemTwo] = useState(1)
-  const [ItemThree, setItemThree] = useState(1)
-  const {} = props
-  const [show, setshow] = useState(1)
-  const [handclose, sethandclose] = useState(1)
-
-  const currentCart = JSON.parse(localStorage.getItem('cart')) || ''
-  // 代表每個產品的單價
   const [mycart, setMycart] = useState([])
   const [dataLoading, setDataLoading] = useState(false)
   const [mycartDisplay, setMycartDisplay] = useState([])
-  const { updateCartNum } = props
-  const messageModal = (
-    <Modal show={show} onHide={handclose} backdrop="static" keyboard={false}>
-      <Modal.Header closeButton>
-        <Modal.Title></Modal.Title>
-      </Modal.Header>
-      <Modal.Body>“購物車是空的”</Modal.Body>
-      <Modal.Footer>
-        <Button
-          className="button55"
-          onClick={() => {
-            props.history.push('/item-list')
-          }}
-        >
-          繼續購物
-        </Button>
-        <Button
-          className="button66"
-          variant="primary"
-          onClick={() => {
-            props.history.push('/Shoppingcart1')
-          }}
-        >
-          前往結帳
-        </Button>
-      </Modal.Footer>
-    </Modal>)
   function getCartFromLocalStorage() {
-
     // 開啟載入的指示圖示
     setDataLoading(true)
 
@@ -115,7 +71,6 @@ function Shoppingcart1(props) {
 
     localStorage.setItem('cart', JSON.stringify(currentCart))
 
-    
     // 設定資料
     setMycart(currentCart)
   }
@@ -137,7 +92,6 @@ function Shoppingcart1(props) {
       console.log(v)
       if (index !== i) {
         return v
-       
       }
     })
     console.log(a)
@@ -157,10 +111,8 @@ function Shoppingcart1(props) {
     !localStorage.getItem('cart') ||
     JSON.parse(localStorage.getItem('cart')).length === 0
   ) {
-  
-    
   }
-  
+
   // 計算總價
   const loading = (
     <>
@@ -176,26 +128,33 @@ function Shoppingcart1(props) {
 
   return (
     <>
-   
       <div className="cart1title1 p-3 mt-5">
         <p4 class="cartbold  ">購物車</p4>
       </div>
-    
+
       <table className="cart1title2  ">
         <tbody>
           <tr>
-            <th  className="thcart" width="150px "></th>
-            <th  className="thcart" width="200x">商品名稱</th>
-            <th className="thcart" width="200px">商品單價</th>
-            <th className="thcart" width="220px">商品數量</th>
-            <th className="thcart" width="200px">金額小計</th>
+            <th className="thcart" width="150px "></th>
+            <th className="thcart" width="200x">
+              商品名稱
+            </th>
+            <th className="thcart" width="200px">
+              商品單價
+            </th>
+            <th className="thcart" width="220px">
+              商品數量
+            </th>
+            <th className="thcart" width="200px">
+              金額小計
+            </th>
             <th className="thcart" width="100px" />
           </tr>
           {mycart.map((item, index) => {
             return (
               <tr key={item.itemId}>
-           
-                <td className="tdcart"
+                <td
+                  className="tdcart"
                   id={item.itemId}
                   onClick={() => {
                     const cartList = [...mycart]
@@ -215,12 +174,13 @@ function Shoppingcart1(props) {
                     height={100}
                   />
                 </td>  */}
-                <td  className="tdcart" height="130px">{item.name}</td>
-                <td className="tdcart2" >{item.price}</td>
+                <td className="tdcart" height="130px">
+                  {item.name}
+                </td>
+                <td className="tdcart2">{item.price}</td>
                 <td className="tdcart1">
-                
                   <div className="counter2  ">
-                    <li  className="ccc" id="minus">
+                    <li className="ccc" id="minus">
                       <a
                         href="#/"
                         onClick={() => {
@@ -229,7 +189,6 @@ function Shoppingcart1(props) {
                           updateCartToLocalStorage(item, false)
                         }}
                       >
-
                         <input
                           type="button"
                           onclick="minuser()"
@@ -238,7 +197,7 @@ function Shoppingcart1(props) {
                       </a>
                     </li>
 
-                    <li  id="countnum2"> {item.amount}</li>
+                    <li id="countnum2"> {item.amount}</li>
 
                     <li id="plus">
                       <a
@@ -262,14 +221,12 @@ function Shoppingcart1(props) {
                     className=" far fa-trash-alt"
                     onClick={() => {
                       updateCartRemove(index)
-                     
                     }}
                   />
                 </td>
               </tr>
             )
           })}
-        
         </tbody>
       </table>
       <div className="end  p-5 mb-5">
@@ -283,13 +240,12 @@ function Shoppingcart1(props) {
             props.history.push('/item-list')
           }}
         >
-        繼續購物
+          繼續購物
         </button>
         <button
-            className="btn homeP-btn items"
+          className="btn homeP-btn items"
           onClick={() => {
             props.history.push('/Shoppingcart2')
-            
           }}
         >
           前往結帳
